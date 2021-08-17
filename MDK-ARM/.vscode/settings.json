@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "uart_data_transmit.h": "c",
+    "struct_typedef.h": "c",
+    "chassis_move.h": "c",
+    "can_receive&send.h": "c",
+    "dbus_remote_control.h": "c",
+    "stm32f4xx_hal.h": "c",
+    "led_control.h": "c",
+    "pwm_control.h": "c",
+    "imu_updata.h": "c",
+    "arm_task.h": "c"
+  }
+}
