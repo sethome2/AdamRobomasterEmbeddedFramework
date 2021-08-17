@@ -28,20 +28,20 @@ ___
 
 ___
 更新日志（Ver1.0.4.20210818 Alpha）:
-1.修复长久以来的命名问题
-
+1. 修复长久以来的命名问题
+___
 更新日志（Ver1.0.3.20210713 Alpha）:
-1.使用了SPI2_CS引脚为IO8，浮空输出模式，支持状态量控制，不支持PWM
-
+1. 使用了SPI2_CS引脚为IO8，浮空输出模式，支持状态量控制，不支持PWM
+___
 更新日志（Ver1.0.2.20210712 Alpha）:
-1.更改IO口功能，IO1-5不变，IO6改为浮空输入模式，IO7为浮空外部中断
-2.增加了对光电编码器的支持(Drivers/Encoder.c)，但是无统一定时器，未能计算速度
-3.增加了对系统时间的支持(Applications/time.c)，最大49天时间
-4.移植了ADAM步兵的开源代码，为多个文件(referee.c,referee_usart_send_task.c)
-5.增加了CRC8/16(Algorithm/CRC8_CRC16.c),和fifo数据结构(Algorithm/fifo.c)的支持
-
+1. 更改IO口功能，IO1-5不变，IO6改为浮空输入模式，IO7为浮空外部中断
+2. 增加了对光电编码器的支持(Drivers/Encoder.c)，但是无统一定时器，未能计算速度
+3. 增加了对系统时间的支持(Applications/time.c)，最大49天时间
+4. 移植了ADAM步兵的开源代码，为多个文件(referee.c,referee_usart_send_task.c)
+5. 增加了CRC8/16(Algorithm/CRC8_CRC16.c),和fifo数据结构(Algorithm/fifo.c)的支持
+___
 更新日志（Ver1.0.1.20210330 Alpha）：
-1.修复PWM输出问题
-
+1. 修复PWM输出问题
+___
 更新日志（Ver1.0.0.20210327 Alpha）：
-1.bsp基本工作正常
+1. bsp基本工作正常
