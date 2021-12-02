@@ -26,6 +26,7 @@ rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -37,5 +38,8 @@ rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+rmc_adam_generalrobotsystemcode\bmi088driver.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ..\Drivers\Chip\BMI088reg.h
 rmc_adam_generalrobotsystemcode\bmi088driver.o: ..\Drivers\Chip\BMI088Middleware.h

@@ -30,6 +30,7 @@ rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/In
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -41,6 +42,11 @@ rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/In
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+rmc_adam_generalrobotsystemcode\imu_updata.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Algorithm\pid.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ../Inc/tim.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Drivers\Chip\ist8310driver.h
+rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Algorithm\MahonyAHRS\MahonyAHRS.h
+rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Algorithm\madgwickAHRS\madgwick.h

@@ -2,8 +2,8 @@
 #include "math.h"
 
 //电机数据
-motor_measure_t Can1_motor_data[8];
-motor_measure_t Can2_motor_data[8];
+motor_measure_t Can1_motor_data[16];
+motor_measure_t Can2_motor_data[16];
 
 //CAN寄存器及控制器
 extern CAN_HandleTypeDef hcan1;

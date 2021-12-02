@@ -5,11 +5,8 @@
 
 #include "GPIO_input_EXTI.h"
 #include "main.h"
-
 #include "Encoder.h"
-
-//for test
-#include "LED_control.h"
+#include "stm32f4xx_hal_gpio.h"
 
 //重载HAL库中断函数
 void HAL_GPIO_EXTI_Callback (uint16_t GPIO_Pin)
@@ -17,11 +14,9 @@ void HAL_GPIO_EXTI_Callback (uint16_t GPIO_Pin)
 	if(GPIO_Pin == IO7_Pin)//为IO7被中断时
 	{
 		update_Encoder(&Arm_encoder,read_IO6());
-		led_show(YELLOW);
 	}
 }
 
-#include "stm32f4xx_hal_gpio.h"
 //读取IO6的电平状态
 int read_IO6()//返回0/1
 {

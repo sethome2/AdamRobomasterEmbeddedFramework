@@ -63,8 +63,6 @@ void Error_Handler(void);
 #define IO7_EXTI_IRQn EXTI9_5_IRQn
 #define IO6_Pin GPIO_PIN_6
 #define IO6_GPIO_Port GPIOI
-#define IST8310_RST_Pin GPIO_PIN_6
-#define IST8310_RST_GPIO_Port GPIOG
 #define IST8310_DRDY_Pin GPIO_PIN_3
 #define IST8310_DRDY_GPIO_Port GPIOG
 #define CS1_ACCEL_Pin GPIO_PIN_4
@@ -90,15 +88,10 @@ void Error_Handler(void);
 #define PIN_6 6
 #define PIN_7 7
 #define PIN_8 8
-//define成你想要的名字(套娃)
-#define UP_PIN PIN_4
-#define DOWN_PIN PIN_3
-#define EXTEND_PIN PIN_2
-#define COMPRESS_PIN PIN_1
 
-#define SERVO_PIN PIN_5 //舵机口
-
-#define CATCH_PIN PIN_8 //爪子电磁阀控制
+//#define TEST_VERSION
+#define DEV_VERSION
+//#define RELEASE_VERSION
 
 /* USER CODE END Private defines */
 

@@ -21,11 +21,13 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "can.h"
+#include "crc.h"
 #include "dma.h"
 #include "i2c.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
+#include "usb_device.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -85,7 +87,6 @@ void MX_FREERTOS_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -94,7 +95,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+	HAL_Delay(100);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -120,6 +121,8 @@ int main(void)
   MX_USART6_UART_Init();
   MX_I2C2_Init();
   MX_TIM8_Init();
+  MX_CRC_Init();
+  MX_TIM13_Init();
   /* USER CODE BEGIN 2 */
   //bsp 板级支持包
   //初始化各项应用
@@ -130,7 +133,6 @@ int main(void)
   can_filter_init();        //can 过滤器
   remote_control_init();    //遥控器初始化
   PWM_servo_control_init(); //PWM
-  set_servo_angle(5, 130);    //图传下降
   IMU_init();               //IMU 加速度计，陀螺仪，地磁计
   uart_init();              //初始化串口
 
@@ -139,8 +141,7 @@ int main(void)
   init_referee_struct_data(); //初始化裁判系统解析
   init_Encoder(&Arm_encoder);   //初始化推杆编码器变量
 
-  led_show(BLUE); //初始化完成
-                  //测试版本
+  led_show(BLUE);//初始化完毕
 
   /* USER CODE END 2 */
 
@@ -186,7 +187,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 6;
   RCC_OscInitStruct.PLL.PLLN = 168;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 7;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -210,7 +211,7 @@ void SystemClock_Config(void)
 
 /* USER CODE END 4 */
 
- /**
+/**
   * @brief  Period elapsed callback in non blocking mode
   * @note   This function is called  when TIM2 interrupt took place, inside
   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
@@ -227,10 +228,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-  if (htim->Instance == TIM14)
+  if (htim->Instance == TIM13)//1000HZ
   {
     IMU_updata();
   }
+	else if (htim->Instance == TIM14)//200HZ
+	{
+		MagUpdate();
+	}
+		
   /* USER CODE END Callback 1 */
 }
 

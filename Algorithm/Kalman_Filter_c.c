@@ -1,5 +1,7 @@
 #include "Kalman_Filter_c.h"
 
+//来源未知，德语代码，但是问题不大
+
 void Kalman_init(Attitude_3D_Kalman* filter,float Abtastzeit_s, float Qyaw, float Qpitch_roll, float Qgyrobias, float Ryaw, float Rpitch_roll) 
 {
     filter->Abtastzeit_s = Abtastzeit_s;

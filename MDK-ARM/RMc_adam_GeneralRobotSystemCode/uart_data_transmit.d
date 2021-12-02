@@ -1,6 +1,5 @@
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Applications\Hardware\UART_data_transmit.c
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Task\Arm_Task.h
-rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Inc/struct_typedef.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Applications\Hardware\UART_data_transmit.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Inc/stm32f4xx_hal_conf.h
@@ -26,6 +25,7 @@ rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_D
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -37,7 +37,15 @@ rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_D
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Inc/usart.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Inc/main.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ../Inc/struct_typedef.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Applications\Software\Stxxid-Data-Transmission.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Applications\Software\referee.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Applications\Software\protocol.h

@@ -5,7 +5,7 @@
 #include "main.h"
 
 #define BMI088_TEMP_FACTOR 0.125f
-#define BMI088_TEMP_OFFSET 23.0f
+#define BMI088_TEMP_OFFSET 45.0f //23 changed by sethome
 
 #define BMI088_WRITE_ACCEL_REG_NUM 6
 #define BMI088_WRITE_GYRO_REG_NUM 6

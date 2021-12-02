@@ -69,9 +69,7 @@ void UART_rx_IRQHandler(transmit_data *uart)
   }
   else if (uart->huart->Instance->SR & UART_FLAG_IDLE) //如果为空闲中断
   {
-		__HAL_DMA_DISABLE(uart->hdma_usart_rx); //失效DMA
-		__HAL_UART_CLEAR_IDLEFLAG(uart->huart); //清除空闲中断标志
-		__HAL_UART_CLEAR_PEFLAG(uart->huart);   //清除等待标志
+		HAL_UART_DMAStop(uart->huart); //失效DMA
 		
     len = 256 - __HAL_DMA_GET_COUNTER(uart->hdma_usart_rx);//计算获得的字节长度
 		
@@ -87,15 +85,16 @@ void UART_rx_IRQHandler(transmit_data *uart)
 		}
     else if (uart->huart == &huart6)//串口二（板子丝印）数据处理
     {
-			//UART_send_data(UART6_data,uart->rev_data,len);
+			UART_send_data(UART6_data,uart->rev_data,len);
 		}
 
 		//清除数据
 		for(int p = 0;p < 256;p++)
 			uart->rev_data[p] = 0;
 		
+		__HAL_UART_CLEAR_IDLEFLAG(uart->huart); //清除空闲中断标志
+		__HAL_UART_CLEAR_PEFLAG(uart->huart);   //清除等待标志
 		HAL_UART_Receive_DMA(uart->huart, uart->rev_data, 256);   //重新使能DMA缓冲区
-		__HAL_DMA_ENABLE(uart->hdma_usart_rx);                    //使能DMA
   }
 	
 	__HAL_UART_CLEAR_PEFLAG(uart->huart);//清除等待标志

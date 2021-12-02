@@ -26,6 +26,7 @@ rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Dri
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
@@ -37,4 +38,7 @@ rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Dri
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

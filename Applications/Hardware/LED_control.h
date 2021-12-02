@@ -8,6 +8,10 @@
 #define GREEN  0xFF00FF00
 #define BLUE   0xFF0000FF
 #define YELLOW 0xFFFFFF00
+#define PINK   0xFFFFC0CB
+#define ORANGE 0xFFDA6E00
+#define PURPLE 0xFF800080
+#define BLANK  0xFF000000
 
 //外部调用
 void led_init(void);          //LED彩灯初始化

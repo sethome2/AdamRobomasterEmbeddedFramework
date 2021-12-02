@@ -21,6 +21,9 @@ typedef enum
   CAN_ID6 = 0x206,
   CAN_ID7 = 0x207,
   CAN_ID8 = 0x208,
+	
+	CAN_6020_SIGN_ID = 0x204,
+	
 } can_msg_id_e;
 
 //请在这宏定义您的电机ID
@@ -76,6 +79,22 @@ typedef struct
   float round_speed; //出轴旋转速度
 
 } motor_measure_t;
+
+typedef struct
+{
+  int16_t set_voltage; //设定的电压
+
+  uint16_t ecd;          //编码器
+  int16_t speed_rpm;     //转速
+  int16_t given_current; //电调给的电流
+  uint8_t temperate;     //温度（获取不到）
+  int16_t last_ecd;      //上一次编码器的数值
+
+  long long ecd_cnt; //编码器计数器
+  float angle_cnt;   //转过的总角度
+  float round_speed; //出轴旋转速度
+
+} motor_6020_measure_t;
 
 //外部调用
 void CAN1_send_current(void);                                        //发送电机控制电流

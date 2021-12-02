@@ -1,0 +1,11 @@
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: ..\Drivers\Chip\MPU6050\eMPL\inv_mpu_dmp_motion_driver.c
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: ..\Drivers\Chip\MPU6050\eMPL\inv_mpu.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: ../Inc/struct_typedef.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: ..\Drivers\Chip\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: ..\Drivers\Chip\MPU6050\eMPL\dmpKey.h
+rmc_adam_generalrobotsystemcode\inv_mpu_dmp_motion_driver.o: ..\Drivers\Chip\MPU6050\eMPL\dmpmap.h
