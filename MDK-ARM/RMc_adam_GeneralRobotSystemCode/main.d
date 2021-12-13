@@ -72,9 +72,9 @@ rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Hardware\PWM_control.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Hardware\IMU_updata.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Algorithm\Kalman_Filter_c.h
 rmc_adam_generalrobotsystemcode\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\chassis_move.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Hardware\UART_data_transmit.h
+rmc_adam_generalrobotsystemcode\main.o: ..\Drivers\Encoder\Encoder.h
+rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\guard_chassis.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\referee.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\protocol.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Task\Arm_Task.h
-rmc_adam_generalrobotsystemcode\main.o: ..\Drivers\Encoder\Encoder.h

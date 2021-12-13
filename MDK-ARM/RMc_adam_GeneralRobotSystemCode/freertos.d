@@ -68,6 +68,5 @@ rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\LED_control
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\IMU_updata.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Algorithm\Kalman_Filter_c.h
 rmc_adam_generalrobotsystemcode\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
-rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\chassis_move.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\PWM_control.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\Stxxid-Data-Transmission.h

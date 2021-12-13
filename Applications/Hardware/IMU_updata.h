@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-08-18 01:50:38
+ * @LastEditTime: 2021-12-09 10:58:23
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Applications\Hardware\IMU_updata.h
+ */
 #include "struct_typedef.h"
 #include "Kalman_Filter_c.h"
 
@@ -27,12 +35,12 @@ struct IMU_t
 		
 };
 
+extern struct IMU_t IMU_data;
+
 //外部调用
 void IMU_init(void);//IMU初始化
 void IMU_updata(void);//IMU数据更新
 void MagUpdate(void);
 
-//内部调用
-void IMU_heat_set(uint16_t ccr);//加热电阻PWM占空比
 #endif
 //end of flie

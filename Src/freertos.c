@@ -31,10 +31,13 @@
 #include "DBUS_remote_control.h"
 #include "LED_control.h"
 #include "IMU_updata.h"
-#include "chassis_move.h"
 #include "PWM_control.h"
 #include "Stxxid-Data-Transmission.h"
 #include "math.h"
+
+
+//#include "chassis_move.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -161,7 +164,6 @@ void ChassisTask_callback(void *argument)
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN ChassisTask_callback */
-  chassis_move_init();
 	char a[]="Test\n";
   /* Infinite loop */
   for (;;)
@@ -185,7 +187,8 @@ void RemoteTask_callback(void *argument)
   
 	for(;;)
 	{
-		
+		set_motor(1000,CAN_2_1);
+		set_motor(10000,CAN_2_6020_5);
     osDelay(10);
 	}
   /* USER CODE END RemoteTask_callback */
@@ -217,7 +220,7 @@ void SendCAN_Task_callback(void *argument)
       taskYIELD();
     }
 
-    osDelay(5);
+    osDelay(10);
   }
   /* USER CODE END SendCAN_Task_callback */
 }
@@ -240,7 +243,7 @@ void FlashLEDTask_callback(void *argument)
 			led_show(PINK);
 		#endif
 		#ifdef DEV_VERSION
-			led_show(ORANGE);
+			led_show(BLUE);
 		#endif
 		#ifdef RELEASE_VERSION
 			led_show(GREEN);

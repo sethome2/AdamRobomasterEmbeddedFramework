@@ -22,21 +22,22 @@ Dialog DLL:      TCM.DLL V1.14.9.0
  
 <h2>Project:</h2>
 C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\MDK-ARM\RMc_adam_GeneralRobotSystemCode.uvprojx
-Project File Date:  11/23/2021
+Project File Date:  12/09/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'RMc_adam_GeneralRobotSystemCode'
-compiling LED_control.c...
-compiling freertos.c...
-../Src/freertos.c(169): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
-  		CDC_Transmit_FS(a,5);
-../Src/freertos.c: 1 warning, 0 errors
-compiling main.c...
+compiling small_tools.c...
+compiling gimbal.c...
+..\Applications\Software\gimbal.c(62): warning:  #223-D: function "sliding_variance_cal" declared implicitly
+      gimbal.pitch.stable = sliding_variance_cal(&pitch_variance, gimbal.pitch.now);
+..\Applications\Software\gimbal.c(68): warning:  #550-D: variable "pitch_motor_speed" was set but never used
+      static float yaw_motor_speed = 0, pitch_motor_speed = 0;
+..\Applications\Software\gimbal.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=51272 RO-data=700 RW-data=676 ZI-data=31284  
+Program Size: Code=51576 RO-data=700 RW-data=676 ZI-data=30852  
 FromELF: creating hex file...
-"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 1 Warning(s).
+"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,7 +55,7 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.3.0
-Build Time Elapsed:  00:00:06
+Build Time Elapsed:  00:00:05
 </pre>
 </body>
 </html>

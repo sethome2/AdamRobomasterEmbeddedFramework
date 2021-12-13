@@ -3,6 +3,10 @@
         "can_receive&send.h": "c",
         "pwm_control.h": "c",
         "string.h": "c",
-        "arm_task.h": "c"
+        "arm_task.h": "c",
+        "guard_chassis.h": "c",
+        "struct_typedef.h": "c",
+        "imu_calculate.h": "c",
+        "imu_updata.h": "c"
     }
 }

@@ -50,3 +50,4 @@ rmc_adam_generalrobotsystemcode\usbd_cdc_if.o: ../Drivers/STM32F4xx_HAL_Driver/I
 rmc_adam_generalrobotsystemcode\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h
 rmc_adam_generalrobotsystemcode\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 rmc_adam_generalrobotsystemcode\usbd_cdc_if.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
+rmc_adam_generalrobotsystemcode\usbd_cdc_if.o: ..\Applications\Hardware\USB_VirCom.h

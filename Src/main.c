@@ -32,18 +32,22 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "stdio.h"
 #include "CAN_receive&send.h"
 #include "DBUS_remote_control.h"
 #include "LED_control.h"
 #include "PWM_control.h"
 #include "IMU_updata.h"
-#include "chassis_move.h"
 #include "UART_data_transmit.h"
+#include "Encoder.h"
+
+#include "stdio.h"
+
+//#include "chassis_move.h"
+#include "guard_chassis.h"
 #include "referee.h"
 #include "Arm_Task.h"
 
-#include "Encoder.h"
+
 
 /* USER CODE END Includes */
 
@@ -137,7 +141,8 @@ int main(void)
   uart_init();              //初始化串口
 
   //初始化软件
-  chassis_move_init();          //初始化底盘
+  //chassis_move_init();//初始化底盘
+  guard_chassis_move_init();//初始化底盘
   init_referee_struct_data(); //初始化裁判系统解析
   init_Encoder(&Arm_encoder);   //初始化推杆编码器变量
 

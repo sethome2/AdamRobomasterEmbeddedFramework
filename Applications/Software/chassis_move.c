@@ -11,148 +11,107 @@
                ++++
            2 %++++++% 3 */
 //wheel conf
-#define WHEEL_RADIUS 0.15240f	 //m
+#define WHEEL_RADIUS 0.15240f //m
 #define PI 3.1415926f
 
 //car conf
-#define ROLLER_DISTANCE 100    //mm  Öá¾à
-#define WHEELS_DISTANCE 100    //mm  ÂÖ¾à
-
+#define ROLLER_DISTANCE 100 //mm  Öá¾à
+#define WHEELS_DISTANCE 100 //mm  ÂÖ¾à
 
 struct chassis_status chassis;
 
-//´®¿Úµ÷ÊÔPID
-#define DEBUG
-
 //mm/s
-float wheel_rpm[4];						 //Âí´ïËÙ¶È£¨¼ÆËãÖµ£©
-float track_motor_rpm;
+float wheel_rpm[4]; //¼ÆËã³öµÄ×ªËÙ
 
-int16_t wheel_current[4];      //Âí´ïµçÁ÷£¨pid¼ÆËãÖµ£©
+int16_t wheel_current[4]; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½pidï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
 int16_t track_pid;
-//ÏÞËÙ
-#define MAX_VX_SPEED 2.5  			 //m/s 
+//ï¿½ï¿½ï¿½ï¿½
+#define MAX_VX_SPEED 2.5 //m/s
 #define MAX_VY_SPEED 2.5
 #define MAX_VR_SPEED 3
 #define MAX_TRACK_SPEED 3
 
-//¼ÓËÙ¶ÈÏÞÖÆ
-#define ACC_VX       0.01       //m/s^2
-#define ACC_VY       0.3   
-#define ACC_VW       0xFF
+//ï¿½ï¿½ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½
+#define ACC_VX 0.01 //m/s^2
+#define ACC_VY 0.3
+#define ACC_VW 0xFF
 
-//Âí´ïPID¿ØÖÆ±äÁ¿Êý×é
+//µ×ÅÌPID±äÁ¿
 pid_t motor_speed[4];
-pid_t track_motor_speed;
 
-//µ÷ÊÔµ×ÅÌÂí´ïPIDÊ¹ÓÃ
-char buff[5] = {0,0,0,0,0};
+//ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½PIDÊ¹ï¿½ï¿½
+char buff[5] = {0, 0, 0, 0, 0};
 uint8_t buff1[100];
 
-//µ×ÅÌ³õÊ¼»¯£¨½öÕë¶Ô4ÂÖÂó¿ËÄÉÄ·ÂÖ£©
+//ï¿½ï¿½ï¿½Ì³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½Ö£ï¿?
 void chassis_move_init()
 {
-	//Âí´ïPIDÉèÖÃ³õÊ¼»¯
-	pid_set(&motor_speed[FR],8000,0,500,15000,0);
-	pid_set(&motor_speed[FL],8000,0,500,15000,0);
-	pid_set(&motor_speed[BL],8000,0,500,15000,0);
-	pid_set(&motor_speed[BR],8000,0,500,15000,0);
-	//´¢¿éÂí´ïPIDÉèÖÃ³õÊ¼»¯
-	pid_set(&track_motor_speed,5000, 0, 20, 7000, 0);
+	//ÉèÖÃµ×ÅÌPID
+	pid_set(&motor_speed[FR], 8000, 0, 500, 15000, 0);
+	pid_set(&motor_speed[FL], 8000, 0, 500, 15000, 0);
+	pid_set(&motor_speed[BL], 8000, 0, 500, 15000, 0);
+	pid_set(&motor_speed[BR], 8000, 0, 500, 15000, 0);
 }
 
-//×î´óÖµÏÞÖÆ
-void val_limit(float *val,float MAX)
+//ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿?
+void val_limit(float *val, float MAX)
 {
-	if(fabs(*val) > MAX)
-		if(*val > 0)
+	if (fabs(*val) > MAX)
+		if (*val > 0)
 			*val = MAX;
 		else
 			*val = -MAX;
 }
 
-//ÏÞÖÆ±ä»¯
-void change_limit(float last,float *now,float limit)
+//ï¿½ï¿½ï¿½Æ±ä»¯
+void change_limit(float last, float *now, float limit)
 {
 	float change = *now - last;
-	if(fabs(change) > limit)
+	if (fabs(change) > limit)
 	{
-		if(change > 0)
+		if (change > 0)
 			*now = last + limit;
 		else
 			*now = last - limit;
 	}
 }
 
-//¼ÆËãµ×ÅÌÂí´ïËÙ¶È£¨×¢Òâ²»»á·¢ËÍ£©
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶È£ï¿½×¢ï¿½â²»ï¿½á·¢ï¿½Í£ï¿?
 void chassis_moto_speed_calc(float vx, float vy, float vw)
 {
-	//static float last_vx,last_vy,last_vw;//ÉÏ´ÎµÄËÙ¶È
-	
-	//ËÙ¶ÈÏÞÖÆ
-  val_limit(&vx, MAX_VX_SPEED);
-  val_limit(&vy, MAX_VY_SPEED);  
-  val_limit(&vw, MAX_VR_SPEED);  
-  
-	chassis.speed.vx = vx;	chassis.speed.vy = vy;	chassis.speed.vw = vw;
-	//¼ÓËÙ¶ÈÏÞÖÆ
+	//static float last_vx,last_vy,last_vw;//ï¿½Ï´Îµï¿½ï¿½Ù¶ï¿½
+
+	//ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½
+	val_limit(&vx, MAX_VX_SPEED);
+	val_limit(&vy, MAX_VY_SPEED);
+	val_limit(&vw, MAX_VR_SPEED);
+
+	chassis.speed.vx = vx;
+	chassis.speed.vy = vy;
+	chassis.speed.vw = vw;
+	//ï¿½ï¿½ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½
 	//change_limit(last_vx,&vx,ACC_VX);
 	//change_limit(last_vy,&vy,ACC_VY);
 	//change_limit(last_vw,&vw,ACC_VX);
-	
+
 	//last_vx = vx; last_vy = vy; last_vw = vw;
-	
-	//¼ÆËãÂÖ×ÓËÙ¶È
-  wheel_rpm[FR] = +chassis.speed.vx - chassis.speed.vy + chassis.speed.vw;
-  wheel_rpm[FL] = +chassis.speed.vx + chassis.speed.vy + chassis.speed.vw;
-  wheel_rpm[BL] = -chassis.speed.vx + chassis.speed.vy + chassis.speed.vw;
-  wheel_rpm[BR] = -chassis.speed.vx - chassis.speed.vy + chassis.speed.vw;
-	
-	//ËÙ¶È»·PID¼ÆËã
-	wheel_current[FR] = pid_cal(&motor_speed[FR],get_motor_data(CAN_1,chassis_FR).round_speed * WHEEL_RADIUS * PI,wheel_rpm[FR]);
-	wheel_current[FL] = pid_cal(&motor_speed[FL],get_motor_data(CAN_1,chassis_FL).round_speed * WHEEL_RADIUS * PI,wheel_rpm[FL]);
-	wheel_current[BL] = pid_cal(&motor_speed[BL],get_motor_data(CAN_1,chassis_BL).round_speed * WHEEL_RADIUS * PI,wheel_rpm[BL]);
-	wheel_current[BR] = pid_cal(&motor_speed[BR],get_motor_data(CAN_1,chassis_BR).round_speed * WHEEL_RADIUS * PI,wheel_rpm[BR]);
 
-	//Éè¶¨Âí´ïµçÁ÷
-	set_motor_current(wheel_current[FR],CAN_1,chassis_FR);
-	set_motor_current(wheel_current[FL],CAN_1,chassis_FL);
-	set_motor_current(wheel_current[BL],CAN_1,chassis_BL);
-	set_motor_current(wheel_current[BR],CAN_1,chassis_BR);	
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
+	wheel_rpm[FR] = +chassis.speed.vx - chassis.speed.vy + chassis.speed.vw;
+	wheel_rpm[FL] = +chassis.speed.vx + chassis.speed.vy + chassis.speed.vw;
+	wheel_rpm[BL] = -chassis.speed.vx + chassis.speed.vy + chassis.speed.vw;
+	wheel_rpm[BR] = -chassis.speed.vx - chassis.speed.vy + chassis.speed.vw;
+
+//	//ï¿½Ù¶È»ï¿½PIDï¿½ï¿½ï¿½ï¿½
+//	wheel_current[FR] = pid_cal(&motor_speed[FR], get_motor_data(CAN_1, chassis_FR).round_speed * WHEEL_RADIUS * PI, wheel_rpm[FR]);
+//	wheel_current[FL] = pid_cal(&motor_speed[FL], get_motor_data(CAN_1, chassis_FL).round_speed * WHEEL_RADIUS * PI, wheel_rpm[FL]);
+//	wheel_current[BL] = pid_cal(&motor_speed[BL], get_motor_data(CAN_1, chassis_BL).round_speed * WHEEL_RADIUS * PI, wheel_rpm[BL]);
+//	wheel_current[BR] = pid_cal(&motor_speed[BR], get_motor_data(CAN_1, chassis_BR).round_speed * WHEEL_RADIUS * PI, wheel_rpm[BR]);
+
+//	//ï¿½è¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿?
+//	set_motor_current(wheel_current[FR], CAN_1, chassis_FR);
+//	set_motor_current(wheel_current[FL], CAN_1, chassis_FL);
+//	set_motor_current(wheel_current[BL], CAN_1, chassis_BL);
+//	set_motor_current(wheel_current[BR], CAN_1, chassis_BR);
 }
-
-//¼ÆËã´¢¿éÂí´ïËÙ¶È£¨×¢Òâ²»»á·¢ËÍ£©
-void track_moto_speed_calc(float vy)
-{
-	if(vy<-5||vy>5)
-	{
-		set_motor_current(0,CAN_1,RollTrack);
-	}
-	else
-	{
-		val_limit(&vy, MAX_TRACK_SPEED);
-		track_motor_rpm=vy;
-		track_pid=pid_cal(&track_motor_speed,get_motor_data(CAN_1,RollTrack).round_speed,track_motor_rpm);
-		set_motor_current(track_pid,CAN_1,RollTrack);
-	}
-	
-}
-
-
-
-
-	//´®¿ÚPIDµ÷ÊÔ
-//	#ifdef DEBUG
-//		//sprintf(buff1,"%6.2f",wheel_rpm[FR]);
-//		sprintf(buff1,"%6.2f",get_motor_data(CAN_1,chassis_FR).round_speed * WHEEL_RADIUS * PI);
-//		buff1[15] = ',';
-//		sprintf(buff1+16,"%6.2f",get_motor_data(CAN_1,chassis_FL).round_speed * WHEEL_RADIUS * PI);
-//		buff1[36] = ',';
-//		sprintf(buff1+36,"%6.2f",get_motor_data(CAN_1,chassis_BL).round_speed * WHEEL_RADIUS * PI);
-//		buff1[50] = ',';
-//		sprintf(buff1+50,"%6.2f",get_motor_data(CAN_1,chassis_BR).round_speed * WHEEL_RADIUS * PI);
-//		buff1[74] = '\n';
-//		UART_send_data(UART1_data,buff1,75);
-//	#endif
-
 

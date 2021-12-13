@@ -1,3 +1,8 @@
+<!--
+ * @Author: sethome
+ * @Date: 2021-08-18 01:50:37
+ * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\README.md
+-->
 RMc_adam_GenralRobotSystem
 Ver1.0.4.20210818 Alpha
 
@@ -8,7 +13,7 @@ Ver1.0.4.20210818 Alpha
 相当于对官方的bsp做了精简，目前正在去DJI化（逃）
 希望如果这个对你有帮助，能提到这个框架~我们希望减少无用功，专注在应用程序的开发上
 
-作者：sethome +(有请工程组的各位)
+作者：sethome + (有请工程组的各位)
 
 ___
 写在最后：
@@ -20,28 +25,28 @@ release里有干净的工程和齐鲁工业大学Adam战队的工程机器人比
 比赛代码里很多是临时加的，就没什么可读性，见谅。
 ___
 问题：
-1.陀螺仪的数据不够准确
-2.未能支持裁判系统
+1. 陀螺仪的数据不够准确
+2. 未能支持裁判系统
 
 简单描述：
 尽可能使用HAL库函数，支持CubeMX二次定义，陀螺仪及PID（待实现）的定时控制
 
 ___
 更新日志（Ver1.0.4.20210818 Alpha）:
-1.修复长久以来的命名问题
+1. 修复长久以来的命名问题
 
 更新日志（Ver1.0.3.20210713 Alpha）:
-1.使用了SPI2_CS引脚为IO8，浮空输出模式，支持状态量控制，不支持PWM
+1. 使用了SPI2_CS引脚为IO8，浮空输出模式，支持状态量控制，不支持PWM
 
 更新日志（Ver1.0.2.20210712 Alpha）:
-1.更改IO口功能，IO1-5不变，IO6改为浮空输入模式，IO7为浮空外部中断
-2.增加了对光电编码器的支持(Drivers/Encoder.c)，但是无统一定时器，未能计算速度
-3.增加了对系统时间的支持(Applications/time.c)，最大49天时间
-4.移植了ADAM步兵的开源代码，为多个文件(referee.c,referee_usart_send_task.c)
-5.增加了CRC8/16(Algorithm/CRC8_CRC16.c),和fifo数据结构(Algorithm/fifo.c)的支持
+1. 更改IO口功能，IO1-5不变，IO6改为浮空输入模式，IO7为浮空外部中断
+2. 增加了对光电编码器的支持(Drivers/Encoder.c)，但是无统一定时器，未能计算速度
+3. 增加了对系统时间的支持(Applications/time.c)，最大49天时间
+4. 移植了ADAM步兵的开源代码，为多个文件(referee.c,referee_usart_send_task.c)
+5. 增加了CRC8/16(Algorithm/CRC8_CRC16.c),和fifo数据结构(Algorithm/fifo.c)的支持
 
 更新日志（Ver1.0.1.20210330 Alpha）：
-1.修复PWM输出问题
+1. 修复PWM输出问题
 
 更新日志（Ver1.0.0.20210327 Alpha）：
-1.bsp基本工作正常
+1. bsp基本工作正常
