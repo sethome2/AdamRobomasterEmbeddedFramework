@@ -42,6 +42,8 @@ rmc_adam_generalrobotsystemcode\guard_chassis.o: ../Drivers/STM32F4xx_HAL_Driver
 rmc_adam_generalrobotsystemcode\guard_chassis.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 rmc_adam_generalrobotsystemcode\guard_chassis.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 rmc_adam_generalrobotsystemcode\guard_chassis.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+rmc_adam_generalrobotsystemcode\guard_chassis.o: ..\Algorithm\small_tools.h
+rmc_adam_generalrobotsystemcode\guard_chassis.o: ..\Drivers\TF-MINI_PLUS\TF_MINI_PLUS_LaserRanging.h
 rmc_adam_generalrobotsystemcode\guard_chassis.o: ..\Applications\Hardware\time.h
 rmc_adam_generalrobotsystemcode\guard_chassis.o: ..\Algorithm\pid.h
 rmc_adam_generalrobotsystemcode\guard_chassis.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

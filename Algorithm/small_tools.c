@@ -7,7 +7,7 @@
 #include "math.h"
 
 //滑动方差
-void sliding_variance_init(sliding_variance *obj)//不一定需要初始化，但要注意index要为0
+void sliding_variance_init(sliding_variance *obj) //不一定需要初始化，但要注意index要为0
 {
   int i = 0;
   for (i = 0; i < 5; i++)
@@ -35,3 +35,25 @@ float sliding_variance_cal(sliding_variance *obj, float new)
 
   return variance;
 }
+
+void sliding_average_init(sliding_average *obj)
+{
+  for (int i = 0; i < 5; i++)
+    obj->data[i] = 0;
+  obj->sum;
+  obj->index = 4;
+}
+
+float sliding_average_cal(sliding_average *obj, float new)
+{
+  obj->sum += new - obj->data[obj->index];
+  obj->data[obj->index] = new;
+  if (obj->index == 4)
+    obj->index = 0;
+  else
+    obj->index++;
+
+  return obj->sum / 5.0f;
+}
+
+//end of file

@@ -43,10 +43,11 @@
 #include "stdio.h"
 
 //#include "chassis_move.h"
+#include "gimbal.h"
 #include "guard_chassis.h"
 #include "referee.h"
 #include "Arm_Task.h"
-
+#include "shoot.h"
 
 
 /* USER CODE END Includes */
@@ -143,6 +144,8 @@ int main(void)
   //初始化软件
   //chassis_move_init();//初始化底盘
   guard_chassis_move_init();//初始化底盘
+	gimbal_init();//初始化云台
+	shoot_init();//初始化发射机构
 
   led_show(BLUE);//初始化完毕
 
@@ -233,11 +236,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 1 */
   if (htim->Instance == TIM13)//1000HZ
   {
-    //IMU_updata();
+    IMU_updata();
   }
 	else if (htim->Instance == TIM14)//200HZ
 	{
-		//MagUpdate();
+		MagUpdate();
 	}
 		
   /* USER CODE END Callback 1 */

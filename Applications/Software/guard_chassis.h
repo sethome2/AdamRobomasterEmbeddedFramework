@@ -38,7 +38,7 @@ extern struct guard_chassis_status chassis;
 void guard_chassis_move_init(void);              //哨兵底盘初始化
 void guard_chassis_pid_calc(void);               //哨兵底盘PID初始化
 void guard_chassis_set_location(float location); //哨兵设定位置
-void guard_chassis_offset(void);                 //设定归零值，并回到原点
+void guard_chassis_offset(float loctaion);                 //设定归零值，并回到原点
 void guard_chassis_updata_location(void);        //哨兵更新位置
 #endif
 

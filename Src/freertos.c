@@ -35,6 +35,7 @@
 #include "TF_MINI_PLUS_LaserRanging.h"
 #include "guard_chassis.h" //哨兵底盘
 //#include "chassis_move.h"  //普通底盘
+#include "gimbal.h"
 #include "math.h"
 
 //#include "chassis_move.h"
@@ -65,37 +66,44 @@ extern struct IMU_t IMU_data;
 /* Definitions for flashLED */
 osThreadId_t flashLEDHandle;
 const osThreadAttr_t flashLED_attributes = {
-    .name = "flashLED",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityNormal,
+  .name = "flashLED",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for CAN_sendTask */
 osThreadId_t CAN_sendTaskHandle;
 const osThreadAttr_t CAN_sendTask_attributes = {
-    .name = "CAN_sendTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityRealtime7,
+  .name = "CAN_sendTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityRealtime7,
 };
 /* Definitions for FastTestTask */
 osThreadId_t FastTestTaskHandle;
 const osThreadAttr_t FastTestTask_attributes = {
-    .name = "FastTestTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "FastTestTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for RemoteTask */
 osThreadId_t RemoteTaskHandle;
 const osThreadAttr_t RemoteTask_attributes = {
-    .name = "RemoteTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityHigh,
+  .name = "RemoteTask",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for ChassisTask */
 osThreadId_t ChassisTaskHandle;
 const osThreadAttr_t ChassisTask_attributes = {
-    .name = "ChassisTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "ChassisTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityRealtime1,
+};
+/* Definitions for gimbalTask */
+osThreadId_t gimbalTaskHandle;
+const osThreadAttr_t gimbalTask_attributes = {
+  .name = "gimbalTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityRealtime6,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -108,6 +116,7 @@ void CAN_sendTask_callback(void *argument);
 void FastTestTask_callback(void *argument);
 void RemoteTask_callback(void *argument);
 void ChassisTask_callback(void *argument);
+void gimbalTask_callback(void *argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -117,8 +126,7 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   * @param  None
   * @retval None
   */
-void MX_FREERTOS_Init(void)
-{
+void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
@@ -155,6 +163,9 @@ void MX_FREERTOS_Init(void)
   /* creation of ChassisTask */
   ChassisTaskHandle = osThreadNew(ChassisTask_callback, NULL, &ChassisTask_attributes);
 
+  /* creation of gimbalTask */
+  gimbalTaskHandle = osThreadNew(gimbalTask_callback, NULL, &gimbalTask_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -162,6 +173,7 @@ void MX_FREERTOS_Init(void)
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
+
 }
 
 /* USER CODE BEGIN Header_flashLEDTask_callback */
@@ -257,7 +269,7 @@ void RemoteTask_callback(void *argument)
   /* Infinite loop */
   for (;;)
   {
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END RemoteTask_callback */
 }
@@ -272,12 +284,46 @@ void RemoteTask_callback(void *argument)
 void ChassisTask_callback(void *argument)
 {
   /* USER CODE BEGIN ChassisTask_callback */
+  sliding_average *offsetLocation = malloc(sizeof(sliding_average));
+  sliding_average_init(offsetLocation);
+
+  //简单暴力的先填满平均值数组
+  sliding_average_cal(offsetLocation, TF_LaserRanging.distance);
+  sliding_average_cal(offsetLocation, TF_LaserRanging.distance);
+  sliding_average_cal(offsetLocation, TF_LaserRanging.distance);
+  sliding_average_cal(offsetLocation, TF_LaserRanging.distance);
+  guard_chassis_offset(sliding_average_cal(offsetLocation, TF_LaserRanging.distance));
+
+  free(offsetLocation);
+
   /* Infinite loop */
   for (;;)
   {
-    osDelay(1);
+    guard_chassis_updata_location();
+    guard_chassis_pid_calc();
+    osDelay(10);
   }
   /* USER CODE END ChassisTask_callback */
+}
+
+/* USER CODE BEGIN Header_gimbalTask_callback */
+/**
+* @brief Function implementing the gimbalTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_gimbalTask_callback */
+void gimbalTask_callback(void *argument)
+{
+  /* USER CODE BEGIN gimbalTask_callback */
+  /* Infinite loop */
+  for(;;)
+  {
+		gimbal_updata();
+		gimbal_pid_cal();
+    osDelay(5);
+  }
+  /* USER CODE END gimbalTask_callback */
 }
 
 /* Private application code --------------------------------------------------*/

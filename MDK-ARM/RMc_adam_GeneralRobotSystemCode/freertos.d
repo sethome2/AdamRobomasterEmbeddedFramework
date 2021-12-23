@@ -69,4 +69,7 @@ rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\IMU_updata.
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Algorithm\Kalman_Filter_c.h
 rmc_adam_generalrobotsystemcode\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\PWM_control.h
-rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\Stxxid-Data-Transmission.h
+rmc_adam_generalrobotsystemcode\freertos.o: ..\Drivers\TF-MINI_PLUS\TF_MINI_PLUS_LaserRanging.h
+rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\guard_chassis.h
+rmc_adam_generalrobotsystemcode\freertos.o: ..\Algorithm\small_tools.h
+rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\gimbal.h

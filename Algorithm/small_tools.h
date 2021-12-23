@@ -12,4 +12,13 @@ typedef struct
 void sliding_variance_init(sliding_variance *obj);
 float sliding_variance_cal(sliding_variance *obj, float new);
 
+typedef struct 
+{
+    float data[5];
+    float sum;
+    unsigned char index;
+}sliding_average;
+void sliding_average_init(sliding_average *obj);
+float sliding_average_cal(sliding_average *obj, float new);
+
 //end of file

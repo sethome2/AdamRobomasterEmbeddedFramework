@@ -39,6 +39,9 @@ void gimbal_init()
 
     gimbal.yaw.offset = 0;
     gimbal.yaw.stable = 0;
+    
+    sliding_variance_init(&pitch_variance);
+    sliding_variance_init(&yaw_variance);
 }
 
 void gimbal_set_offset(float pitch, float yaw)
@@ -50,28 +53,34 @@ void gimbal_set_offset(float pitch, float yaw)
 void gimbal_updata()
 {
     //从陀螺仪或电机获取数据
+    //pitch轴更新
     gimbal.pitch.now = IMU_data.KF_result.pitch - gimbal.pitch.offset;
 
+    //yaw轴更新
     //decode_as_6020(YAW_MOTOR);
     //decode_as_3508(YAW_MOTOR);
     //gimbal.yaw.now = get_motor_data(YAW_MOTOR).angle_cnt - gimbal.yaw.offset;
     gimbal.yaw.now = IMU_data.KF_result.yaw - gimbal.yaw.offset;
 
-    gimbal.roll.now = IMU_data.KF_result.roll;
+    //yaw轴更新
+    //gimbal.roll.now = IMU_data.KF_result.roll;
 
     gimbal.pitch.stable = sliding_variance_cal(&pitch_variance, gimbal.pitch.now);
     gimbal.yaw.stable = sliding_variance_cal(&yaw_variance, gimbal.yaw.now);
 }
+void gimbal_set(float pitch,float yaw)
+{
+    gimbal.pitch.set = pitch;
+    gimbal.yaw.set = yaw;
+}
 
 void gimbal_pid_cal()
 {
-    static float yaw_motor_speed = 0, pitch_motor_speed = 0;
-
     //位置环
-    yaw_motor_speed = pid_cal(&yaw_location_pid, gimbal.yaw.now, gimbal.yaw.set);
-    pitch_motor_speed = pid_cal(&pitch_location_pid, gimbal.pitch.now, gimbal.pitch.set);
+    gimbal.yaw_speed = pid_cal(&yaw_location_pid, gimbal.yaw.now, gimbal.yaw.set);
+    gimbal.pitch_speed = pid_cal(&pitch_location_pid, gimbal.pitch.now, gimbal.pitch.set);
 
     //速度环
-    set_motor(pid_cal(&yaw_speed_pid, get_motor_data(YAW_MOTOR).speed_rpm, yaw_motor_speed), YAW_MOTOR);
-    set_motor(pid_cal(&yaw_speed_pid, get_motor_data(PITCH_MOTOR).speed_rpm, yaw_motor_speed), YAW_MOTOR);
+    set_motor(pid_cal(&yaw_speed_pid, get_motor_data(YAW_MOTOR).speed_rpm, gimbal.yaw_speed), YAW_MOTOR);
+    set_motor(pid_cal(&pitch_speed_pid, get_motor_data(PITCH_MOTOR).speed_rpm, gimbal.pitch_speed), PITCH_MOTOR);
 }
