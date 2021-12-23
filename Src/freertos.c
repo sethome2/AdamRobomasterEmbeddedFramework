@@ -36,6 +36,7 @@
 #include "guard_chassis.h" //ÉÚ±øµ×ÅÌ
 //#include "chassis_move.h"  //ÆÕÍ¨µ×ÅÌ
 #include "gimbal.h"
+#include "shoot.h"
 #include "math.h"
 
 //#include "chassis_move.h"
@@ -105,6 +106,13 @@ const osThreadAttr_t gimbalTask_attributes = {
   .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityRealtime6,
 };
+/* Definitions for NUCcontrolTask */
+osThreadId_t NUCcontrolTaskHandle;
+const osThreadAttr_t NUCcontrolTask_attributes = {
+  .name = "NUCcontrolTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityAboveNormal7,
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -117,6 +125,7 @@ void FastTestTask_callback(void *argument);
 void RemoteTask_callback(void *argument);
 void ChassisTask_callback(void *argument);
 void gimbalTask_callback(void *argument);
+void NUCcontrolTask_callback(void *argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -165,6 +174,9 @@ void MX_FREERTOS_Init(void) {
 
   /* creation of gimbalTask */
   gimbalTaskHandle = osThreadNew(gimbalTask_callback, NULL, &gimbalTask_attributes);
+
+  /* creation of NUCcontrolTask */
+  NUCcontrolTaskHandle = osThreadNew(NUCcontrolTask_callback, NULL, &NUCcontrolTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -251,7 +263,7 @@ void FastTestTask_callback(void *argument)
   /* Infinite loop */
   for (;;)
   {
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END FastTestTask_callback */
 }
@@ -321,9 +333,30 @@ void gimbalTask_callback(void *argument)
   {
 		gimbal_updata();
 		gimbal_pid_cal();
+		
+		shoot_update();
+		shoot_pid_cal();
     osDelay(5);
   }
   /* USER CODE END gimbalTask_callback */
+}
+
+/* USER CODE BEGIN Header_NUCcontrolTask_callback */
+/**
+* @brief Function implementing the NUCcontrolTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_NUCcontrolTask_callback */
+void NUCcontrolTask_callback(void *argument)
+{
+  /* USER CODE BEGIN NUCcontrolTask_callback */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(10);
+  }
+  /* USER CODE END NUCcontrolTask_callback */
 }
 
 /* Private application code --------------------------------------------------*/

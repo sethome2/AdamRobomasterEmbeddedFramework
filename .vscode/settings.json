@@ -11,6 +11,7 @@
         "tf_mini_plus_laserranging.h": "c",
         "stdlib.h": "c",
         "small_tools.h": "c",
-        "pid.h": "c"
+        "pid.h": "c",
+        "referee.h": "c"
     }
 }

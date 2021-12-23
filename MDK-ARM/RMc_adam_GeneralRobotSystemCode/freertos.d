@@ -73,3 +73,4 @@ rmc_adam_generalrobotsystemcode\freertos.o: ..\Drivers\TF-MINI_PLUS\TF_MINI_PLUS
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\guard_chassis.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Algorithm\small_tools.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\gimbal.h
+rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\shoot.h
