@@ -6,12 +6,12 @@
 #include "small_tools.h"
 #include "math.h"
 
-//婊戝姩鏂瑰樊
-void sliding_variance_init(sliding_variance *obj, float data[])//涓嶄竴瀹氶渶瑕佸垵濮嬪寲锛屼絾瑕佹敞鎰廼ndex瑕佷负0
+//滑动方差
+void sliding_variance_init(sliding_variance *obj)//不一定需要初始化，但要注意index要为0
 {
   int i = 0;
   for (i = 0; i < 5; i++)
-    obj->data[i] = data[i];
+    obj->data[i] = 0;
 
   obj->index = 4;
 }

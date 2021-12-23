@@ -6,6 +6,8 @@
 #include "string.h"
 #include "stdio.h"
 #include "referee.h"
+#include "TF_MINI_PLUS_LaserRanging.h"
+
 //DMA控制变量
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern DMA_HandleTypeDef hdma_usart1_tx;
@@ -81,11 +83,11 @@ void UART_rx_IRQHandler(transmit_data *uart)
     {
 			UART_send_data(UART1_data,uart->rev_data,len);
 			
-      referee_data_solve(uart->rev_data);
 		}
-    else if (uart->huart == &huart6)//串口二（板子丝印）数据处理
+    else if (uart->huart == &huart6)//串口六数据处理
     {
-			UART_send_data(UART6_data,uart->rev_data,len);
+			//UART_send_data(UART6_data,uart->rev_data,len);
+			updataTF_MINI_PLUS_LaserRanging(uart->rev_data,len);
 		}
 
 		//清除数据

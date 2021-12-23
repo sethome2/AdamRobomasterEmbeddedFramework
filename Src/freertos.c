@@ -32,9 +32,10 @@
 #include "LED_control.h"
 #include "IMU_updata.h"
 #include "PWM_control.h"
-#include "Stxxid-Data-Transmission.h"
+#include "TF_MINI_PLUS_LaserRanging.h"
+#include "guard_chassis.h" //ÉÚ±øµ×ÅÌ
+//#include "chassis_move.h"  //ÆÕÍ¨µ×ÅÌ
 #include "math.h"
-
 
 //#include "chassis_move.h"
 
@@ -61,33 +62,40 @@
 extern struct IMU_t IMU_data;
 
 /* USER CODE END Variables */
-/* Definitions for ChassisTask */
-osThreadId_t ChassisTaskHandle;
-const osThreadAttr_t ChassisTask_attributes = {
-  .name = "ChassisTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal,
+/* Definitions for flashLED */
+osThreadId_t flashLEDHandle;
+const osThreadAttr_t flashLED_attributes = {
+    .name = "flashLED",
+    .stack_size = 128 * 4,
+    .priority = (osPriority_t)osPriorityNormal,
+};
+/* Definitions for CAN_sendTask */
+osThreadId_t CAN_sendTaskHandle;
+const osThreadAttr_t CAN_sendTask_attributes = {
+    .name = "CAN_sendTask",
+    .stack_size = 128 * 4,
+    .priority = (osPriority_t)osPriorityRealtime7,
+};
+/* Definitions for FastTestTask */
+osThreadId_t FastTestTaskHandle;
+const osThreadAttr_t FastTestTask_attributes = {
+    .name = "FastTestTask",
+    .stack_size = 128 * 4,
+    .priority = (osPriority_t)osPriorityLow,
 };
 /* Definitions for RemoteTask */
 osThreadId_t RemoteTaskHandle;
 const osThreadAttr_t RemoteTask_attributes = {
-  .name = "RemoteTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityAboveNormal1,
+    .name = "RemoteTask",
+    .stack_size = 128 * 4,
+    .priority = (osPriority_t)osPriorityHigh,
 };
-/* Definitions for SendCAN_Task */
-osThreadId_t SendCAN_TaskHandle;
-const osThreadAttr_t SendCAN_Task_attributes = {
-  .name = "SendCAN_Task",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityRealtime,
-};
-/* Definitions for FlashLEDTask */
-osThreadId_t FlashLEDTaskHandle;
-const osThreadAttr_t FlashLEDTask_attributes = {
-  .name = "FlashLEDTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
+/* Definitions for ChassisTask */
+osThreadId_t ChassisTaskHandle;
+const osThreadAttr_t ChassisTask_attributes = {
+    .name = "ChassisTask",
+    .stack_size = 128 * 4,
+    .priority = (osPriority_t)osPriorityLow,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -95,10 +103,11 @@ const osThreadAttr_t FlashLEDTask_attributes = {
 
 /* USER CODE END FunctionPrototypes */
 
-void ChassisTask_callback(void *argument);
+void flashLEDTask_callback(void *argument);
+void CAN_sendTask_callback(void *argument);
+void FastTestTask_callback(void *argument);
 void RemoteTask_callback(void *argument);
-void SendCAN_Task_callback(void *argument);
-void FlashLEDTask_callback(void *argument);
+void ChassisTask_callback(void *argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -108,7 +117,8 @@ void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
   * @param  None
   * @retval None
   */
-void MX_FREERTOS_Init(void) {
+void MX_FREERTOS_Init(void)
+{
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
@@ -130,17 +140,20 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* creation of ChassisTask */
-  ChassisTaskHandle = osThreadNew(ChassisTask_callback, NULL, &ChassisTask_attributes);
+  /* creation of flashLED */
+  flashLEDHandle = osThreadNew(flashLEDTask_callback, NULL, &flashLED_attributes);
+
+  /* creation of CAN_sendTask */
+  CAN_sendTaskHandle = osThreadNew(CAN_sendTask_callback, NULL, &CAN_sendTask_attributes);
+
+  /* creation of FastTestTask */
+  FastTestTaskHandle = osThreadNew(FastTestTask_callback, NULL, &FastTestTask_attributes);
 
   /* creation of RemoteTask */
   RemoteTaskHandle = osThreadNew(RemoteTask_callback, NULL, &RemoteTask_attributes);
 
-  /* creation of SendCAN_Task */
-  SendCAN_TaskHandle = osThreadNew(SendCAN_Task_callback, NULL, &SendCAN_Task_attributes);
-
-  /* creation of FlashLEDTask */
-  FlashLEDTaskHandle = osThreadNew(FlashLEDTask_callback, NULL, &FlashLEDTask_attributes);
+  /* creation of ChassisTask */
+  ChassisTaskHandle = osThreadNew(ChassisTask_callback, NULL, &ChassisTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -149,61 +162,49 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
-
 }
 
-/* USER CODE BEGIN Header_ChassisTask_callback */
+/* USER CODE BEGIN Header_flashLEDTask_callback */
 /**
-  * @brief  Function implementing the ChassisTask thread.
+  * @brief  Function implementing the flashLED thread.
   * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_ChassisTask_callback */
-void ChassisTask_callback(void *argument)
+/* USER CODE END Header_flashLEDTask_callback */
+void flashLEDTask_callback(void *argument)
 {
   /* init code for USB_DEVICE */
   MX_USB_DEVICE_Init();
-  /* USER CODE BEGIN ChassisTask_callback */
-	char a[]="Test\n";
+  /* USER CODE BEGIN flashLEDTask_callback */
   /* Infinite loop */
   for (;;)
   {
-		CDC_Transmit_FS(a,5);
-    osDelay(1000);
+#ifdef TEST_VERSION
+    led_show(PINK);
+#endif
+#ifdef DEV_VERSION
+    led_show(BLUE);
+#endif
+#ifdef RELEASE_VERSION
+    led_show(GREEN);
+#endif
+    osDelay(80);
+    led_show(BLANK);
+    osDelay(80);
   }
-  /* USER CODE END ChassisTask_callback */
+  /* USER CODE END flashLEDTask_callback */
 }
 
-/* USER CODE BEGIN Header_RemoteTask_callback */
+/* USER CODE BEGIN Header_CAN_sendTask_callback */
 /**
-* @brief Function implementing the RemoteTask thread.
+* @brief Function implementing the CAN_sendTask thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_RemoteTask_callback */
-void RemoteTask_callback(void *argument)
+/* USER CODE END Header_CAN_sendTask_callback */
+void CAN_sendTask_callback(void *argument)
 {
-  /* USER CODE BEGIN RemoteTask_callback */
-  
-	for(;;)
-	{
-		set_motor(1000,CAN_2_1);
-		set_motor(10000,CAN_2_6020_5);
-    osDelay(10);
-	}
-  /* USER CODE END RemoteTask_callback */
-}
-
-/* USER CODE BEGIN Header_SendCAN_Task_callback */
-/**
-* @brief Function implementing the SendCAN_Task thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_SendCAN_Task_callback */
-void SendCAN_Task_callback(void *argument)
-{
-  /* USER CODE BEGIN SendCAN_Task_callback */
+  /* USER CODE BEGIN CAN_sendTask_callback */
   /* Infinite loop */
   for (;;)
   {
@@ -222,37 +223,61 @@ void SendCAN_Task_callback(void *argument)
 
     osDelay(10);
   }
-  /* USER CODE END SendCAN_Task_callback */
+  /* USER CODE END CAN_sendTask_callback */
 }
 
-/* USER CODE BEGIN Header_FlashLEDTask_callback */
+/* USER CODE BEGIN Header_FastTestTask_callback */
 /**
-* @brief Function implementing the FlashLEDTask thread.
+* @brief Function implementing the FastTestTask thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_FlashLEDTask_callback */
-void FlashLEDTask_callback(void *argument)
+/* USER CODE END Header_FastTestTask_callback */
+void FastTestTask_callback(void *argument)
 {
-  /* USER CODE BEGIN FlashLEDTask_callback */
-	//ÓÃÓÚ¼ì²âÏµÍ³ÊÇ·ñ¿¨ËÀ
+  /* USER CODE BEGIN FastTestTask_callback */
   /* Infinite loop */
-  for(;;)
+  for (;;)
   {
-		#ifdef TEST_VERSION
-			led_show(PINK);
-		#endif
-		#ifdef DEV_VERSION
-			led_show(BLUE);
-		#endif
-		#ifdef RELEASE_VERSION
-			led_show(GREEN);
-		#endif
-    osDelay(80);
-			led_show(BLANK);
-		osDelay(80); 
+    osDelay(1);
   }
-  /* USER CODE END FlashLEDTask_callback */
+  /* USER CODE END FastTestTask_callback */
+}
+
+/* USER CODE BEGIN Header_RemoteTask_callback */
+/**
+* @brief Function implementing the RemoteTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_RemoteTask_callback */
+void RemoteTask_callback(void *argument)
+{
+  /* USER CODE BEGIN RemoteTask_callback */
+  /* Infinite loop */
+  for (;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END RemoteTask_callback */
+}
+
+/* USER CODE BEGIN Header_ChassisTask_callback */
+/**
+* @brief Function implementing the ChassisTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_ChassisTask_callback */
+void ChassisTask_callback(void *argument)
+{
+  /* USER CODE BEGIN ChassisTask_callback */
+  /* Infinite loop */
+  for (;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END ChassisTask_callback */
 }
 
 /* Private application code --------------------------------------------------*/

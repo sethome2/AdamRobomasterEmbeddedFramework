@@ -143,8 +143,6 @@ int main(void)
   //初始化软件
   //chassis_move_init();//初始化底盘
   guard_chassis_move_init();//初始化底盘
-  init_referee_struct_data(); //初始化裁判系统解析
-  init_Encoder(&Arm_encoder);   //初始化推杆编码器变量
 
   led_show(BLUE);//初始化完毕
 
@@ -235,11 +233,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 1 */
   if (htim->Instance == TIM13)//1000HZ
   {
-    IMU_updata();
+    //IMU_updata();
   }
 	else if (htim->Instance == TIM14)//200HZ
 	{
-		MagUpdate();
+		//MagUpdate();
 	}
 		
   /* USER CODE END Callback 1 */

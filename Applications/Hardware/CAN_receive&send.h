@@ -16,10 +16,10 @@
 #include "main.h"
 
 //使用6020电机的ID5-7，添加其解析，一般不建议使用
-#define USE_CAN_1_6020
-#define USE_CAN_2_6020
-//#define USE_FREERTOS_DELAY
-#define USE_NOP_DELAY
+//#define USE_CAN_1_6020
+//#define USE_CAN_2_6020
+#define USE_FREERTOS_DELAY
+//#define USE_NOP_DELAY
 
 /* CAN send and receive ID */
 typedef enum

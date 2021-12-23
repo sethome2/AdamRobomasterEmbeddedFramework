@@ -49,3 +49,4 @@ rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Applications\Software\S
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Applications\Software\referee.h
 rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Applications\Software\protocol.h
+rmc_adam_generalrobotsystemcode\uart_data_transmit.o: ..\Drivers\TF-MINI_PLUS\TF_MINI_PLUS_LaserRanging.h

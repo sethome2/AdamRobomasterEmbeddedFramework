@@ -7,6 +7,9 @@
         "guard_chassis.h": "c",
         "struct_typedef.h": "c",
         "imu_calculate.h": "c",
-        "imu_updata.h": "c"
+        "imu_updata.h": "c",
+        "tf_mini_plus_laserranging.h": "c",
+        "stdlib.h": "c",
+        "small_tools.h": "c"
     }
 }

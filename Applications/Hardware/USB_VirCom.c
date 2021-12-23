@@ -15,3 +15,4 @@ void VirCom_rev(uint8_t data[], uint16_t len)
 {
     VirCom_send(data, len);
 }
+

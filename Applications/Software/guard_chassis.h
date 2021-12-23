@@ -1,13 +1,14 @@
 /*
  * @Author: sethome
  * @Date: 2021-12-02 11:48:50
- * @LastEditTime: 2021-12-09 10:47:14
+ * @LastEditTime: 2021-12-23 11:07:00
  * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Applications\Software\guard_chassis.h
  */
 #define __GUARD_CHASSIS_H__
 #ifdef __GUARD_CHASSIS_H__
 
 #include "CAN_receive&send.h"
+#include "small_tools.h"
 
 #include "struct_typedef.h"
 
@@ -18,9 +19,8 @@ struct guard_chassis_status
         float set;
         float last;
         float now;
-        float offset;
     } speed;
-    float acc;
+    float acc; // cm/s^2
 
     struct
     {
@@ -28,7 +28,9 @@ struct guard_chassis_status
         float last;
         float now;
         float offset;
-    } location;
+
+        sliding_variance stable;
+    } location; // cm
 };
 
 extern struct guard_chassis_status chassis;
