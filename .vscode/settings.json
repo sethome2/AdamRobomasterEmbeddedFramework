@@ -12,6 +12,12 @@
         "stdlib.h": "c",
         "small_tools.h": "c",
         "pid.h": "c",
-        "referee.h": "c"
+        "referee.h": "c",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "map": "cpp",
+        "crc8_crc16.h": "c",
+        "xtree": "cpp",
+        "utility": "cpp"
     }
 }

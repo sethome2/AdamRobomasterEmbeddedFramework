@@ -19,6 +19,7 @@
 #define CRC8_CRC16_H
 
 #include "main.h"
+#include "stdint.h"
 
 /**
   * @brief          calculate the crc8  
@@ -34,7 +35,7 @@
   * @param[in]      ucCRC8:初始CRC8
   * @retval         计算完的CRC8
   */
-extern uint8_t get_CRC8_check_sum(unsigned char *pchMessage,unsigned int dwLength,unsigned char ucCRC8);
+uint8_t get_CRC8_check_sum(unsigned char *pchMessage,unsigned int dwLength,unsigned char ucCRC8);
 
 /**
   * @brief          CRC8 verify function  
@@ -48,7 +49,7 @@ extern uint8_t get_CRC8_check_sum(unsigned char *pchMessage,unsigned int dwLengt
   * @param[in]      dw_length: 数据和校验的长度
   * @retval         真或者假
   */
-extern uint32_t verify_CRC8_check_sum(unsigned char *pchMessage, unsigned int dwLength);
+uint32_t verify_CRC8_check_sum(unsigned char *pchMessage, unsigned int dwLength);
 
 /**
   * @brief          append CRC8 to the end of data
@@ -62,7 +63,7 @@ extern uint32_t verify_CRC8_check_sum(unsigned char *pchMessage, unsigned int dw
   * @param[in]      dw_length: 数据和校验的长度
   * @retval         none
   */
-extern void append_CRC8_check_sum(unsigned char *pchMessage, unsigned int dwLength);
+void append_CRC8_check_sum(unsigned char *pchMessage, unsigned int dwLength);
 
 /**
   * @brief          calculate the crc16  
@@ -78,7 +79,7 @@ extern void append_CRC8_check_sum(unsigned char *pchMessage, unsigned int dwLeng
   * @param[in]      wCRC:初始CRC16
   * @retval         计算完的CRC16
   */
-extern uint16_t get_CRC16_check_sum(uint8_t *pchMessage,uint32_t dwLength,uint16_t wCRC);
+uint16_t get_CRC16_check_sum(uint8_t *pchMessage,uint32_t dwLength,uint16_t wCRC);
 
 /**
   * @brief          CRC16 verify function  
@@ -92,7 +93,7 @@ extern uint16_t get_CRC16_check_sum(uint8_t *pchMessage,uint32_t dwLength,uint16
   * @param[in]      dw_length: 数据和校验的长度
   * @retval         真或者假
   */
-extern uint32_t verify_CRC16_check_sum(uint8_t *pchMessage, uint32_t dwLength);
+uint32_t verify_CRC16_check_sum(uint8_t *pchMessage, uint32_t dwLength);
 
 /**
   * @brief          append CRC16 to the end of data
@@ -106,5 +107,5 @@ extern uint32_t verify_CRC16_check_sum(uint8_t *pchMessage, uint32_t dwLength);
   * @param[in]      dw_length: 数据和校验的长度
   * @retval         none
   */
-extern void append_CRC16_check_sum(uint8_t * pchMessage,uint32_t dwLength);
+void append_CRC16_check_sum(uint8_t * pchMessage,uint32_t dwLength);
 #endif
