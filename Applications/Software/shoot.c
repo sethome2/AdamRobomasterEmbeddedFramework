@@ -14,13 +14,13 @@
 #include "PWM_control.h"
 
 //拨弹电机配置
-#define TRIGGER_MOTOR CAN_2_5
+#define TRIGGER_MOTOR CAN_2_3
 #define A_BULLET_ANGEL 20.0f
 pid_t trigger_speed_pid;
 pid_t trigger_location_pid;
 
-//摩擦轮电机配置
-#ifdef USB_3508_AS_SHOOT_MOTOR
+//摩擦轮电机配置 3508
+#ifdef USE_3508_AS_SHOOT_MOTOR
 
 #define SHOOT_MOTOR1 CAN_2_3
 #define SHOOT_MOTOR2 CAN_2_4
@@ -34,7 +34,7 @@ shoot_t shoot;
 //初始化
 void shoot_init()
 {
-#ifdef USB_3508_AS_SHOOT_MOTOR
+#ifdef USE_3508_AS_SHOOT_MOTOR
     pid_set(&shoot1_speed_pid, 1000, 0, 0, 0, 2000);
     pid_set(&shoot2_speed_pid, 1000, 0, 0, 0, 2000);
 #endif
@@ -51,7 +51,7 @@ void shoot_init()
 //更新拨弹电机数据
 void shoot_update()
 {
-#ifdef USB_3508_AS_SHOOT_MOTOR
+#ifdef USE_3508_AS_SHOOT_MOTOR
     //如果使用3508作为拨弹电机的话
     shoot.shoot_speed[0] = get_motor_data(SHOOT_MOTOR1).speed_rpm;
     shoot.shoot_speed[1] = get_motor_data(SHOOT_MOTOR2).speed_rpm;
@@ -63,7 +63,7 @@ void shoot_update()
 
 void shoot_set_shoot_Motor_speed(float speed)
 {
-#ifdef USB_3508_AS_SHOOT_MOTOR
+#ifdef USE_3508_AS_SHOOT_MOTOR
     set_motor(pid_cal(&shoot1_speed_pid, get_motor_data(SHOOT_MOTOR1).speed_rpm, speed), SHOOT_MOTOR1);
     set_motor(pid_cal(&shoot2_speed_pid, get_motor_data(SHOOT_MOTOR2).speed_rpm, speed), SHOOT_MOTOR2);
 #else

@@ -6,11 +6,14 @@
  */
 #include "stdint.h"
 
+#define _SHOOT_H_
+#ifdef _SHOOT_H_
+
 #pragma anon_unions
 
 #define FULL_BULLETS 500
 
-#define USB_3508_AS_SHOOT_MOTOR
+//#define USE_3508_AS_SHOOT_MOTOR
 
 enum shoot_speed
 {
@@ -39,10 +42,15 @@ typedef struct
 
 } shoot_t;
 
+extern shoot_t shoot;
+
 //外部调用
 void shoot_init(void);    //初始化
 void shoot_update(void);  //更新拨弹电机速度等
 void shoot_pid_cal(void); //计算pid
 int shoot_Bullets(int n); //发射N颗子弹
 void shoot_reload(void);  //子弹重新计数
+
+#endif
+
 //end of file

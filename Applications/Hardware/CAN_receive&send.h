@@ -98,7 +98,7 @@ typedef enum
 #define M6020_2_7 CAN_2_6020_7
 
 //马达基础参数
-#define ECD_MAX 8191       //编码器最大值
+#define ECD_MAX 8191.0f       //编码器最大值
 #define M3508_P 19.0f      //M3508电机减速比
 #define M2006_P 36.0f      //M2006电机减速比
 #define MAX_CURRENT 16384  //M2006+M3508最大电流 20A / MAX_CURRENT

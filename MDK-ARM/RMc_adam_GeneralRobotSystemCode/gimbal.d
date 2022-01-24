@@ -47,3 +47,4 @@ rmc_adam_generalrobotsystemcode\gimbal.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/st
 rmc_adam_generalrobotsystemcode\gimbal.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 rmc_adam_generalrobotsystemcode\gimbal.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 rmc_adam_generalrobotsystemcode\gimbal.o: ..\Algorithm\small_tools.h
+rmc_adam_generalrobotsystemcode\gimbal.o: ..\Applications\Hardware\USB_VirCom.h

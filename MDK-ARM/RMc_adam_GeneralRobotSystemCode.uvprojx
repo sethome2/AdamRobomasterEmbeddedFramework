@@ -663,7 +663,7 @@
                             
               <Undefine />
                             
-              <IncludePath>../Inc;       ../Drivers/STM32F4xx_HAL_Driver/Inc;       ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;       ../Middlewares/Third_Party/FreeRTOS/Source/include;       ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;       ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;       ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;       ../Drivers/CMSIS/Include;       ..\Algorithm;       ..\Drivers\Chip;       ..\Task;       ..\Drivers\Encoder;       ..\Applications\Software;       ..\Applications\Hardware;       ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;       ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;       ..\Algorithm\madgwickAHRS;       ..\Algorithm\MahonyAHRS;       ..\Drivers\Chip\MPU6050;       ..\Drivers\Chip\MPU6050\eMPL;       ..\Drivers\TF-MINI_PLUS</IncludePath>
+              <IncludePath>../Inc;         ../Drivers/STM32F4xx_HAL_Driver/Inc;         ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;         ../Middlewares/Third_Party/FreeRTOS/Source/include;         ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;         ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;         ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;         ../Drivers/CMSIS/Include;         ..\Algorithm;         ..\Drivers\Chip;         ..\Task;         ..\Drivers\Encoder;         ..\Applications\Software;         ..\Applications\Hardware;         ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;         ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;         ..\Algorithm\madgwickAHRS;         ..\Algorithm\MahonyAHRS;         ..\Drivers\Chip\MPU6050;         ..\Drivers\Chip\MPU6050\eMPL;         ..\Drivers\TF-MINI_PLUS</IncludePath>
                           
             </VariousControls>
                       
@@ -1744,26 +1744,6 @@
               <FileType>1</FileType>
                             
               <FilePath>..\Applications\Software\IMU_calculate.c</FilePath>
-                          
-            </File>
-                        
-            <File>
-                            
-              <FileName>referee.c</FileName>
-                            
-              <FileType>1</FileType>
-                            
-              <FilePath>..\Applications\Software\referee.c</FilePath>
-                          
-            </File>
-                        
-            <File>
-                            
-              <FileName>refree_usart_send_task.c</FileName>
-                            
-              <FileType>1</FileType>
-                            
-              <FilePath>..\Applications\Software\refree_usart_send_task.c</FilePath>
                           
             </File>
                         

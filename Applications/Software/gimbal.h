@@ -6,6 +6,8 @@
 #define __GIMBAL_H__
 #ifdef __GIMBAL_H__
 
+#include "pid.h"
+
 struct gimbal_status
 {
     struct
@@ -31,9 +33,12 @@ struct gimbal_status
 
 extern struct gimbal_status gimbal;
 
+extern pid_t pitch_speed_pid;
+
 //外部调用
 void gimbal_init(void);                         //云台初始化
 void gimbal_set_offset(float pitch, float yaw); //设置云台初始值
+void gimbal_set(float pitch,float yaw); //设置云台角度
 void gimbal_pid_cal(void);//云台PID计算
 void gimbal_updata(void);                       //更新云台数据
 //end of file

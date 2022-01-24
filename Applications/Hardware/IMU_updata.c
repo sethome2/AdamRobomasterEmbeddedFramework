@@ -53,7 +53,7 @@ void IMU_init()
 	IMU_data.madgwick_result.q[2] = 0.0f;
 	IMU_data.madgwick_result.q[3] = 0.0f;
 
-	pid_set(&IMU_tempure_pid, 1100, 0.1, 0, 10000, 1520); //PID设置
+	pid_set(&IMU_tempure_pid, 300, 0.01, 0, 8000, 1520); //PID设置
 
 	HAL_TIM_Base_Start(&htim10);			   //加热电阻PID
 	HAL_TIM_PWM_Start(&htim10, TIM_CHANNEL_1); //加热电阻PWM
@@ -102,6 +102,14 @@ void IMU_heat_set(uint16_t ccr)
 {
 	__HAL_TIM_SetCompare(&htim10, TIM_CHANNEL_1, ccr); //HAL库PWM的CCR设定
 													   //TIM10->CCR1 = (pwm);
+}
+
+//旋转90度
+float rotate_90(float a)
+{
+	float ans = 0.0;
+	
+	return ans;
 }
 
 //end of file

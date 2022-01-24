@@ -18,8 +18,8 @@ typedef struct
     int remainingBullets;
     enum 
     {
-        Red = 0,
-        Blue,
+        Red_Team = 0,
+        Blue_Team,
     }Team;
 
     char customStr[2]; //内存对齐
@@ -37,6 +37,8 @@ typedef struct
 
     char customStr[10]; //内存对齐
 } NUC_data_t;
+
+extern NUC_data_t fromNUC;
 
 //对STM32向NUC的信息解/编码
 int encodeSTM32(STM32_data_t *target, unsigned char rx_buff[], unsigned int len);

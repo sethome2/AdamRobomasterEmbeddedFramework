@@ -80,13 +80,12 @@ void UART_rx_IRQHandler(transmit_data *uart)
 		
     if (uart->huart == &huart1)//串口一数据处理
     {
-			UART_send_data(UART1_data,uart->rev_data,len);
-			
-		}
-    else if (uart->huart == &huart6)//串口六数据处理
-    {
-			//UART_send_data(UART6_data,uart->rev_data,len);
+			//UART_send_data(UART1_data,uart->rev_data,len);
 			updataTF_MINI_PLUS_LaserRanging(uart->rev_data,len);
+		}
+    else if (uart->huart == &huart6)//串口二数据处理
+    {
+			UART_send_data(UART6_data,uart->rev_data,len);
 		}
 
 		//清除数据

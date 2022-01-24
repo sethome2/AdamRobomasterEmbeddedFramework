@@ -9,10 +9,10 @@ using namespace std;
 #define HEADER 0xA5
 typedef struct
 {
-    uint8_t SOF = HEADER; //包头
-    uint16_t data_len;    //数据区域的长度
-    uint8_t seq;          //序号
-    uint8_t CRC8;         //CRC8校验值
+    uint8_t SOF;       //包头
+    uint16_t data_len; //数据区域的长度
+    uint8_t seq;       //序号
+    uint8_t CRC8;      //CRC8校验值
 } frame_head;
 
 referee_t referee;
@@ -40,25 +40,23 @@ int referee_decode_data(void *target_data, unsigned char rx_data[], unsigned int
 //从串口接收的解析
 int referee_decode_full_frame(unsigned char rx_data[], unsigned int len)
 {
-    if (len < 9) //太短了
+    if (len < 9) //太短了   
         return -1;
-    else if (rx_data[0] != 0xA5) //帧头不对
+    else if (rx_data[0] != HEADER) //帧头不对
         return -2;
 
     //复制帧头区域
     frame_head this_head;
-    memcpy(&this_head, rx_data, 5);
+    memcpy(&this_head, rx_data, sizeof(frame_head));
     //此处应有CRC8校验
 
-    uint16_t commandID = rx_data[4] + rx_data[5] * 256;
+    uint16_t commandID = rx_data[sizeof(frame_head) + 1] + rx_data[sizeof(frame_head) + 2] * 256;
 
     map<unsigned int, void *>::iterator iter = commandMem.find(commandID);
     if (iter != commandMem.end())
         return referee_decode_data(iter->second, rx_data + 5, this_head.data_len);
     else
         return -3; //找不到命令
-
-    return 0;
 }
 
 /**
@@ -74,7 +72,7 @@ template <typename T>
 void referre_encode_frame(unsigned int commandID, unsigned char tx_data[], unsigned int *len, T *target)
 {
     static uint8_t seq = 0;
-    if(*len < 10)
+    if (*len < 10)
         return;
 
     //设置帧头
@@ -83,6 +81,7 @@ void referre_encode_frame(unsigned int commandID, unsigned char tx_data[], unsig
     send_head.seq = seq++;
     send_head.data_len = sizeof(T);
     //send_head.CRC8 = ?
+    memcpy(&send_head, tx_data, sizeof(frame_head));
 
     //设置ID
     union
@@ -94,9 +93,13 @@ void referre_encode_frame(unsigned int commandID, unsigned char tx_data[], unsig
     tx_data[sizeof(frame_head) + 1] = ID.uint8_data[0];
     tx_data[sizeof(frame_head) + 2] = ID.uint8_data[1];
 
-    *len = sizeof(frame_head) + 2 + sizeof(T) + 2; //长度为 帧头 + 命令ID（2）+ 数据部分 + CRC16（2）
+    //拷贝数据部分
+    memcpy(target, tx_data + sizeof(frame_head) + 3, sizeof(T));
 
     //CRC16校验
+
+    //返回长度
+    *len = sizeof(frame_head) + 2 + sizeof(T) + 2; //长度为 帧头 + 命令ID（2）+ 数据部分 + CRC16（2）
 }
 
 void referee_init()

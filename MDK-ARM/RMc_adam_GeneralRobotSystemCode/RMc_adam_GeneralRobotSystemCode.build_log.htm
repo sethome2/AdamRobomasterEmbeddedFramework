@@ -22,16 +22,23 @@ Dialog DLL:      TCM.DLL V1.14.9.0
  
 <h2>Project:</h2>
 C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\MDK-ARM\RMc_adam_GeneralRobotSystemCode.uvprojx
-Project File Date:  12/24/2021
+Project File Date:  01/19/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'RMc_adam_GeneralRobotSystemCode'
-compiling referee.cpp...
+compiling shoot.c...
+compiling gimbal.c...
+..\Applications\Software\gimbal.c(64): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		gimbal.yaw.now = (get_motor_data(
+AW_MOTOR).angle_cnt) / 3.0 - gimbal.yaw.offset;
+..\Applications\Software\gimbal.c: 1 warning, 0 errors
+compiling freertos.c...
+compiling main.c...
 linking...
-Program Size: Code=77380 RO-data=2892 RW-data=764 ZI-data=31676  
+Program Size: Code=54416 RO-data=848 RW-data=664 ZI-data=31224  
 FromELF: creating hex file...
-"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 0 Warning(s).
+"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -49,7 +56,7 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.3.0
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:07
 </pre>
 </body>
 </html>

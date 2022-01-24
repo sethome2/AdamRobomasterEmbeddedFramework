@@ -4,9 +4,10 @@
 void pid_set(pid_t *PidSet,float p_set,float i_set,float d_set,float lim_out_set,float lim_i_outset)//PID设置
 {
   PidSet->p = p_set;   PidSet->i = i_set;   PidSet->d = d_set;
-	PidSet->p_out = PidSet->i_out = PidSet->d_out = 0;
+	PidSet->p_out = 0.0f;
+	PidSet->i_out = 0.0f;
+	PidSet->d_out = 0.0f;
   PidSet->lim_out = lim_out_set;   PidSet->lim_i_out = lim_i_outset;//将设置赋值
-  return;
 }
 
 //PID计算
@@ -17,7 +18,8 @@ float pid_cal(pid_t *PidGoal,float Now,float Set)//PID??
   PidGoal->err = Set - Now;//计算误差
  
   PidGoal->p_out = PidGoal->p * PidGoal->err;
-  PidGoal->i_out += PidGoal->i * PidGoal->err;
+	if(PidGoal->i != 0)
+		PidGoal->i_out += PidGoal->i * PidGoal->err;
   PidGoal->d_out = PidGoal->d * (PidGoal->err - PidGoal->err_last);//pid运算
   
   if(fabs(PidGoal->i_out) > PidGoal->lim_i_out)//防止积分过大

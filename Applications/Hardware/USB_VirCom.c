@@ -5,14 +5,17 @@
  */
 #include "usbd_cdc_if.h"
 #include "USB_VirCom.h"
+#include "NUC_communication.h"
 
+NUC_data_t fromNUC;
+	
 void VirCom_send(uint8_t data[], uint16_t len)
 {
-    CDC_Transmit_FS(data, len);
+  CDC_Transmit_FS(data, len);
 }
 
 void VirCom_rev(uint8_t data[], uint16_t len)
 {
-    VirCom_send(data, len);
+	decodeNUC(&fromNUC,data,len);
 }
 

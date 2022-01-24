@@ -48,6 +48,8 @@
 #include "Arm_Task.h"
 #include "shoot.h"
 
+#include "USB_VirCom.h"
+
 
 /* USER CODE END Includes */
 
@@ -227,19 +229,21 @@ void SystemClock_Config(void)
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   /* USER CODE BEGIN Callback 0 */
-
+	
   /* USER CODE END Callback 0 */
   if (htim->Instance == TIM2) {
     HAL_IncTick();
   }
   /* USER CODE BEGIN Callback 1 */
-  if (htim->Instance == TIM13)//1000HZ
+	if (htim->Instance == TIM13)//1000HZ
   {
-    IMU_updata();
   }
 	else if (htim->Instance == TIM14)//200HZ
 	{
+    IMU_updata();
 		MagUpdate();
+		//char a[100];
+		//VirCom_send(a, sprintf(a,"%f,%f\n",pitch_speed_pid.set,pitch_speed_pid.err));
 	}
 		
   /* USER CODE END Callback 1 */

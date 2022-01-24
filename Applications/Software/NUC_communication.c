@@ -10,7 +10,7 @@
 #include "stdlib.h"
 #include "string.h"
 
-int encodeSTM32(STM32_data_t *target, unsigned char rx_buff[], unsigned int len)
+int decodeSTM32(STM32_data_t *target, unsigned char rx_buff[], unsigned int len)
 {
     if (len != sizeof(STM32_data_t))
         return -1;
@@ -18,7 +18,7 @@ int encodeSTM32(STM32_data_t *target, unsigned char rx_buff[], unsigned int len)
     memcpy(target, rx_buff, sizeof(STM32_data_t));
     return 0;
 }
-int decodeSTM32(STM32_data_t *target, unsigned char tx_buff[], unsigned int len)
+int encodeSTM32(STM32_data_t *target, unsigned char tx_buff[], unsigned int len)
 {
     if (len < sizeof(STM32_data_t))
         return -1;
@@ -27,7 +27,7 @@ int decodeSTM32(STM32_data_t *target, unsigned char tx_buff[], unsigned int len)
     return 0;
 }
 
-int encodeNUC(NUC_data_t *target, unsigned char rx_buff[], unsigned int len)
+int decodeNUC(NUC_data_t *target, unsigned char rx_buff[], unsigned int len)
 {
     if (len != sizeof(NUC_data_t))
         return -1;
@@ -35,7 +35,7 @@ int encodeNUC(NUC_data_t *target, unsigned char rx_buff[], unsigned int len)
     memcpy(target, rx_buff, sizeof(NUC_data_t));
     return 0;
 }
-int decodeNUC(NUC_data_t *target, unsigned char tx_buff[], unsigned int len)
+int encodeNUC(NUC_data_t *target, unsigned char tx_buff[], unsigned int len)
 {
     if (len < sizeof(NUC_data_t))
         return -1;
