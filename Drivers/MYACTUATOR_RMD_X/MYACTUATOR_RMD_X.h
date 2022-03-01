@@ -1,7 +1,7 @@
 /*
  * @Author: sethome
  * @Date: 2022-02-27 23:20:23
- * @LastEditTime: 2022-03-01 16:34:24
+ * @LastEditTime: 2022-03-01 21:18:21
  * @LastEditors: Please set LastEditors
  * @Description: 
  * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h
@@ -20,10 +20,11 @@ typedef struct
 
 	int32_t ecd;
 	
+	int speed;
 	int temp;
 } RMD_X;
 
-extern RMD_X RMD_motor[32];
+extern RMD_X RMD_motor[8];
 
 typedef enum
 {
@@ -35,22 +36,11 @@ typedef enum
 	MOTOR_ID_5 = 0x145,
 	MOTOR_ID_6 = 0x146,
 
-	LOCATION_P2RAM = 0x36,
-	LOCATION_I2RAM = 0x37,
-	SPEED_P2RAM = 0x38,
-	SPEED_I2RAM = 0x39,
-	CURRENT_P2RAM = 0x3A,
-	CURRENT_I2RAM = 0x3B,
-	
-	LOCATION_P2RAM = 0x36,
-	LOCATION_I2RAM = 0x37,
-	SPEED_P2RAM = 0x38,
-	SPEED_I2RAM = 0x39,
-	CURRENT_P2RAM = 0x3A,
-	CURRENT_I2RAM = 0x3B,
+	PID_SET = 0x31,
 
 	READ_LOCATION = 0x60, //编码器
 
+	WRITE_CURRENT = 0xA1,
 	WRITE_LOCATION1 = 0xA3,
 	WRITE_LOCATION2 = 0xA4,
 
@@ -60,8 +50,9 @@ typedef enum
 } RMD_X_ID_CMD;
 
 void RMD_config(RMD_X *motor, float location_p, float location_i, float speed_p, float speed_i, float current_p, float current_i); //设置电机
-void RMD_setup(RMD_X *motor, RMD_X_ID_CMD ID);																																										 //设置电机
-void RMD_run(RMD_X_ID_CMD ID);																																																		 //启动电机
-void RMD_write_angle(RMD_X_ID_CMD ID, float angle);																																								 //写入设定角度
-void RMD_write_angle_with_speed(RMD_X_ID_CMD ID, uint16_t speed, float angle);																										 //写入限制速度的角度控制
-void RMD_decode_reply(uint16_t CAN_ID, uint8_t data[8]);																																					 //解码信息
+void RMD_setup(RMD_X *motor, RMD_X_ID_CMD ID);																					   //设置电机
+void RMD_run(RMD_X_ID_CMD ID);																									   //启动电机
+void RMD_write_current(RMD_X_ID_CMD ID, int16_t current);																		   //写入角度
+void RMD_write_angle(RMD_X_ID_CMD ID, float angle);																				   //写入设定角度
+void RMD_write_angle_with_speed(RMD_X_ID_CMD ID, uint16_t speed, float angle);													   //写入限制速度的角度控制
+void RMD_decode_reply(uint16_t CAN_ID, uint8_t data[8]);																		   //解码信息

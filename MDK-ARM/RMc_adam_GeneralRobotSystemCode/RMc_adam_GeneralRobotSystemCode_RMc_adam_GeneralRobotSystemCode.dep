@@ -1,8 +1,8 @@
 Dependencies for Project 'RMc_adam_GeneralRobotSystemCode', Target 'RMc_adam_GeneralRobotSystemCode': (DO NOT MODIFY !)
-F (../Src/main.c)(0x621DCF4F)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\main.o --omf_browse rmc_adam_generalrobotsystemcode\main.crf --depend rmc_adam_generalrobotsystemcode\main.d)
-I (../Inc/main.h)(0x61F13AAD)
+F (../Src/main.c)(0x621E2674)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\main.o --omf_browse rmc_adam_generalrobotsystemcode\main.crf --depend rmc_adam_generalrobotsystemcode\main.d)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -41,7 +41,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -50,20 +50,20 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x6138C35D
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6138C35D)
-I (../Inc/can.h)(0x61F13AAA)
-I (../Inc/crc.h)(0x61F13AAA)
-I (../Inc/dma.h)(0x61F13AAB)
-I (../Inc/i2c.h)(0x61F13AAB)
-I (../Inc/spi.h)(0x61F13AAB)
-I (../Inc/tim.h)(0x61F13AAB)
-I (../Inc/usart.h)(0x61F13AAC)
-I (../Inc/usb_device.h)(0x61F13AAC)
+I (../Inc/can.h)(0x621E1A94)
+I (../Inc/crc.h)(0x621E1A94)
+I (../Inc/dma.h)(0x621E1A95)
+I (../Inc/i2c.h)(0x621E1A95)
+I (../Inc/spi.h)(0x621E1A95)
+I (../Inc/tim.h)(0x621E1A96)
+I (../Inc/usart.h)(0x621E1A96)
+I (../Inc/usb_device.h)(0x621E1A96)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/gpio.h)(0x61F13AA7)
+I (../Inc/gpio.h)(0x621E1A90)
 I (..\Applications\Hardware\CAN_receive&send.h)(0x61EE70E7)
 I (../Inc/struct_typedef.h)(0x601434AF)
 I (..\Applications\Hardware\DBUS_remote_control.h)(0x60917F9F)
@@ -80,12 +80,12 @@ I (..\Algorithm\pid.h)(0x600C5D86)
 I (..\Applications\Software\Arm.h)(0x621B989B)
 I (..\Applications\Software\shoot.h)(0x6203CA5D)
 I (..\Applications\Hardware\USB_VirCom.h)(0x61AD765A)
-I (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h)(0x621DD88D)
-F (../Src/gpio.c)(0x61F13AA7)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\gpio.o --omf_browse rmc_adam_generalrobotsystemcode\gpio.crf --depend rmc_adam_generalrobotsystemcode\gpio.d)
-I (../Inc/gpio.h)(0x61F13AA7)
-I (../Inc/main.h)(0x61F13AAD)
+I (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h)(0x621E1D1D)
+F (../Src/gpio.c)(0x621E1A90)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\gpio.o --omf_browse rmc_adam_generalrobotsystemcode\gpio.crf --depend rmc_adam_generalrobotsystemcode\gpio.d)
+I (../Inc/gpio.h)(0x621E1A90)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -122,11 +122,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-F (../Src/freertos.c)(0x621DD747)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\freertos.o --omf_browse rmc_adam_generalrobotsystemcode\freertos.crf --depend rmc_adam_generalrobotsystemcode\freertos.d)
+F (../Src/freertos.c)(0x621E2714)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\freertos.o --omf_browse rmc_adam_generalrobotsystemcode\freertos.crf --depend rmc_adam_generalrobotsystemcode\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -134,9 +134,9 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6138C35D)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -173,11 +173,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6138C35D)
-I (../Inc/usbd_cdc_if.h)(0x61F13AAC)
+I (../Inc/usbd_cdc_if.h)(0x621E1A97)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
@@ -198,12 +198,12 @@ I (..\Algorithm\pid.h)(0x600C5D86)
 I (..\Applications\Software\shoot.h)(0x6203CA5D)
 I (..\Applications\Hardware\USB_VirCom.h)(0x61AD765A)
 I (..\Applications\Software\NUC_communication.h)(0x62079E95)
-I (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h)(0x621DD88D)
-F (../Src/can.c)(0x61F3D383)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\can.o --omf_browse rmc_adam_generalrobotsystemcode\can.crf --depend rmc_adam_generalrobotsystemcode\can.d)
-I (../Inc/can.h)(0x61F13AAA)
-I (../Inc/main.h)(0x61F13AAD)
+I (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h)(0x621E1D1D)
+F (../Src/can.c)(0x621E1D0A)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\can.o --omf_browse rmc_adam_generalrobotsystemcode\can.crf --depend rmc_adam_generalrobotsystemcode\can.d)
+I (../Inc/can.h)(0x621E1A94)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -240,11 +240,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-F (../Src/crc.c)(0x61F13AAA)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\crc.o --omf_browse rmc_adam_generalrobotsystemcode\crc.crf --depend rmc_adam_generalrobotsystemcode\crc.d)
-I (../Inc/crc.h)(0x61F13AAA)
-I (../Inc/main.h)(0x61F13AAD)
+F (../Src/crc.c)(0x621E1A94)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\crc.o --omf_browse rmc_adam_generalrobotsystemcode\crc.crf --depend rmc_adam_generalrobotsystemcode\crc.d)
+I (../Inc/crc.h)(0x621E1A94)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -281,11 +281,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-F (../Src/dma.c)(0x61F13AAA)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\dma.o --omf_browse rmc_adam_generalrobotsystemcode\dma.crf --depend rmc_adam_generalrobotsystemcode\dma.d)
-I (../Inc/dma.h)(0x61F13AAB)
-I (../Inc/main.h)(0x61F13AAD)
+F (../Src/dma.c)(0x621E1A95)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\dma.o --omf_browse rmc_adam_generalrobotsystemcode\dma.crf --depend rmc_adam_generalrobotsystemcode\dma.d)
+I (../Inc/dma.h)(0x621E1A95)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -322,11 +322,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-F (../Src/i2c.c)(0x61F13AAB)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\i2c.o --omf_browse rmc_adam_generalrobotsystemcode\i2c.crf --depend rmc_adam_generalrobotsystemcode\i2c.d)
-I (../Inc/i2c.h)(0x61F13AAB)
-I (../Inc/main.h)(0x61F13AAD)
+F (../Src/i2c.c)(0x621E1A95)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\i2c.o --omf_browse rmc_adam_generalrobotsystemcode\i2c.crf --depend rmc_adam_generalrobotsystemcode\i2c.d)
+I (../Inc/i2c.h)(0x621E1A95)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -363,11 +363,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-F (../Src/spi.c)(0x61F13AAB)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\spi.o --omf_browse rmc_adam_generalrobotsystemcode\spi.crf --depend rmc_adam_generalrobotsystemcode\spi.d)
-I (../Inc/spi.h)(0x61F13AAB)
-I (../Inc/main.h)(0x61F13AAD)
+F (../Src/spi.c)(0x621E1A95)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\spi.o --omf_browse rmc_adam_generalrobotsystemcode\spi.crf --depend rmc_adam_generalrobotsystemcode\spi.d)
+I (../Inc/spi.h)(0x621E1A95)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -404,11 +404,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-F (../Src/tim.c)(0x61F13AAB)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\tim.o --omf_browse rmc_adam_generalrobotsystemcode\tim.crf --depend rmc_adam_generalrobotsystemcode\tim.d)
-I (../Inc/tim.h)(0x61F13AAB)
-I (../Inc/main.h)(0x61F13AAD)
+F (../Src/tim.c)(0x621E1A95)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\tim.o --omf_browse rmc_adam_generalrobotsystemcode\tim.crf --depend rmc_adam_generalrobotsystemcode\tim.d)
+I (../Inc/tim.h)(0x621E1A96)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -445,11 +445,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-F (../Src/usart.c)(0x61F13AAB)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usart.o --omf_browse rmc_adam_generalrobotsystemcode\usart.crf --depend rmc_adam_generalrobotsystemcode\usart.d)
-I (../Inc/usart.h)(0x61F13AAC)
-I (../Inc/main.h)(0x61F13AAD)
+F (../Src/usart.c)(0x621E1A96)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usart.o --omf_browse rmc_adam_generalrobotsystemcode\usart.crf --depend rmc_adam_generalrobotsystemcode\usart.d)
+I (../Inc/usart.h)(0x621E1A96)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -488,8 +488,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (..\Applications\Hardware\UART_data_transmit.h)(0x61003388)
 I (../Inc/struct_typedef.h)(0x601434AF)
-F (../Src/usb_device.c)(0x61F13AAC)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usb_device.o --omf_browse rmc_adam_generalrobotsystemcode\usb_device.crf --depend rmc_adam_generalrobotsystemcode\usb_device.d)
-I (../Inc/usb_device.h)(0x61F13AAC)
+F (../Src/usb_device.c)(0x621E1A96)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usb_device.o --omf_browse rmc_adam_generalrobotsystemcode\usb_device.crf --depend rmc_adam_generalrobotsystemcode\usb_device.d)
+I (../Inc/usb_device.h)(0x621E1A96)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h)(0x6138C441)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x6138C35A)
@@ -500,7 +500,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6138C35A)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x6138C35A)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6138C441)
@@ -529,18 +529,18 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6138C35C)
-I (../Inc/usbd_desc.h)(0x61F13AAC)
+I (../Inc/usbd_desc.h)(0x621E1A96)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x6138C35C)
-I (../Inc/usbd_cdc_if.h)(0x61F13AAC)
-F (../Src/usbd_conf.c)(0x61F13AAC)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_conf.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_conf.crf --depend rmc_adam_generalrobotsystemcode\usbd_conf.d)
+I (../Inc/usbd_cdc_if.h)(0x621E1A97)
+F (../Src/usbd_conf.c)(0x621E1A96)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_conf.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_conf.crf --depend rmc_adam_generalrobotsystemcode\usbd_conf.d)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h)(0x6138C441)
 I (../Drivers/CMSIS/Include/core_cm4.h)(0x6138C35A)
@@ -551,7 +551,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6138C35A)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x6138C35A)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6138C441)
@@ -580,24 +580,24 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x6138C35C)
-F (../Src/usbd_desc.c)(0x61F13AAC)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_desc.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_desc.crf --depend rmc_adam_generalrobotsystemcode\usbd_desc.d)
+F (../Src/usbd_desc.c)(0x621E1A97)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_desc.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_desc.crf --depend rmc_adam_generalrobotsystemcode\usbd_desc.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -637,19 +637,19 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6138C35C)
-I (../Inc/usbd_desc.h)(0x61F13AAC)
-F (../Src/usbd_cdc_if.c)(0x61F13AAC)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_cdc_if.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_cdc_if.crf --depend rmc_adam_generalrobotsystemcode\usbd_cdc_if.d)
-I (../Inc/usbd_cdc_if.h)(0x61F13AAC)
+I (../Inc/usbd_desc.h)(0x621E1A96)
+F (../Src/usbd_cdc_if.c)(0x621E1A97)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_cdc_if.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_cdc_if.crf --depend rmc_adam_generalrobotsystemcode\usbd_cdc_if.d)
+I (../Inc/usbd_cdc_if.h)(0x621E1A97)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -689,10 +689,10 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6138C35C)
 I (..\Applications\Hardware\USB_VirCom.h)(0x61AD765A)
-F (../Src/stm32f4xx_it.c)(0x61F13AAC)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_it.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_it.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_it.d)
-I (../Inc/main.h)(0x61F13AAD)
+F (../Src/stm32f4xx_it.c)(0x621E1A97)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_it.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_it.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_it.d)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -729,15 +729,15 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-I (../Inc/stm32f4xx_it.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_it.h)(0x621E1A97)
 I (..\Applications\Hardware\DBUS_remote_control.h)(0x60917F9F)
 I (../Inc/struct_typedef.h)(0x601434AF)
 I (..\Applications\Hardware\UART_data_transmit.h)(0x61003388)
-I (../Inc/usart.h)(0x61F13AAC)
-F (../Src/stm32f4xx_hal_msp.c)(0x61F13AAD)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_msp.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_msp.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_msp.d)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/usart.h)(0x621E1A96)
+F (../Src/stm32f4xx_hal_msp.c)(0x621E1A97)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_msp.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_msp.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_msp.d)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -774,9 +774,9 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-F (../Src/stm32f4xx_hal_timebase_tim.c)(0x61F13AAD)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_timebase_tim.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_timebase_tim.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_timebase_tim.d)
+F (../Src/stm32f4xx_hal_timebase_tim.c)(0x621E1A97)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_timebase_tim.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_timebase_tim.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_timebase_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -815,7 +815,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pcd.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pcd.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pcd.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -854,7 +854,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pcd_ex.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pcd_ex.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pcd_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -893,7 +893,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_ll_usb.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_ll_usb.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_ll_usb.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -932,7 +932,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_rcc.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_rcc.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_rcc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -971,7 +971,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_rcc_ex.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_rcc_ex.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_rcc_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1010,7 +1010,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1049,7 +1049,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash_ex.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash_ex.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1088,7 +1088,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash_ramfunc.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash_ramfunc.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_flash_ramfunc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1127,7 +1127,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_gpio.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_gpio.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_gpio.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1166,7 +1166,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_dma_ex.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_dma_ex.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_dma_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1205,7 +1205,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_dma.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_dma.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_dma.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1244,7 +1244,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pwr.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pwr.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pwr.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1283,7 +1283,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pwr_ex.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pwr_ex.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_pwr_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1322,7 +1322,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_cortex.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_cortex.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_cortex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1361,7 +1361,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1400,7 +1400,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_exti.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_exti.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_exti.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1439,7 +1439,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_can.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_can.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_can.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1478,7 +1478,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_crc.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_crc.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_crc.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1517,7 +1517,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_i2c.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_i2c.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_i2c.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1556,7 +1556,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_i2c_ex.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_i2c_ex.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_i2c_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1595,7 +1595,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_spi.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_spi.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_spi.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1634,7 +1634,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_tim.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_tim.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_tim.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1673,7 +1673,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_tim_ex.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_tim_ex.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_tim_ex.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1712,7 +1712,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c)(0x6138C441)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stm32f4xx_hal_uart.o --omf_browse rmc_adam_generalrobotsystemcode\stm32f4xx_hal_uart.crf --depend rmc_adam_generalrobotsystemcode\stm32f4xx_hal_uart.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -1761,7 +1761,7 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6138C35A)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x6138C35A)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6138C441)
@@ -1793,7 +1793,7 @@ F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x6138C35D)(--c99 -c -
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1807,7 +1807,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1822,7 +1822,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1835,7 +1835,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1849,7 +1849,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1864,7 +1864,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1879,7 +1879,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1897,7 +1897,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x6138C35A)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x6138C35A)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1918,7 +1918,7 @@ I (../Drivers/CMSIS/Include/cmsis_version.h)(0x6138C35A)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x6138C35A)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x6138C441)
@@ -1950,7 +1950,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1962,7 +1962,7 @@ F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c)(0x6
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -1973,9 +1973,9 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x6138C35D)
 F (..\Drivers\Chip\BMI088driver.c)(0x5FE8241B)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\bmi088driver.o --omf_browse rmc_adam_generalrobotsystemcode\bmi088driver.crf --depend rmc_adam_generalrobotsystemcode\bmi088driver.d)
 I (..\Drivers\Chip\BMI088driver.h)(0x619CAA8E)
 I (../Inc/struct_typedef.h)(0x601434AF)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2017,9 +2017,9 @@ I (..\Drivers\Chip\BMI088Middleware.h)(0x5E16ECD7)
 F (..\Drivers\Chip\BMI088Middleware.c)(0x60A9CCC5)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\bmi088middleware.o --omf_browse rmc_adam_generalrobotsystemcode\bmi088middleware.crf --depend rmc_adam_generalrobotsystemcode\bmi088middleware.d)
 I (..\Drivers\Chip\BMI088Middleware.h)(0x5E16ECD7)
 I (../Inc/struct_typedef.h)(0x601434AF)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2063,9 +2063,9 @@ I (..\Drivers\Chip\ist8310driver_middleware.h)(0x5FE451C7)
 F (..\Drivers\Chip\ist8310driver_middleware.c)(0x60A9CCA3)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\ist8310driver_middleware.o --omf_browse rmc_adam_generalrobotsystemcode\ist8310driver_middleware.crf --depend rmc_adam_generalrobotsystemcode\ist8310driver_middleware.d)
 I (..\Drivers\Chip\ist8310driver_middleWare.h)(0x5FE451C7)
 I (../Inc/struct_typedef.h)(0x601434AF)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2107,7 +2107,7 @@ I (..\Drivers\Chip\MPU6050\mpu6050.h)(0x619C55A0)
 I (..\Drivers\Chip\MPU6050\mpuiic.h)(0x619C5425)
 I (../Inc/struct_typedef.h)(0x601434AF)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2170,7 +2170,7 @@ I (..\Drivers\Chip\MPU6050\eMPL\inv_mpu_dmp_motion_driver.h)(0x50CA9A0C)
 I (..\Drivers\Chip\MPU6050\mpu6050.h)(0x619C55A0)
 I (..\Drivers\Chip\MPU6050\mpuiic.h)(0x619C5425)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2214,9 +2214,9 @@ I (..\Algorithm\Kalman_Filter_c.h)(0x600AEB99)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE42D6)
 F (..\Algorithm\CRC8_CRC16.c)(0x605A27C6)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\crc8_crc16.o --omf_browse rmc_adam_generalrobotsystemcode\crc8_crc16.crf --depend rmc_adam_generalrobotsystemcode\crc8_crc16.d)
 I (..\Algorithm\crc8_crc16.h)(0x61C4B97B)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2260,7 +2260,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2313,7 +2313,7 @@ F (..\Drivers\Encoder\Encoder.c)(0x61F140A5)(--c99 -c --cpu Cortex-M4.fp -g -O2 
 I (..\Drivers\Encoder\Encoder.h)(0x61F1409E)
 I (..\Applications\Hardware\time.h)(0x60EBA2ED)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2354,7 +2354,7 @@ F (..\Applications\Hardware\UART_data_transmit.c)(0x61E780CB)(--c99 -c --cpu Cor
 I (..\Task\Arm_Task.h)(0x611BF74B)
 I (..\Applications\Hardware\UART_data_transmit.h)(0x61003388)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2391,8 +2391,8 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-I (../Inc/usart.h)(0x61F13AAC)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/usart.h)(0x621E1A96)
+I (../Inc/main.h)(0x621E1A98)
 I (../Inc/struct_typedef.h)(0x601434AF)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
@@ -2403,9 +2403,9 @@ F (..\Applications\Hardware\GPIO_output.c)(0x60ED77CE)(--c99 -c --cpu Cortex-M4.
 I (..\Applications\Hardware\GPIO_output.h)(0x60ED71D0)
 I (../Inc/struct_typedef.h)(0x601434AF)
 I (..\Applications\Hardware\PWM_control.h)(0x61F36BE0)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2449,9 +2449,9 @@ I (..\Algorithm\Kalman_Filter_c.h)(0x600AEB99)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE42D6)
 I (..\Drivers\Chip\BMI088Middleware.h)(0x5E16ECD7)
 I (..\Drivers\Chip\BMI088driver.h)(0x619CAA8E)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2489,16 +2489,16 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (..\Algorithm\pid.h)(0x600C5D86)
-I (../Inc/tim.h)(0x61F13AAB)
+I (../Inc/tim.h)(0x621E1A96)
 I (..\Drivers\Chip\ist8310driver.h)(0x5E16ECD7)
 I (..\Algorithm\MahonyAHRS\MahonyAHRS.h)(0x5E16ECD7)
 I (..\Algorithm\madgwickAHRS\madgwick.h)(0x619B9181)
 F (..\Applications\Hardware\CAN_receive&send.c)(0x621CCDCC)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\can_receive&send.o --omf_browse rmc_adam_generalrobotsystemcode\can_receive&send.crf --depend rmc_adam_generalrobotsystemcode\can_receive&send.d)
 I (..\Applications\Hardware\CAN_receive&send.h)(0x61EE70E7)
 I (../Inc/struct_typedef.h)(0x601434AF)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2535,11 +2535,11 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-I (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h)(0x621DD88D)
+I (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h)(0x621E1D1D)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE42D6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x6138C35D)
-I (../Inc/FreeRTOSConfig.h)(0x61F13AAA)
+I (../Inc/FreeRTOSConfig.h)(0x621E1A94)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x6138C35D)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x6138C35D)
@@ -2551,9 +2551,9 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h)(0x6138C
 F (..\Applications\Hardware\DBUS_remote_control.c)(0x605F7A29)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\dbus_remote_control.o --omf_browse rmc_adam_generalrobotsystemcode\dbus_remote_control.crf --depend rmc_adam_generalrobotsystemcode\dbus_remote_control.d)
 I (..\Applications\Hardware\DBUS_remote_control.h)(0x60917F9F)
 I (../Inc/struct_typedef.h)(0x601434AF)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2593,7 +2593,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (..\Applications\Hardware\GPIO_input_EXTI.c)(0x61F140B4)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\gpio_input_exti.o --omf_browse rmc_adam_generalrobotsystemcode\gpio_input_exti.crf --depend rmc_adam_generalrobotsystemcode\gpio_input_exti.d)
 I (..\Applications\Hardware\GPIO_input_EXTI.h)(0x60EB9161)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2630,7 +2630,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (..\Drivers\Encoder\Encoder.h)(0x61F1409E)
 I (..\Applications\Hardware\LED_control.h)(0x61A79C3E)
 I (../Inc/struct_typedef.h)(0x601434AF)
@@ -2638,7 +2638,7 @@ F (..\Applications\Hardware\LED_control.c)(0x605F778D)(--c99 -c --cpu Cortex-M4.
 I (..\Applications\Hardware\LED_control.h)(0x61A79C3E)
 I (../Inc/struct_typedef.h)(0x601434AF)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2679,7 +2679,7 @@ F (..\Applications\Hardware\PWM_control.c)(0x61F370A7)(--c99 -c --cpu Cortex-M4.
 I (..\Applications\Hardware\PWM_control.h)(0x61F36BE0)
 I (../Inc/struct_typedef.h)(0x601434AF)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2716,12 +2716,12 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
-I (../Inc/tim.h)(0x61F13AAB)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/tim.h)(0x621E1A96)
+I (../Inc/main.h)(0x621E1A98)
 F (..\Applications\Hardware\time.c)(0x60EBA18C)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\time.o --omf_browse rmc_adam_generalrobotsystemcode\time.crf --depend rmc_adam_generalrobotsystemcode\time.d)
 I (..\Applications\Hardware\time.h)(0x60EBA2ED)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2759,17 +2759,17 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 F (..\Applications\Hardware\USB_VirCom.c)(0x6207A50B)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usb_vircom.o --omf_browse rmc_adam_generalrobotsystemcode\usb_vircom.crf --depend rmc_adam_generalrobotsystemcode\usb_vircom.d)
-I (../Inc/usbd_cdc_if.h)(0x61F13AAC)
+I (../Inc/usbd_cdc_if.h)(0x621E1A97)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2814,10 +2814,10 @@ I (..\Applications\Software\gimbal.h)(0x61EEA8CB)
 I (..\Algorithm\pid.h)(0x600C5D86)
 I (..\Applications\Software\shoot.h)(0x6203CA5D)
 F (..\Applications\Software\IMU_calculate.c)(0x5FE82731)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\imu_calculate.o --omf_browse rmc_adam_generalrobotsystemcode\imu_calculate.crf --depend rmc_adam_generalrobotsystemcode\imu_calculate.d)
-I (../Inc/tim.h)(0x61F13AAB)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/tim.h)(0x621E1A96)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2861,7 +2861,7 @@ I (..\Algorithm\Kalman_Filter_c.h)(0x600AEB99)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE42D6)
 F (..\Applications\Software\Stxxid-Data-Transmission.c)(0x60162A23)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\stxxid-data-transmission.o --omf_browse rmc_adam_generalrobotsystemcode\stxxid-data-transmission.crf --depend rmc_adam_generalrobotsystemcode\stxxid-data-transmission.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2909,9 +2909,9 @@ I (../Inc/struct_typedef.h)(0x601434AF)
 I (..\Algorithm\Kalman_Filter_c.h)(0x600AEB99)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE42D6)
 I (..\Applications\Hardware\CAN_receive&send.h)(0x61EE70E7)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -2953,9 +2953,9 @@ I (..\Applications\Hardware\USB_VirCom.h)(0x61AD765A)
 F (..\Applications\Software\shoot.c)(0x621AFE28)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\shoot.o --omf_browse rmc_adam_generalrobotsystemcode\shoot.crf --depend rmc_adam_generalrobotsystemcode\shoot.d)
 I (..\Applications\Software\shoot.h)(0x6203CA5D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -3005,9 +3005,9 @@ I (..\Applications\Software\chassis_move.h)(0x621B03AE)
 I (../Inc/struct_typedef.h)(0x601434AF)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x56FE42D6)
 I (..\Applications\Hardware\CAN_receive&send.h)(0x61EE70E7)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -3046,20 +3046,18 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h)(0x6138C441)
 I (..\Algorithm\pid.h)(0x600C5D86)
 I (..\Applications\Hardware\UART_data_transmit.h)(0x61003388)
-I (../Inc/usart.h)(0x61F13AAC)
+I (../Inc/usart.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
-F (..\Applications\Software\Arm.c)(0x621B98A8)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\arm.o --omf_browse rmc_adam_generalrobotsystemcode\arm.crf --depend rmc_adam_generalrobotsystemcode\arm.d)
-I (..\Applications\Software\Arm.h)(0x621B989B)
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c)(0x6138C35C)(--c99 -c --cpu Cortex-M4.fp -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_core.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_core.crf --depend rmc_adam_generalrobotsystemcode\usbd_core.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -3102,13 +3100,13 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6138C35C
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c)(0x6138C35C)(--c99 -c --cpu Cortex-M4.fp -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_ctlreq.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_ctlreq.crf --depend rmc_adam_generalrobotsystemcode\usbd_ctlreq.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -3150,13 +3148,13 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6138C35C)
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c)(0x6138C35C)(--c99 -c --cpu Cortex-M4.fp -g -O1 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\usbd_ioreq.o --omf_browse rmc_adam_generalrobotsystemcode\usbd_ioreq.crf --depend rmc_adam_generalrobotsystemcode\usbd_ioreq.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -3199,13 +3197,13 @@ F (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c)(0x6138C3
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x6138C35C)
-I (../Inc/usbd_conf.h)(0x61F13AAC)
+I (../Inc/usbd_conf.h)(0x621E1A96)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)
@@ -3246,14 +3244,14 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x6138C35C)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x6138C35C)
 F (..\Drivers\TF-MINI_PLUS\TF_MINI_PLUS_LaserRanging.c)(0x61C4B097)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\tf_mini_plus_laserranging.o --omf_browse rmc_adam_generalrobotsystemcode\tf_mini_plus_laserranging.crf --depend rmc_adam_generalrobotsystemcode\tf_mini_plus_laserranging.d)
 I (..\Drivers\TF-MINI_PLUS\TF_MINI_PLUS_LaserRanging.h)(0x61C35AD2)
-F (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.c)(0x621DD86B)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\myactuator_rmd_x.o --omf_browse rmc_adam_generalrobotsystemcode\myactuator_rmd_x.crf --depend rmc_adam_generalrobotsystemcode\myactuator_rmd_x.d)
-I (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h)(0x621DD88D)
+F (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.c)(0x621E2A00)(--c99 -c --cpu Cortex-M4.fp -g -O2 -Otime --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\Algorithm -I ..\Drivers\Chip -I ..\Task -I ..\Drivers\Encoder -I ..\Applications\Software -I ..\Applications\Hardware -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ..\Algorithm\madgwickAHRS -I ..\Algorithm\MahonyAHRS -I ..\Drivers\Chip\MPU6050 -I ..\Drivers\Chip\MPU6050\eMPL -I ..\Drivers\TF-MINI_PLUS -I ..\Drivers\MYACTUATOR_RMD_X-I "C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="520" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o rmc_adam_generalrobotsystemcode\myactuator_rmd_x.o --omf_browse rmc_adam_generalrobotsystemcode\myactuator_rmd_x.crf --depend rmc_adam_generalrobotsystemcode\myactuator_rmd_x.d)
+I (..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h)(0x621E1D1D)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
 I (..\Applications\Hardware\CAN_receive&send.h)(0x61EE70E7)
 I (../Inc/struct_typedef.h)(0x601434AF)
-I (../Inc/main.h)(0x61F13AAD)
+I (../Inc/main.h)(0x621E1A98)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x6138C441)
-I (../Inc/stm32f4xx_hal_conf.h)(0x61F13AAD)
+I (../Inc/stm32f4xx_hal_conf.h)(0x621E1A97)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h)(0x6138C441)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h)(0x6138C441)
 I (../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h)(0x6138C441)

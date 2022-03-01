@@ -238,7 +238,7 @@ void CAN_sendTask_callback(void *argument)
     //停止任务调度
     vTaskSuspendAll();
 
-    //CAN1_send_current();
+    CAN1_send_current();
     CAN2_send_current();
 
     //重启调度
@@ -316,11 +316,11 @@ void ChassisTask_callback(void *argument)
 * @retval None
 */
 /* USER CODE END Header_gimbalTask_callback */
+	int i = 0;
 void gimbalTask_callback(void *argument)
 {
   /* USER CODE BEGIN gimbalTask_callback */
 	//工程机器为机械臂进程
-	int i = 0;
   /* Infinite loop */
   for(;;)
   {
@@ -329,10 +329,7 @@ void gimbalTask_callback(void *argument)
 //		
 //		shoot_update();
 //		shoot_pid_cal();
-		RMD_write_angle_with_speed(MOTOR_ID_1,360,i);
-		i++;
-		if(i > 5)
-			i = 0;
+		RMD_write_angle(MOTOR_ID_1,i);
 		
     osDelay(1000);
   }

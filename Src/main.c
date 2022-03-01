@@ -153,11 +153,6 @@ int main(void)
 	
 	gimbal_init();//初始化云台
 	shoot_init();//初始化发射机构
-	ARM_init();
-  
-	RMD_config(&RMD_motor[0],0.1,0,0.1,0,0.1,0);
-	RMD_setup(&RMD_motor[0],MOTOR_ID_1);
-	RMD_run(MOTOR_ID_1);
 	
 	led_show(BLUE);//初始化完毕
 	
