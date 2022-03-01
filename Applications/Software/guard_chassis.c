@@ -92,12 +92,13 @@ void guard_chassis_updata_location()
     chassis.location.last = chassis.location.now;
     //从电机获取
     //chassis.location.now = WHEEL_RADIUS * ((get_motor_data(Motor1).angle_cnt + get_motor_data(Motor1).angle_cnt) / 2.0) - chassis.location.offset;
-    chassis.location.now = TF_LaserRanging.distance - chassis.location.offset;
+		//从激光获取	
+		chassis.location.now = TF_LaserRanging.distance - chassis.location.offset;
     sliding_variance_cal(&chassis.location.stable,chassis.location.now);
 
     //计算底盘的速度
     chassis.speed.last = chassis.speed.now;
-    chassis.speed.last = (chassis.location.now - chassis.location.set) / (time - last_time);
+    chassis.speed.last = (chassis.location.now - chassis.location.last) / (time - last_time);
     
     last_time = time;
 }

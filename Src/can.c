@@ -216,7 +216,7 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 /* USER CODE BEGIN 1 */
 void can_filter_init(void)//启动ID过滤 减少无用信息
 {
-  CAN_FilterTypeDef can_filter_st;
+  static CAN_FilterTypeDef can_filter_st;
   can_filter_st.FilterActivation = ENABLE;
   can_filter_st.FilterMode = CAN_FILTERMODE_IDMASK;
   can_filter_st.FilterScale = CAN_FILTERSCALE_32BIT;
@@ -227,8 +227,8 @@ void can_filter_init(void)//启动ID过滤 减少无用信息
   can_filter_st.FilterBank = 0;
   can_filter_st.FilterFIFOAssignment = CAN_RX_FIFO0;
   
-  can_filter_st.SlaveStartFilterBank = 14;
-  can_filter_st.FilterBank = 14;
+//  can_filter_st.SlaveStartFilterBank = 14;
+//  can_filter_st.FilterBank = 14;
 	
   HAL_CAN_ConfigFilter(&hcan1, &can_filter_st);
   HAL_CAN_Start(&hcan1);

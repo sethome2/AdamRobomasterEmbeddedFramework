@@ -23,13 +23,8 @@ struct chassis_status
 	}acc;
 };
 
-//extern struct chassis_status chassis;
+extern struct chassis_status chassis;
 
-//马达ID
-#define FR 0
-#define FL 1
-#define BL 2
-#define BR 3
 
 void chassis_move_init(void);//底盘移动初始化
 void chassis_moto_speed_calc(float vx, float vy, float vw);//计算马达速度

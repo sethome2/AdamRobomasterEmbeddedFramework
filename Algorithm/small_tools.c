@@ -40,7 +40,7 @@ void sliding_average_init(sliding_average *obj)
 {
   for (int i = 0; i < 5; i++)
     obj->data[i] = 0;
-  obj->sum;
+  obj->sum = 0;
   obj->index = 4;
 }
 

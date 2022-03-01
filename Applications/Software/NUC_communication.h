@@ -16,13 +16,14 @@ typedef struct
     float now_yaw;
 
     int remainingBullets;
+	
+		int HP;
+	
     enum 
     {
         Red_Team = 0,
         Blue_Team,
     }Team;
-
-    char customStr[2]; //内存对齐
 } STM32_data_t;
 
 typedef struct
@@ -33,9 +34,8 @@ typedef struct
     char shot; //大于1代表开火
 
     float delay; // ms
-    int HP;      //剩余血量
 
-    char customStr[10]; //内存对齐
+    char customStr[2]; //内存对齐
 } NUC_data_t;
 
 extern NUC_data_t fromNUC;

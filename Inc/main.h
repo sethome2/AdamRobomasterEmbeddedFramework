@@ -63,8 +63,13 @@ void Error_Handler(void);
 #define IO7_EXTI_IRQn EXTI9_5_IRQn
 #define IO6_Pin GPIO_PIN_6
 #define IO6_GPIO_Port GPIOI
+#define Laser_Pin GPIO_PIN_8
+#define Laser_GPIO_Port GPIOC
 #define IST8310_DRDY_Pin GPIO_PIN_3
 #define IST8310_DRDY_GPIO_Port GPIOG
+#define KEY_Pin GPIO_PIN_0
+#define KEY_GPIO_Port GPIOA
+#define KEY_EXTI_IRQn EXTI0_IRQn
 #define CS1_ACCEL_Pin GPIO_PIN_4
 #define CS1_ACCEL_GPIO_Port GPIOA
 #define INT1_ACCEL_Pin GPIO_PIN_4

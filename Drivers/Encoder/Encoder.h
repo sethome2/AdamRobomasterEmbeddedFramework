@@ -10,8 +10,5 @@ typedef struct
 	
 } Encode_t;
 
-//机械臂编码电机变量
-extern Encode_t Arm_encoder;
-
 void init_Encoder(Encode_t *target);		  //初始化编码器变量
 void update_Encoder(Encode_t *target, int B); //更新编码器变量

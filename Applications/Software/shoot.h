@@ -17,10 +17,10 @@
 
 enum shoot_speed
 {
-    SHOOT_STOP = 0,
-    SHOOT_17 = 1000,
-    SHOOT_23 = 3000,
-    SHOOT_30 = 4000,
+    SHOOT_STOP = 1200,
+    SHOOT_17 = 1350,
+    SHOOT_23 = 1450,
+    SHOOT_30 = 1550,
 };
 
 typedef struct
@@ -50,7 +50,6 @@ void shoot_update(void);  //更新拨弹电机速度等
 void shoot_pid_cal(void); //计算pid
 int shoot_Bullets(int n); //发射N颗子弹
 void shoot_reload(void);  //子弹重新计数
-
 #endif
 
 //end of file

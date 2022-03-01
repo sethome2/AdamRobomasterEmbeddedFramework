@@ -33,8 +33,8 @@
 #include "IMU_updata.h"
 #include "PWM_control.h"
 #include "TF_MINI_PLUS_LaserRanging.h"
-#include "guard_chassis.h" //哨兵底盘
-//#include "chassis_move.h"  //普通底盘
+//#include "guard_chassis.h" //哨兵底盘
+#include "chassis_move.h"  //普通底盘
 #include "gimbal.h"
 #include "shoot.h"
 #include "math.h"
@@ -42,8 +42,7 @@
 
 #include "NUC_communication.h"
 
-//#include "chassis_move.h"
-
+#include "MYACTUATOR_RMD_X.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -106,7 +105,7 @@ const osThreadAttr_t ChassisTask_attributes = {
 osThreadId_t gimbalTaskHandle;
 const osThreadAttr_t gimbalTask_attributes = {
   .name = "gimbalTask",
-  .stack_size = 512 * 4,
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityRealtime6,
 };
 /* Definitions for NUCcontrolTask */
@@ -239,7 +238,7 @@ void CAN_sendTask_callback(void *argument)
     //停止任务调度
     vTaskSuspendAll();
 
-    CAN1_send_current();
+    //CAN1_send_current();
     CAN2_send_current();
 
     //重启调度
@@ -267,7 +266,7 @@ void FastTestTask_callback(void *argument)
   for (;;)
   {
 		//gimbal.pitch.set = RC_data.rc.ch[0] / 3.0;
-    osDelay(10);
+		osDelay(5);
   }
   /* USER CODE END FastTestTask_callback */
 }
@@ -284,8 +283,8 @@ void RemoteTask_callback(void *argument)
   /* USER CODE BEGIN RemoteTask_callback */
   /* Infinite loop */
   for (;;)
-  {
-    osDelay(10);
+  {	
+    osDelay(2000);
   }
   /* USER CODE END RemoteTask_callback */
 }
@@ -300,23 +299,11 @@ void RemoteTask_callback(void *argument)
 void ChassisTask_callback(void *argument)
 {
   /* USER CODE BEGIN ChassisTask_callback */
-  sliding_average *offsetLocation = malloc(sizeof(sliding_average));
-  sliding_average_init(offsetLocation);
-
-  //简单暴力的先填满平均值数组
-  sliding_average_cal(offsetLocation, TF_LaserRanging.distance);
-  sliding_average_cal(offsetLocation, TF_LaserRanging.distance);
-  sliding_average_cal(offsetLocation, TF_LaserRanging.distance);
-  sliding_average_cal(offsetLocation, TF_LaserRanging.distance);
-  guard_chassis_offset(sliding_average_cal(offsetLocation, TF_LaserRanging.distance));
-
-  free(offsetLocation);
-
+  
   /* Infinite loop */
   for (;;)
   {
-    guard_chassis_updata_location();
-    //guard_chassis_pid_calc();
+    //chassis_moto_speed_calc(RC_data.rc.ch[0],RC_data.rc.ch[1],RC_data.rc.ch[2]);
     osDelay(10);
   }
   /* USER CODE END ChassisTask_callback */
@@ -332,17 +319,22 @@ void ChassisTask_callback(void *argument)
 void gimbalTask_callback(void *argument)
 {
   /* USER CODE BEGIN gimbalTask_callback */
+	//工程机器为机械臂进程
+	int i = 0;
   /* Infinite loop */
   for(;;)
   {
-		gimbal_set(fromNUC.set_pitch,fromNUC.set_yaw);
-		gimbal_updata();
-		gimbal_pid_cal();
+//		gimbal_updata();
+//		gimbal_pid_cal();
+//		
+//		shoot_update();
+//		shoot_pid_cal();
+		RMD_write_angle_with_speed(MOTOR_ID_1,360,i);
+		i++;
+		if(i > 5)
+			i = 0;
 		
-		shoot_update();
-		shoot_pid_cal();
-		
-    osDelay(5);
+    osDelay(1000);
   }
   /* USER CODE END gimbalTask_callback */
 }
@@ -370,11 +362,12 @@ void NUCcontrolTask_callback(void *argument)
 		toNUC.gyo[0] = IMU_data.gyro[0]; toNUC.gyo[1] = IMU_data.gyro[1]; toNUC.gyo[2] = IMU_data.gyro[2];
 		toNUC.mag[0] = IMU_data.mag[0]; toNUC.mag[1] = IMU_data.mag[1]; toNUC.mag[2] = IMU_data.mag[2];
 		
-		toNUC.location = chassis.location.now;
+		//toNUC.location = chassis.location.now;
 		
-		toNUC.move_speed = chassis.speed.now;
+		//toNUC.move_speed = chassis.speed.now;
 		
 		toNUC.remainingBullets = shoot.remainingBullets;
+		toNUC.Team = Blue_Team;
 		
 		encodeSTM32(&toNUC,data,128);
 		VirCom_send(data,sizeof(STM32_data_t));

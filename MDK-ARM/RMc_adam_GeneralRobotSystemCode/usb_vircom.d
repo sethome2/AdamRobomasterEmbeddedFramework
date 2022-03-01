@@ -52,3 +52,6 @@ rmc_adam_generalrobotsystemcode\usb_vircom.o: ../Middlewares/ST/STM32_USB_Device
 rmc_adam_generalrobotsystemcode\usb_vircom.o: ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h
 rmc_adam_generalrobotsystemcode\usb_vircom.o: ..\Applications\Hardware\USB_VirCom.h
 rmc_adam_generalrobotsystemcode\usb_vircom.o: ..\Applications\Software\NUC_communication.h
+rmc_adam_generalrobotsystemcode\usb_vircom.o: ..\Applications\Software\gimbal.h
+rmc_adam_generalrobotsystemcode\usb_vircom.o: ..\Algorithm\pid.h
+rmc_adam_generalrobotsystemcode\usb_vircom.o: ..\Applications\Software\shoot.h

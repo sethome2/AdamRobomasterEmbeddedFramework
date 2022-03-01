@@ -21,22 +21,21 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
 Dialog DLL:      TCM.DLL V1.14.9.0
  
 <h2>Project:</h2>
-C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\MDK-ARM\RMc_adam_GeneralRobotSystemCode.uvprojx
-Project File Date:  01/19/2022
+C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RMc_adam_GeneralRobotSystemCode.uvprojx
+Project File Date:  02/09/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'RMc_adam_GeneralRobotSystemCode'
-compiling shoot.c...
-compiling gimbal.c...
-..\Applications\Software\gimbal.c(64): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-  		gimbal.yaw.now = (get_motor_data(
-AW_MOTOR).angle_cnt) / 3.0 - gimbal.yaw.offset;
-..\Applications\Software\gimbal.c: 1 warning, 0 errors
+compiling MYACTUATOR_RMD_X.c...
+..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.c(82): warning: C4487E: read from variable 'speed' with offset out of bounds
+}
+..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.c: 1 warning, 0 errors
+compiling CAN_receive&send.c...
 compiling freertos.c...
 compiling main.c...
 linking...
-Program Size: Code=54416 RO-data=848 RW-data=664 ZI-data=31224  
+Program Size: Code=52712 RO-data=848 RW-data=648 ZI-data=32392  
 FromELF: creating hex file...
 "RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 1 Warning(s).
 
@@ -49,7 +48,7 @@ Package Vendor: ARM
    * Component: CORE Version: 4.3.0
 
 <h2>Collection of Component include folders:</h2>
-  C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\MDK-ARM\RTE
+  C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\MDK-ARM\RTE
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
   C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 

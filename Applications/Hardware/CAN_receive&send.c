@@ -10,6 +10,9 @@
  */
 #include "CAN_receive&send.h"
 
+//第三方驱动
+#include "MYACTUATOR_RMD_X.h"
+
 #include "math.h"
 #include "cmsis_os.h"
 
@@ -50,7 +53,9 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
   uint8_t rx_data[8];            //获取到的数据
 
   HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data); //取得信息
-
+	
+	RMD_decode_reply(rx_header.StdId, rx_data);
+	
   if (hcan == &hcan1) //CAN1/2判断
   {
     get_motor_measure(&motor_data[rx_header.StdId - CAN_ID1], rx_data);
@@ -217,7 +222,6 @@ void CAN2_send_current() //发送电机控制电流
 #ifdef USE_FREERTOS_DELAY
   osDelay(1); //延时1ms
 #endif
-
   HAL_CAN_AddTxMessage(&hcan2, &tx_message, can_send_data, &send_mail_box);
 #endif
 }
