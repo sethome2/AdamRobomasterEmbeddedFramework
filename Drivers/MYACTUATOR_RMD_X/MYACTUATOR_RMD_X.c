@@ -62,7 +62,7 @@ void RMD_write_current(RMD_X_ID_CMD ID, int16_t current) // -2000 ~ 2000
 
 void RMD_write_angle(RMD_X_ID_CMD ID, float angle)
 {
-	int32_t angleInt = angle * 100;
+	int32_t angleInt = angle * 100 * 32;
 	send2CAN(ID, WRITE_LOCATION1, 0, 0, 0, (uint8_t)(angleInt), (uint8_t)(angleInt >> 8), (uint8_t)(angleInt >> 16), (uint8_t)(angleInt >> 24));
 }
 void RMD_write_angle_with_speed(RMD_X_ID_CMD ID, uint16_t speed, float angle)

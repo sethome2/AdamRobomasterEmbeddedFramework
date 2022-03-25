@@ -54,7 +54,11 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 
   HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data); //取得信息
 	
-	RMD_decode_reply(rx_header.StdId, rx_data);
+	if(rx_header.StdId > 0x140 && rx_header.StdId < 0x150)
+	{
+		RMD_decode_reply(rx_header.StdId, rx_data);
+		return;
+	}
 	
   if (hcan == &hcan1) //CAN1/2判断
   {

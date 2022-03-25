@@ -236,16 +236,16 @@ void CAN_sendTask_callback(void *argument)
   {
     //原子化任务
     //停止任务调度
-    vTaskSuspendAll();
+    //vTaskSuspendAll();
 
     CAN1_send_current();
     CAN2_send_current();
 
     //重启调度
-    if (!xTaskResumeAll())
-    {
-      taskYIELD();
-    }
+//    if (!xTaskResumeAll())
+//    {
+//      taskYIELD();
+//    }
 
     osDelay(10);
   }
@@ -316,11 +316,18 @@ void ChassisTask_callback(void *argument)
 * @retval None
 */
 /* USER CODE END Header_gimbalTask_callback */
-	int i = 0;
+	int i = -10;
+	float set = 0.0f;
+	pid_t speed;
+	pid_t location;
 void gimbalTask_callback(void *argument)
 {
   /* USER CODE BEGIN gimbalTask_callback */
 	//工程机器为机械臂进程
+	pid_set(&speed,1000,10,0,10000,300);
+	pid_set(&location,20,0,0,20,0);
+	float set_speed = 0;
+	
   /* Infinite loop */
   for(;;)
   {
@@ -329,9 +336,15 @@ void gimbalTask_callback(void *argument)
 //		
 //		shoot_update();
 //		shoot_pid_cal();
+		decode_as_6020(CAN_1_5);
+		 
+		set_speed = pid_cal(&location, get_motor_data(CAN_1_5).angle_cnt,set);
+		
+		set_motor(pid_cal(&speed, get_motor_data(CAN_1_5).round_speed,set_speed),CAN_1_5);
+		
 		RMD_write_angle(MOTOR_ID_1,i);
 		
-    osDelay(1000);
+    osDelay(5);
   }
   /* USER CODE END gimbalTask_callback */
 }
