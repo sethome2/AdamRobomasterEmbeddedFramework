@@ -47,6 +47,7 @@
 #include "guard_chassis.h"
 #include "Arm_Task.h"
 #include "shoot.h"
+#include "referee.h"
 
 #include "USB_VirCom.h"
 
@@ -129,6 +130,7 @@ int main(void)
   MX_TIM8_Init();
   MX_CRC_Init();
   MX_TIM13_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
   //bsp 板级支持包
   //初始化各项应用
@@ -139,6 +141,9 @@ int main(void)
   can_filter_init();        //can 过滤器
   remote_control_init();    //遥控器初始化
   PWM_servo_control_init(); //PWM
+	PWM_snail_init(PIN_2);
+	PWM_snail_init(PIN_3);
+	
   IMU_init();               //IMU 加速度计，陀螺仪，地磁计
   uart_init();              //初始化串口
 
@@ -147,9 +152,11 @@ int main(void)
   guard_chassis_move_init();//初始化底盘
 	gimbal_init();//初始化云台
 	shoot_init();//初始化发射机构
+	referee_init(); // 初始化裁判系统
 
   led_show(BLUE);//初始化完毕
-
+	
+	HAL_Delay(3000);
   /* USER CODE END 2 */
 
   /* Init scheduler */

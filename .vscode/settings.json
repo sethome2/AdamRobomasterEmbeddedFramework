@@ -18,6 +18,7 @@
         "map": "cpp",
         "crc8_crc16.h": "c",
         "xtree": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "files:encoding": "gb2312"
     }
 }

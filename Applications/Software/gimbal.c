@@ -74,7 +74,9 @@ void gimbal_updata()
 
 void gimbal_set(float pitch,float yaw)
 {
-    gimbal.pitch.set = pitch;
+		if(fabs(pitch) < 180)
+			gimbal.pitch.set = pitch;
+		
     gimbal.yaw.set = yaw;
 }
 

@@ -217,7 +217,6 @@ void CAN2_send_current() //发送电机控制电流
 #ifdef USE_FREERTOS_DELAY
   osDelay(1); //延时1ms
 #endif
-
   HAL_CAN_AddTxMessage(&hcan2, &tx_message, can_send_data, &send_mail_box);
 #endif
 }

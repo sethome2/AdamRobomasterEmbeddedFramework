@@ -17,28 +17,33 @@ Library Manager: ArmAr.exe V5.06 update 2 (build 183)
 Hex Converter:   FromElf.exe V5.06 update 2 (build 183)
 CPU DLL:         SARMCM3.DLL V5.20
 Dialog DLL:      DCM.DLL V1.13.7.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
+Target DLL:      CMSIS_AGDI.dll V1.25.20.0
 Dialog DLL:      TCM.DLL V1.14.9.0
  
 <h2>Project:</h2>
 C:\Users\sethome\Desktop\RM开发板C型拓展框架\RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\MDK-ARM\RMc_adam_GeneralRobotSystemCode.uvprojx
-Project File Date:  01/19/2022
+Project File Date:  02/09/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'RMc_adam_GeneralRobotSystemCode'
-compiling shoot.c...
-compiling gimbal.c...
-..\Applications\Software\gimbal.c(64): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-  		gimbal.yaw.now = (get_motor_data(
-AW_MOTOR).angle_cnt) / 3.0 - gimbal.yaw.offset;
-..\Applications\Software\gimbal.c: 1 warning, 0 errors
-compiling freertos.c...
+compiling UART_data_transmit.c...
+..\Applications\Software\referee.h(208): error:  #20: identifier "layer_node" is undefined
+    layer_node *next;
+..\Applications\Hardware\UART_data_transmit.c: 0 warnings, 1 error
+compiling referee.c...
+..\Applications\Software\referee.h(208): error:  #20: identifier "layer_node" is undefined
+    layer_node *next;
+..\Applications\Software\referee.c(118): error:  #29: expected an expression
+    static uint8_t send_data[512] = {}; // 鍙?閫?鏁?鎹?鏆?瀛?
+..\Applications\Software\referee.c(183): warning:  #177-D: variable "frame" was declared but never referenced
+    ext_student_interactive_header_data_t frame;
+..\Applications\Software\referee.c: 1 warning, 2 errors
 compiling main.c...
-linking...
-Program Size: Code=54416 RO-data=848 RW-data=664 ZI-data=31224  
-FromELF: creating hex file...
-"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 1 Warning(s).
+..\Applications\Software\referee.h(208): error:  #20: identifier "layer_node" is undefined
+    layer_node *next;
+../Src/main.c: 0 warnings, 1 error
+"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 4 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -56,7 +61,8 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.3.0
-Build Time Elapsed:  00:00:07
+Target not created.
+Build Time Elapsed:  00:00:26
 </pre>
 </body>
 </html>

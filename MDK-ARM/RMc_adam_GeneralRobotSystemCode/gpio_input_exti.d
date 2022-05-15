@@ -41,3 +41,5 @@ rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/STM32F4xx_HAL_Driv
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Inc/main.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ..\Drivers\Encoder\Encoder.h
+rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ..\Applications\Hardware\LED_control.h
+rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Inc/struct_typedef.h

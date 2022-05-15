@@ -1,9 +1,6 @@
 #include "Encoder.h"
 #include "time.h"
 
-//推杆编码器变量
-Encode_t Arm_encoder;
-
 //初始化编码器
 void init_Encoder(Encode_t *target)
 {

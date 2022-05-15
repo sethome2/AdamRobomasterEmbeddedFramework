@@ -63,7 +63,7 @@ void val_limit(float *val, float MAX)
 			*val = -MAX;
 }
 
-//????Å£
+//??????
 void change_limit(float last, float *now, float limit)
 {
 	float change = *now - last;
@@ -79,7 +79,7 @@ void change_limit(float last, float *now, float limit)
 //????????????????????????
 void chassis_moto_speed_calc(float vx, float vy, float vw)
 {
-	//static float last_vx,last_vy,last_vw;//??¶≈????
+	//static float last_vx,last_vy,last_vw;//????????
 
 	//???????
 	val_limit(&vx, MAX_VX_SPEED);
@@ -108,7 +108,7 @@ void chassis_moto_speed_calc(float vx, float vy, float vw)
 //	wheel_current[BL] = pid_cal(&motor_speed[BL], get_motor_data(CAN_1, chassis_BL).round_speed * WHEEL_RADIUS * PI, wheel_rpm[BL]);
 //	wheel_current[BR] = pid_cal(&motor_speed[BR], get_motor_data(CAN_1, chassis_BR).round_speed * WHEEL_RADIUS * PI, wheel_rpm[BR]);
 
-//	//?⁄Ö????????
+//	//??????????
 //	set_motor_current(wheel_current[FR], CAN_1, chassis_FR);
 //	set_motor_current(wheel_current[FL], CAN_1, chassis_FL);
 //	set_motor_current(wheel_current[BL], CAN_1, chassis_BL);

@@ -106,7 +106,7 @@ const osThreadAttr_t ChassisTask_attributes = {
 osThreadId_t gimbalTaskHandle;
 const osThreadAttr_t gimbalTask_attributes = {
   .name = "gimbalTask",
-  .stack_size = 512 * 4,
+  .stack_size = 128 * 4,
   .priority = (osPriority_t) osPriorityRealtime6,
 };
 /* Definitions for NUCcontrolTask */
@@ -267,7 +267,10 @@ void FastTestTask_callback(void *argument)
   for (;;)
   {
 		//gimbal.pitch.set = RC_data.rc.ch[0] / 3.0;
-    osDelay(10);
+		osDelay(1800);
+		guard_chassis_set_location(-15.0f);
+		osDelay(1800);
+		guard_chassis_set_location(15.0f);
   }
   /* USER CODE END FastTestTask_callback */
 }
@@ -284,8 +287,8 @@ void RemoteTask_callback(void *argument)
   /* USER CODE BEGIN RemoteTask_callback */
   /* Infinite loop */
   for (;;)
-  {
-    osDelay(10);
+  {	
+    osDelay(2000);
   }
   /* USER CODE END RemoteTask_callback */
 }
@@ -316,7 +319,7 @@ void ChassisTask_callback(void *argument)
   for (;;)
   {
     guard_chassis_updata_location();
-    //guard_chassis_pid_calc();
+    guard_chassis_pid_calc();
     osDelay(10);
   }
   /* USER CODE END ChassisTask_callback */
@@ -335,7 +338,6 @@ void gimbalTask_callback(void *argument)
   /* Infinite loop */
   for(;;)
   {
-		gimbal_set(fromNUC.set_pitch,fromNUC.set_yaw);
 		gimbal_updata();
 		gimbal_pid_cal();
 		
@@ -362,24 +364,8 @@ void NUCcontrolTask_callback(void *argument)
 	unsigned char data[128];
   for(;;)
   {
-		//和NUC py一下
-		toNUC.Team = Red_Team;
-		toNUC.now_yaw = gimbal.yaw.now; toNUC.now_pitch = gimbal.pitch.now;
 		
-		toNUC.acc[0] = IMU_data.accel[0]; toNUC.acc[1] = IMU_data.accel[1]; toNUC.acc[2] = IMU_data.accel[2];
-		toNUC.gyo[0] = IMU_data.gyro[0]; toNUC.gyo[1] = IMU_data.gyro[1]; toNUC.gyo[2] = IMU_data.gyro[2];
-		toNUC.mag[0] = IMU_data.mag[0]; toNUC.mag[1] = IMU_data.mag[1]; toNUC.mag[2] = IMU_data.mag[2];
-		
-		toNUC.location = chassis.location.now;
-		
-		toNUC.move_speed = chassis.speed.now;
-		
-		toNUC.remainingBullets = shoot.remainingBullets;
-		
-		encodeSTM32(&toNUC,data,128);
-		VirCom_send(data,sizeof(STM32_data_t));
-		
-		//和MATLAB py一下
+//    和MATLAB py一下
 //		char matlab[128];
 //		unsigned char len = 0;
 //		len = sprintf(matlab,"%f %f %f %f %f %f %f %f %f",IMU_data.accel[0],IMU_data.accel[1],IMU_data.accel[2],IMU_data.gyro[0],IMU_data.gyro[1],IMU_data.gyro[2],IMU_data.mag[0],IMU_data.mag[1],IMU_data.mag[2]);

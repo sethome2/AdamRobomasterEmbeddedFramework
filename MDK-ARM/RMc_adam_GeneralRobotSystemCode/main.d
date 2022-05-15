@@ -80,4 +80,5 @@ rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\guard_chassis.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Algorithm\small_tools.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Task\Arm_Task.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\shoot.h
+rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\referee.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Hardware\USB_VirCom.h
