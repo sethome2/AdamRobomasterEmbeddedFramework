@@ -3,6 +3,7 @@
 
 #include "stdint.h"
 
+#define __packed // 防止vsc报错
 // #define __packed
 
 typedef struct
@@ -290,8 +291,14 @@ enum layer_color_e
   LAYER_BLANK = 7,
   LAYER_WHITE = 8,
 };
-void referee_layer_color(graphic_data_struct_t *t, enum layer_color_e set);
+void referee_layer_color(uint8_t id, enum layer_color_e set);
+void referr_layer_width(uint8_t id,uint16_t set);
+
+void referr_layer_chars_size(uint8_t id,uint16_t set);
+
 void referee_layer_draw_line(uint8_t id, uint16_t sX, uint16_t sY, uint16_t eX, uint16_t eY);
+void referee_layer_draw_cycle(uint8_t id, uint16_t sX, uint16_t sY, uint16_t eX, uint16_t eY);
+void referee_layer_draw_retangle(uint8_t id,uint16_t x1,uint16_t y1,uint16_t x2,uint16_t y2)
 
 //外部调用
 void referee_init(void); //初始化裁判系统

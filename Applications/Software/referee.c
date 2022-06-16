@@ -262,7 +262,7 @@ void referee_init()
   referee_add_command(0x0209, 4, &referee.ext_rfid_status_t);
   referee_add_command(0x020A, 4, &referee.ext_dart_client_cmd_t);
 
-  // 初始化图像部分
+  // 初始化图像部分的名称
   char name = '0';
   for (int i = 0; i < IMG_LAYER_NUM; i++)
     referee_layers.img.layers[i].graphic_name[2] = name++;
@@ -270,14 +270,10 @@ void referee_init()
     referee_layers.chars.layers[i].grapic_data_struct.graphic_name[2] = name++;
 }
 
-
 void referee_data_pack_handle(uint16_t cmd_id, uint8_t *p_data, uint16_t len)
 {
-  // unsigned char i = i;
-
-	static uint8_t seq = 0;
+  static uint8_t seq = 0;
   static uint8_t tx_buff[200];
-
   uint16_t frame_length = sizeof(frame_head) + 2 + len + 2; //数据帧长度
 
   memset(tx_buff, 0, frame_length); //存储数据的数组清零
@@ -286,29 +282,25 @@ void referee_data_pack_handle(uint16_t cmd_id, uint8_t *p_data, uint16_t len)
   frame_head send_header;
   send_header.SOF = HEADER_SOF; //数据帧起始字节
   send_header.data_len = len;
-  // memcpy(&tx_buff[1], (uint8_t *)&len, sizeof(len)); //数据帧中data的长度
-  send_header.seq = seq;                           //包序号
-  memcpy(tx_buff,&send_header,sizeof(frame_head));
+  send_header.seq = seq; //包序号
+  memcpy(tx_buff, &send_header, sizeof(frame_head));
   append_CRC8_check_sum(tx_buff, sizeof(frame_head)); //帧头校验CRC8
 
-  /*****命令码打包*****/
+  // commandID打包
   memcpy(&tx_buff[sizeof(frame_head)], (uint8_t *)&cmd_id, 2);
 
-  /*****数据打包*****/
+  // 计算CRC16
   memcpy(&tx_buff[sizeof(frame_head) + 2], p_data, len);
   append_CRC16_check_sum(tx_buff, frame_length); //一帧数据校验CRC16
 
-  if (seq == 0xff)
-    seq = 0;
-  else
-    seq++;
+  seq++;
 
+  // 默认使用串口6
   UART_send_data(UART6_data, tx_buff, frame_length);
 }
 
 // 图层数据
 referee_layers_t referee_layers;
-
 
 void referee_layers_all_updata(void)
 {
@@ -326,12 +318,18 @@ void referee_layers_all_updata(void)
       break;
     }
 
-   // 检查字符更新
-   for (int i = IMG_LAYER_NUM; i < IMG_LAYER_NUM + CHARS_LAYER_NUM; i++)
-     if (referee_layers.update[i] != 0) // 有更新
-     {
-       break;
-     }
+  // 检查字符更新
+  for (int i = IMG_LAYER_NUM; i < IMG_LAYER_NUM + CHARS_LAYER_NUM; i++)
+    if (referee_layers.update[i] != 0) // 有更新
+    {
+      referee_layers.chars.data_cmd_id = ADD_2_LAYER;
+      referee_layers.chars.sender_ID = 3;
+      referee_layers.chars.receiver_ID = 0x0103;
+
+      memcpy(cache,&referee_layers.img,sizeof(chars_layers_t));
+      referee_data_pack_handle(0x301,cache,sizeof(chars_layers_t));
+      break;
+    }
 }
 void referee_layer_updata_img(uint8_t id)
 {
@@ -342,23 +340,24 @@ void referee_layer_updata_img(uint8_t id)
 
   graphic_data_struct_t *this = &referee_layers.img.layers[id];
 
-	if(this->operate_tpye == 1)
-		this->operate_tpye = 2; //图形操作，0：空操作；1：增加；2：修改；3：删除；
-	else
-		this->operate_tpye = 1; //图形操作，0：空操作；1：增加；2：修改；3：删除；
-		
-  this->graphic_tpye = 0; //图形类型，0为直线，其他的查看用户手册
-  this->layer = id;        //图层数
-  this->color = 1;        //颜色
-  this->start_angle = 0;
-  this->end_angle = 0;
-  this->width = 1;
-  this->width = 1;
-  this->start_x = SCREEN_LENGTH / 2;
-  this->start_y = SCREEN_WIDTH / 2;
-  this->end_x = SCREEN_LENGTH / 2;
-  this->end_y = SCREEN_WIDTH / 2 - 300;
-  this->radius = 0;
+  if (this->operate_tpye == 1)
+    this->operate_tpye = 2; //图形操作，0：空操作；1：增加；2：修改；3：删除；
+  else
+    this->operate_tpye = 1; //图形操作，0：空操作；1：增加；2：修改；3：删除；
+
+  // 测试使用，后续删除
+  // this->graphic_tpye = 0; //图形类型，0为直线，其他的查看用户手册
+  // this->layer = id;       //图层数
+  // this->color = 1;        //颜色
+  // this->start_angle = 0;
+  // this->end_angle = 0;
+  // this->width = 1;
+  // this->width = 1;
+  // this->start_x = SCREEN_LENGTH / 2;
+  // this->start_y = SCREEN_WIDTH / 2;
+  // this->end_x = SCREEN_LENGTH / 2;
+  // this->end_y = SCREEN_WIDTH / 2 - 300;
+  // this->radius = 0;
 }
 
 void referee_layer_updata_chars(uint8_t id, char str[], uint8_t len)
@@ -371,13 +370,14 @@ void referee_layer_updata_chars(uint8_t id, char str[], uint8_t len)
   ext_client_custom_character_t *this = &referee_layers.chars.layers[id - IMG_LAYER_NUM];
 
   // 拷贝字符
+  memset(this->data, "\0", 30); // 清空发送的字符
   memcpy((char *)this->data, str, len);
 
   // 修改操作类型
-  if (this->grapic_data_struct.operate_tpye == 0)
-    this->grapic_data_struct.operate_tpye = 1;
   if (this->grapic_data_struct.operate_tpye == 1)
-    this->grapic_data_struct.operate_tpye = 2;
+    this->grapic_data_struct.operate_tpye = 2; //图形操作，0：空操作；1：增加；2：修改；3：删除；
+  else
+    this->grapic_data_struct.operate_tpye = 1; //图形操作，0：空操作；1：增加；2：修改；3：删除；
 
   this->grapic_data_struct.graphic_tpye = 7; // 字符类型
   this->grapic_data_struct.layer = id;       // 图层
@@ -391,12 +391,92 @@ void referee_layer_updata_chars(uint8_t id, char str[], uint8_t len)
   this->grapic_data_struct.start_y = SCREEN_WIDTH / 2;
 }
 
-void referee_layer_color(graphic_data_struct_t *t, enum layer_color_e set)
+void referee_layer_color(uint8_t id, enum layer_color_e set)
 {
-  t->color = set;
+  graphic_data_struct_t *this = referee_layer_get(id);
+  if (this == NULL)
+    return;
+  this->color = set;
+}
+void referr_layer_width(uint8_t id, uint16_t set)
+{
+  graphic_data_struct_t *this = referee_layer_get(id);
+  if (this == NULL)
+    return;
+  this->width = set;
+}
+void referr_layer_chars_size(uint8_t id, uint16_t set)
+{
+  graphic_data_struct_t *this = referee_layer_get(id);
+  if (this == NULL)
+    return;
+  this->start_angle = set;
 }
 
-graphic_data_struct_t *referee_layer_get(uint8_t id)
+inline graphic_data_struct_t *referee_layer_get(uint8_t id)
 {
-	return NULL;
+  if (id > IMG_LAYER_NUM + CHARS_LAYER_NUM)
+    return NULL;
+
+  if (id <= IMG_LAYER_NUM)
+    return &referee_layers.img.layers[id];
+  return &referee_layers.chars.layers[id - IMG_LAYER_NUM].grapic_data_struct;
+}
+
+/**
+ * @brief 绘制一条直线
+ *
+ * @param id 图层id
+ * @param sX 开始点x
+ * @param sY 开始点y
+ * @param eX 结束点x
+ * @param eY 结束点y
+ */
+void referee_layer_draw_line(uint8_t id, uint16_t sX, uint16_t sY, uint16_t eX, uint16_t eY)
+{
+  graphic_data_struct_t *this = referee_layer_get(id);
+  if (this == NULL)
+    return;
+
+  this->graphic_tpye = 0; // 0为直线
+  this->layer = id;       //图层
+  this->start_angle = 0;
+  this->end_angle = 0;
+  this->start_x = sX;
+  this->start_y = sY;
+  this->end_x = eX;
+  this->end_y = eY;
+  this->radius = 0;
+
+  if (this->width == 0)
+    this->width = 1; // 默认为1像素
+}
+
+/**
+ * @brief 绘制矩形
+ *
+ * @param id 图层ID
+ * @param x1 对角线坐标点1
+ * @param y1 对角线坐标点1
+ * @param x2 对角线坐标点2
+ * @param y2 对角线坐标点2
+ */
+void referee_layer_draw_retangle(uint8_t id, uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2)
+{
+  graphic_data_struct_t *this = referee_layer_get(id);
+  if (this == NULL)
+    return;
+
+  this->graphic_tpye = 1; // 1为矩形
+  this->layer = id;       //图层
+  this->start_angle = 0;
+  this->end_angle = 0;
+  this->start_x = x1;
+  this->start_y = y1;
+  this->end_x = x2;
+  this->end_y = y2;
+  this->radius = 0;
+
+  if (this->width == 0)
+    this->width = 1; // 默认为1像素
 }
