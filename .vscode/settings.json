@@ -21,6 +21,6 @@
         "utility": "cpp",
         "dbus_remote_control.h": "c",
         "gimbal.h": "c",
-        "myactuator_rmd_x.h": "c"
+        "uart_data_transmit.h": "c"
     }
 }

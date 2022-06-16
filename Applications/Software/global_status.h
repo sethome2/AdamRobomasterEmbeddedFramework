@@ -17,7 +17,6 @@
 // 适合十几个简单状态的情况
 struct GlobalStatus_t
 {
-    // 通用
     // 云台和视觉状态
     enum gimbal_visual_e
     {
@@ -36,37 +35,13 @@ struct GlobalStatus_t
         ACC,      // 用于短时加速
         FULL,     //全力响应
     } cap;
-
+		
+		
     enum team_e
     {
         BLUE_TEAM = 0,
         RED_TEAM,
-    } team;
-
-    // 工程专属
-    enum chassis_e
-    {
-        CHASSIS_SHUTDOWN = 0,
-        CHASSIS_SLOWDOWN,
-        CHASSIS_NORMAOL,
-    } chassis;
-    enum arm_e
-    {
-        AUTO = 0,
-        MANUAL,
-    } arm;
-    enum location_e
-    {
-        get_GND = 0,
-        get_Station,
-        put,
-        STAND_BY,
-    } location;
-    enum pump_e
-    {
-        OFF = 0,
-        ON = 1,
-    } pump;
+    }team;
 };
 
 extern struct GlobalStatus_t Global_status;
@@ -77,4 +52,4 @@ enum gimbal_visual_e read_gimbal_visual_status(void);
 enum cap_e read_cap_status(void);
 
 #endif
-// end of file
+//end of file

@@ -43,4 +43,5 @@ rmc_adam_generalrobotsystemcode\shoot.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm
 rmc_adam_generalrobotsystemcode\shoot.o: ..\Algorithm\pid.h
 rmc_adam_generalrobotsystemcode\shoot.o: ..\Applications\Hardware\CAN_receive&send.h
 rmc_adam_generalrobotsystemcode\shoot.o: ../Inc/struct_typedef.h
+rmc_adam_generalrobotsystemcode\shoot.o: ..\Applications\Hardware\time.h
 rmc_adam_generalrobotsystemcode\shoot.o: ..\Applications\Hardware\PWM_control.h

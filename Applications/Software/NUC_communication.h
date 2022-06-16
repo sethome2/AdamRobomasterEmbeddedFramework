@@ -7,7 +7,8 @@
 typedef struct 
 {
 	char mode;
-    char Team;
+	float pitch;
+	float yaw;
 } STM32_data_t;
 
 typedef struct
@@ -15,7 +16,7 @@ typedef struct
     float set_pitch;
     float set_yaw;
 
-//    char shot; //大于1代表开火
+    int shot; //大于1代表开火
 
 //    float delay; // ms
 

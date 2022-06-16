@@ -121,8 +121,7 @@ typedef struct
   //计算数据
   long long ecd_cnt; //编码器计数器
   float angle_cnt;   //转过的总角度 degree
-  float angle;       //单圈角度 only 6020
-	float round_speed; //出轴旋转速度 degree/s
+  float round_speed; //出轴旋转速度 degree/s
 
 } motor_measure_t;
 

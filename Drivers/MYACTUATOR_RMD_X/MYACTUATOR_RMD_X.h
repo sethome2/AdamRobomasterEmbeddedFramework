@@ -12,9 +12,6 @@
 //我经可能留出了拓展空间，后续建议使用ID来快速控制各个马达
 #include "stdint.h"
 
-#define __MYACTUATOR_RMD_X_H__
-#ifdef __MYACTUATOR_RMD_X_H__
-
 typedef struct
 {
 	float location_p, location_i;
@@ -59,5 +56,3 @@ void RMD_write_current(RMD_X_ID_CMD ID, int16_t current);																		   //
 void RMD_write_angle(RMD_X_ID_CMD ID, float angle);																				   //写入设定角度
 void RMD_write_angle_with_speed(RMD_X_ID_CMD ID, uint16_t speed, float angle);													   //写入限制速度的角度控制
 void RMD_decode_reply(uint16_t CAN_ID, uint8_t data[8]);																		   //解码信息
-
-#endif

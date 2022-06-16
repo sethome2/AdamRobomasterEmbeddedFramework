@@ -1,13 +1,14 @@
-*** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'RMc_adam_GeneralRobotSystemCode'
-compiling Arm_Task.c...
-..\Task\Arm_Task.h(8): error:  #20: identifier "uint8_t" is undefined
-  void Arm_rotate(uint8_t status);
-..\Task\Arm_Task.c: 0 warnings, 1 error
 compiling freertos.c...
-../Src/freertos.c(37): error:  #5: cannot open source input file "Arm_Task.h": No such file or directory
-  #include "Arm_Task.h"
-../Src/freertos.c: 0 warnings, 1 error
-"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 2 Error(s), 0 Warning(s).
-Target not created.
-Build Time Elapsed:  00:00:05
+..\Algorithm\pid.h(11): warning:  #1-D: last line of file ends without a newline
+  float pid_cal_shoot(pid_t *PidGoal,float Now,float Set);//PID????
+..\Applications\Software\shoot.h(65): warning:  #1295-D: Deprecated declaration shoot_one - give arg types
+  int shoot_one();
+../Src/freertos.c(476): warning:  #550-D: variable "err_cnt" was set but never used
+    int err_cnt = 0;
+../Src/freertos.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=60872 RO-data=1252 RW-data=692 ZI-data=31844  
+FromELF: creating hex file...
+"RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.axf" - 0 Error(s), 3 Warning(s).

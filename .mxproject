@@ -7,8 +7,8 @@ HeaderPath=..\Drivers\STM32F4xx_HAL_Driver\Inc;..\Drivers\STM32F4xx_HAL_Driver\I
 CDefines=USE_HAL_DRIVER;STM32F407xx;USE_HAL_DRIVER;USE_HAL_DRIVER;
 
 [PreviousGenFiles]
-HeaderPath=C:/Users/sethome/Desktop/RM开发板C型拓展框架/RMc_Adam_GenralRobotSystem Ver1.1.5.20220325 Alpha/Inc
+HeaderPath=C:/Users/sethome/Documents/Tencent Files/1095646418/FileRecv/adam_步兵_英雄/Inc
 HeaderFiles=gpio.h;FreeRTOSConfig.h;can.h;crc.h;dma.h;i2c.h;spi.h;tim.h;usart.h;usb_device.h;usbd_conf.h;usbd_desc.h;usbd_cdc_if.h;stm32f4xx_it.h;stm32f4xx_hal_conf.h;main.h;
-SourcePath=C:/Users/sethome/Desktop/RM开发板C型拓展框架/RMc_Adam_GenralRobotSystem Ver1.1.5.20220325 Alpha/Src
+SourcePath=C:/Users/sethome/Documents/Tencent Files/1095646418/FileRecv/adam_步兵_英雄/Src
 SourceFiles=gpio.c;freertos.c;can.c;crc.c;dma.c;i2c.c;spi.c;tim.c;usart.c;usb_device.c;usbd_conf.c;usbd_desc.c;usbd_cdc_if.c;stm32f4xx_it.c;stm32f4xx_hal_msp.c;stm32f4xx_hal_timebase_tim.c;main.c;
 

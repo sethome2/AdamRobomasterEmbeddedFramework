@@ -75,9 +75,10 @@ rmc_adam_generalrobotsystemcode\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Hardware\UART_data_transmit.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Drivers\Encoder\Encoder.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\chassis_move.h
-rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\Arm.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\gimbal.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Algorithm\pid.h
+rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\Arm.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\shoot.h
+rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Software\referee.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Applications\Hardware\USB_VirCom.h
 rmc_adam_generalrobotsystemcode\main.o: ..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h

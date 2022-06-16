@@ -6,6 +6,7 @@
 #include "string.h"
 #include "stdio.h"
 #include "TF_MINI_PLUS_LaserRanging.h"
+#include "referee.h"
 
 //DMA控制变量
 extern DMA_HandleTypeDef hdma_usart1_rx;
@@ -49,9 +50,6 @@ void UART_DMA_rxtx_start(transmit_data *data, UART_HandleTypeDef *huart, DMA_Han
   __HAL_DMA_ENABLE(hdma_usart_rx);                      //启动DMA接收
 }
 
-
-
-
 //发送数据（数据别释放了，不然后面收不到）
 void UART_send_data(transmit_data uart, uint8_t data[], uint16_t size)
 {
@@ -60,6 +58,11 @@ void UART_send_data(transmit_data uart, uint8_t data[], uint16_t size)
 
 //请放于UARTx_IRQHandler下，即UART全局中断函数
 //=.=当然你想放在HAL_UART_RxCpltCallback也不是不行
+int c = 0;
+
+uint8_t buffData[1024];
+uint8_t *pData = buffData;
+	
 void UART_rx_IRQHandler(transmit_data *uart)
 {
   uint16_t len = 256;//得到的数据长度
@@ -80,12 +83,24 @@ void UART_rx_IRQHandler(transmit_data *uart)
 		
     if (uart->huart == &huart1)//串口一数据处理
     {
-			//UART_send_data(UART1_data,uart->rev_data,len);
-			updataTF_MINI_PLUS_LaserRanging(uart->rev_data,len);
+			UART_send_data(UART1_data,uart->rev_data,len); // 自发自收
+			// updataTF_MINI_PLUS_LaserRanging(uart->rev_data,len);
 		}
     else if (uart->huart == &huart6)//串口二数据处理
     {
-			UART_send_data(UART6_data,uart->rev_data,len);
+			// UART_send_data(UART6_data,uart->rev_data,len); //自发自收
+			if(pData - buffData > 512)
+			{
+//				for(int i = 0;i < pData - buffData;i++)
+//					referee_decode_a_data(buffData[i]);
+				c = referee_decode_full_frame(buffData, pData - buffData); //解析从裁判系统获取的数据
+				pData = buffData;
+			}
+			else
+			{
+				memcpy(pData,uart->rev_data,len);
+				pData+=len;
+			}
 		}
 
 		//清除数据

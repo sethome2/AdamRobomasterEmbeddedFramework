@@ -17,10 +17,16 @@
 
 enum shoot_speed
 {
-    SHOOT_STOP = 3000,
-    SHOOT_17 = 1350,
-    SHOOT_23 = 1450,
-    SHOOT_30 = 1550,
+    SHOOT_STOP =0,
+    SHOOT_17 = 8000,
+    SHOOT_23 = 0,
+    SHOOT_30 = 0,
+};
+
+enum trigger_status_e     //拨弹轮控制模式
+{
+    LOCATIONS = 0,
+    SPEEDS,
 };
 
 typedef struct
@@ -38,7 +44,13 @@ typedef struct
         /* data */
         float now;
         float set;
+			  float off_set;
     }trigger_location; //拨弹电机位置
+		
+		float trigger_speed;//拨弹电机速度
+    float set_trigger_speed;
+		
+    enum trigger_status_e trigger_status;
 
 } shoot_t;
 
@@ -50,6 +62,10 @@ void shoot_update(void);  //更新拨弹电机速度等
 void shoot_pid_cal(void); //计算pid
 int shoot_Bullets(int n); //发射N颗子弹
 void shoot_reload(void);  //子弹重新计数
+void trigger_set_speed(float sudu); //拨弹电机速度设定
+int shoot_one(void);
+void trigger_clear_cnt(void);
+void trigger_set_offset(float set);
 #endif
 
 //end of file

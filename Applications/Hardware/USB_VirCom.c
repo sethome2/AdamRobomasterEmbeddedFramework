@@ -16,12 +16,35 @@ void VirCom_send(uint8_t data[], uint16_t len)
   CDC_Transmit_FS(data, len);
 }
 
+//void VirCom_rev(uint8_t data[], uint16_t len)
+//{
+//	decodeNUC(&fromNUC,data,len);
+//	
+////	gimbal_set(fromNUC.set_pitch, fromNUC.set_yaw);
+//	gimbal_set(fromNUC.set_pitch + gimbal.pitch.now ,fromNUC.set_yaw + gimbal.yaw.now);
+
+//}
+
+
+
 void VirCom_rev(uint8_t data[], uint16_t len)
 {
 	decodeNUC(&fromNUC,data,len);
 	
-	//gimbal_set(fromNUC.set_pitch, fromNUC.set_yaw);
-	gimbal_set(fromNUC.set_pitch + gimbal.pitch.now ,fromNUC.set_yaw + gimbal.yaw.now);
-
+	gimbal_set(fromNUC.set_pitch, fromNUC.set_yaw);
+//	gimbal_set(fromNUC.set_pitch + gimbal.pitch.now ,fromNUC.set_yaw + gimbal.yaw.now);
+	
+	if(fromNUC.shot == 0)
+			shoot.speed_level = SHOOT_STOP;
+	else if(fromNUC.shot == 1)
+	{
+			shoot.speed_level = SHOOT_17;
+	}
+	else if(fromNUC.shot >= 2)
+	{
+			shoot.speed_level = SHOOT_17;
+			shoot_Bullets(fromNUC.shot - 1);
+	}
 }
+
 

@@ -24,7 +24,7 @@ void cap_handle_message(uint8_t data[8])
 
 void cap_update()
 {
-	uint8_t can_send_data[8];
+	static uint8_t can_send_data[8];
   static CAN_TxHeaderTypeDef tx_message;
   uint32_t send_mail_box;
 	
@@ -35,8 +35,8 @@ void cap_update()
 	
 	can_send_t send_data;
 	
-	send_data.setPower = 50;
-	send_data.cacheEnergy = 60;
+	send_data.setPower = cap.set_max_power;
+	send_data.cacheEnergy = cap.cache_energy;
 	
 	memcpy(can_send_data,&send_data,sizeof(can_send_t));
 	

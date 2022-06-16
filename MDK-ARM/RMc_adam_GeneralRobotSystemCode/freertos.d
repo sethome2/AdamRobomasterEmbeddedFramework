@@ -69,7 +69,8 @@ rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\IMU_updata.
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Algorithm\Kalman_Filter_c.h
 rmc_adam_generalrobotsystemcode\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\PWM_control.h
-rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\GPIO_output.h
+rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\UART_data_transmit.h
+rmc_adam_generalrobotsystemcode\freertos.o: ../Inc/usart.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Drivers\TF-MINI_PLUS\TF_MINI_PLUS_LaserRanging.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\chassis_move.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\gimbal.h
@@ -77,8 +78,8 @@ rmc_adam_generalrobotsystemcode\freertos.o: ..\Algorithm\pid.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\shoot.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\USB_VirCom.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\cap_ctl.h
+rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\referee.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\time.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\global_status.h
-rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\Arm.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\NUC_communication.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h

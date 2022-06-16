@@ -9,10 +9,10 @@ using namespace std;
 #define HEADER 0xA5
 typedef struct
 {
-    uint8_t SOF;       //åŒ…å¤´
-    uint16_t data_len; //æ•°æ®åŒºåŸŸçš„é•¿åº¦
-    uint8_t seq;       //åºå·
-    uint8_t CRC8;      //CRC8æ ¡éªŒå€¼
+    uint8_t SOF;       //°üÍ·
+    uint16_t data_len; //Êı¾İÇøÓòµÄ³¤¶È
+    uint8_t seq;       //ĞòºÅ
+    uint8_t CRC8;      //CRC8Ğ£ÑéÖµ
 } frame_head;
 
 referee_t referee;
@@ -25,10 +25,10 @@ void referee_add_command(unsigned int ID, T *data_p)
     commandMem.insert(pair<unsigned int, void *>(ID, (void *)data_p));
 }
 
-//ç”¨äºæ¥å—é™¤å¸§å¤´åçš„æ•°æ®ï¼ŒåŒ…æ‹¬cmdID,data,CRC16åŒºåŸŸ
+//ÓÃÓÚ½ÓÊÜ³ıÖ¡Í·ºóµÄÊı¾İ£¬°üÀ¨cmdID,data,CRC16ÇøÓò
 int referee_decode_data(void *target_data, unsigned char rx_data[], unsigned int len)
 {
-    //ä¸æƒ³åšCRC16æ ¡éªŒ
+    //²»Ïë×öCRC16Ğ£Ñé
     //if (!verify_CRC16_check_sum(rx_data, len + 4))
     //		return 1;
 
@@ -36,19 +36,19 @@ int referee_decode_data(void *target_data, unsigned char rx_data[], unsigned int
     return 0;
 }
 
-//å¤–éƒ¨è°ƒç”¨
-//ä»ä¸²å£æ¥æ”¶çš„è§£æ
+//Íâ²¿µ÷ÓÃ
+//´Ó´®¿Ú½ÓÊÕµÄ½âÎö
 int referee_decode_full_frame(unsigned char rx_data[], unsigned int len)
 {
-    if (len < 9) //å¤ªçŸ­äº†   
+    if (len < 9) //Ì«¶ÌÁË   
         return -1;
-    else if (rx_data[0] != HEADER) //å¸§å¤´ä¸å¯¹
+    else if (rx_data[0] != HEADER) //Ö¡Í·²»¶Ô
         return -2;
 
-    //å¤åˆ¶å¸§å¤´åŒºåŸŸ
+    //¸´ÖÆÖ¡Í·ÇøÓò
     frame_head this_head;
     memcpy(&this_head, rx_data, sizeof(frame_head));
-    //æ­¤å¤„åº”æœ‰CRC8æ ¡éªŒ
+    //´Ë´¦Ó¦ÓĞCRC8Ğ£Ñé
 
     uint16_t commandID = rx_data[sizeof(frame_head) + 1] + rx_data[sizeof(frame_head) + 2] * 256;
 
@@ -56,17 +56,17 @@ int referee_decode_full_frame(unsigned char rx_data[], unsigned int len)
     if (iter != commandMem.end())
         return referee_decode_data(iter->second, rx_data + 5, this_head.data_len);
     else
-        return -3; //æ‰¾ä¸åˆ°å‘½ä»¤
+        return -3; //ÕÒ²»µ½ÃüÁî
 }
 
 /**
- * @brief å°†å‘é€ç»™è£åˆ¤ç³»ç»Ÿçš„æ•°æ®æ‰“åŒ…
+ * @brief ½«·¢ËÍ¸ø²ÃÅĞÏµÍ³µÄÊı¾İ´ò°ü
  * 
- * @tparam T å‘é€çš„ç»“æ„ä½“
- * @param commandID å‘½ä»¤ID
- * @param tx_data å‘é€æ•°æ®çš„æ•°ç»„
- * @param len å‘é€æ•°æ®çš„ç¼“å†²é•¿åº¦ï¼Œè‡³å°‘åœ¨10ä»¥ä¸Šï¼Œç„¶åä¼šä¿®æ”¹ä¸ºå‘é€å®é™…é•¿åº¦
- * @param target å‘é€çš„ç»“æ„ä½“å†…å­˜åœ°å€
+ * @tparam T ·¢ËÍµÄ½á¹¹Ìå
+ * @param commandID ÃüÁîID
+ * @param tx_data ·¢ËÍÊı¾İµÄÊı×é
+ * @param len ·¢ËÍÊı¾İµÄ»º³å³¤¶È£¬ÖÁÉÙÔÚ10ÒÔÉÏ£¬È»ºó»áĞŞ¸ÄÎª·¢ËÍÊµ¼Ê³¤¶È
+ * @param target ·¢ËÍµÄ½á¹¹ÌåÄÚ´æµØÖ·
  */
 template <typename T>
 void referre_encode_frame(unsigned int commandID, unsigned char tx_data[], unsigned int *len, T *target)
@@ -75,7 +75,7 @@ void referre_encode_frame(unsigned int commandID, unsigned char tx_data[], unsig
     if (*len < 10)
         return;
 
-    //è®¾ç½®å¸§å¤´
+    //ÉèÖÃÖ¡Í·
     frame_head send_head;
     send_head.SOF = HEADER;
     send_head.seq = seq++;
@@ -83,7 +83,7 @@ void referre_encode_frame(unsigned int commandID, unsigned char tx_data[], unsig
     //send_head.CRC8 = ?
     memcpy(&send_head, tx_data, sizeof(frame_head));
 
-    //è®¾ç½®ID
+    //ÉèÖÃID
     union
     {
         uint8_t uint8_data[2];
@@ -93,13 +93,13 @@ void referre_encode_frame(unsigned int commandID, unsigned char tx_data[], unsig
     tx_data[sizeof(frame_head) + 1] = ID.uint8_data[0];
     tx_data[sizeof(frame_head) + 2] = ID.uint8_data[1];
 
-    //æ‹·è´æ•°æ®éƒ¨åˆ†
+    //¿½±´Êı¾İ²¿·Ö
     memcpy(target, tx_data + sizeof(frame_head) + 3, sizeof(T));
 
-    //CRC16æ ¡éªŒ
+    //CRC16Ğ£Ñé
 
-    //è¿”å›é•¿åº¦
-    *len = sizeof(frame_head) + 2 + sizeof(T) + 2; //é•¿åº¦ä¸º å¸§å¤´ + å‘½ä»¤IDï¼ˆ2ï¼‰+ æ•°æ®éƒ¨åˆ† + CRC16ï¼ˆ2ï¼‰
+    //·µ»Ø³¤¶È
+    *len = sizeof(frame_head) + 2 + sizeof(T) + 2; //³¤¶ÈÎª Ö¡Í· + ÃüÁîID£¨2£©+ Êı¾İ²¿·Ö + CRC16£¨2£©
 }
 
 void referee_init()
