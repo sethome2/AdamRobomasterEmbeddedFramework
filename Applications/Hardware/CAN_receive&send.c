@@ -10,6 +10,12 @@
  */
 #include "CAN_receive&send.h"
 
+//第一方驱动
+#include "cap_ctl.h"
+
+//第三方驱动
+#include "MYACTUATOR_RMD_X.h"
+
 #include "math.h"
 #include "cmsis_os.h"
 
@@ -50,7 +56,15 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
   uint8_t rx_data[8];            //获取到的数据
 
   HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data); //取得信息
-
+	
+	if(rx_header.StdId > 0x140 && rx_header.StdId < 0x150)
+	{
+		RMD_decode_reply(rx_header.StdId, rx_data);
+		return;
+	}
+	if(rx_header.StdId == 0x007)
+		cap_handle_message(rx_data);
+	
   if (hcan == &hcan1) //CAN1/2判断
   {
     get_motor_measure(&motor_data[rx_header.StdId - CAN_ID1], rx_data);
@@ -223,23 +237,32 @@ void CAN2_send_current() //发送电机控制电流
 void decode_as_3508(can_id motorID)
 {
   //计算出轴速度
-  motor_data[motorID].round_speed  = motor_data[motorID].speed_rpm / 60.0f / M3508_P;
+  motor_data[motorID].round_speed  = (float)motor_data[motorID].speed_rpm / 60.0f / M3508_P;
   //计算总角度
-  motor_data[motorID].angle_cnt = motor_data[motorID].ecd_cnt / ECD_MAX / M3508_P * 360.00f;
+  motor_data[motorID].angle_cnt = (float)motor_data[motorID].ecd_cnt / ECD_MAX / M3508_P * 360.00f;
 }
 
 void decode_as_2006(can_id motorID)
 {
   //计算出轴速度
-  motor_data[motorID].round_speed = motor_data[motorID].speed_rpm / 60.0f / M2006_P;
+  motor_data[motorID].round_speed = (float)motor_data[motorID].speed_rpm / 60.0f / M2006_P;
   //计算总角度
-  motor_data[motorID].angle_cnt = motor_data[motorID].ecd_cnt / ECD_MAX / M2006_P * 360.00f;
+  motor_data[motorID].angle_cnt = (float)motor_data[motorID].ecd_cnt / ECD_MAX / M2006_P * 360.00f;
 }
 
 void decode_as_6020(can_id motorID)
 {
   //计算出轴速度
-  motor_data[motorID].round_speed = motor_data[motorID].speed_rpm / ECD_MAX * 360.0f;
+  motor_data[motorID].round_speed = (float)motor_data[motorID].speed_rpm / ECD_MAX * 360.0f;
   //计算总角度
-  motor_data[motorID].angle_cnt = motor_data[motorID].ecd_cnt / ECD_MAX * 360.00f;
+  motor_data[motorID].angle_cnt = (float)motor_data[motorID].ecd_cnt / ECD_MAX * 360.00f;
+	//单圈角度
+	motor_data[motorID].angle = (float)(motor_data[motorID].ecd) / ECD_MAX * 360.00f;
+}   
+
+
+void clear_motor_cnt(can_id motorID)
+{
+  motor_data[motorID].ecd_cnt = 0;
 }
+//end of file

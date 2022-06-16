@@ -6,23 +6,20 @@
  */
 typedef struct 
 {
-    enum 
-    {
-        Red_Team = 0,
-        Blue_Team = 1,
-    }Team;
+	char mode;
+    char Team;
 } STM32_data_t;
 
 typedef struct
 {
     float set_pitch;
     float set_yaw;
-		
-		char get;//1 get new frame
-	
-    char shot; //大于1代表开火
 
-    float delay; // ms
+//    char shot; //大于1代表开火
+
+//    float delay; // ms
+
+//    char customStr[2]; //内存对齐
 } NUC_data_t;
 
 extern NUC_data_t fromNUC;

@@ -94,9 +94,6 @@ void Error_Handler(void);
 #define PIN_7 7
 #define PIN_8 8
 
-//#define TEST_VERSION
-#define DEV_VERSION
-//#define RELEASE_VERSION
 
 /* USER CODE END Private defines */
 

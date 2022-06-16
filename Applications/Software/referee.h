@@ -5,256 +5,47 @@
 
 typedef struct
 {
-  __packed struct game_status_t // ±ÈÈü×´Ì¬Êı¾İ£º0x0001¡£·¢ËÍÆµÂÊ£º1Hz
-  {
-    uint8_t game_type : 4;      // 1£ºRoboMaster »ú¼×´óÊ¦Èü 2£ºRoboMaster »ú¼×´óÊ¦µ¥ÏîÈü 3£ºICRA RoboMaster ÈË¹¤ÖÇÄÜÌôÕ½Èü 4£ºRoboMaster ÁªÃËÈü 3V3 5£ºRoboMaster ÁªÃËÈü 1V1
-    uint8_t game_progress : 4;  // 0£ºÎ´¿ªÊ¼±ÈÈü 1£º×¼±¸½×¶Î 2£º×Ô¼ì½×¶Î 3£º5s µ¹¼ÆÊ± 4£º¶ÔÕ½ÖĞ 5£º±ÈÈü½áËãÖĞ
-    uint16_t stage_remain_time; //µ±Ç°½×¶ÎÊ£ÓàÊ±¼ä£¬µ¥Î» s
-    uint64_t SyncTimeStamp;     //µ±Ç°½×¶ÎÊ£ÓàÊ±¼ä£¬µ¥Î» s
-  } game_status;                // 1HZ
+    struct game_status_t
+    {
+        uint8_t game_type : 4;      //1ï¼šRoboMaster æœºç”²å¤§å¸ˆèµ› 2ï¼šRoboMaster æœºç”²å¤§å¸ˆå•é¡¹èµ› 3ï¼šICRA RoboMaster äººå·¥æ™ºèƒ½æŒ‘æˆ˜èµ› 4ï¼šRoboMaster è”ç›Ÿèµ› 3V3 5ï¼šRoboMaster è”ç›Ÿèµ› 1V1
+        uint8_t game_progress : 4;  //0ï¼šæœªå¼€å§‹æ¯”èµ› 1ï¼šå‡†å¤‡é˜¶æ®µ 2ï¼šè‡ªæ£€é˜¶æ®µ 3ï¼š5s å€’è®¡æ—¶ 4ï¼šå¯¹æˆ˜ä¸­ 5ï¼šæ¯”èµ›ç»“ç®—ä¸­
+        uint16_t stage_remain_time; //å½“å‰é˜¶æ®µå‰©ä½™æ—¶é—´ï¼Œå•ä½ s
+        uint64_t SyncTimeStamp;     //å½“å‰é˜¶æ®µå‰©ä½™æ—¶é—´ï¼Œå•ä½ s
+    } game_status;                  //1HZ
 
-  __packed struct game_result_t // ±ÈÈü½á¹ûÊı¾İ£º0x0002¡£·¢ËÍÆµÂÊ£º±ÈÈü½áÊøºó·¢ËÍ
-  {
-    uint8_t winner; // 0 Æ½¾Ö 1 ºì·½Ê¤Àû 2 À¶·½Ê¤Àû
-  } game_result;    //±ÈÈü½áÊøºó·¢ËÍ
+    struct game_result_t
+    {
+        uint8_t winner; //0 å¹³å±€ 1 çº¢æ–¹èƒœåˆ© 2 è“æ–¹èƒœåˆ©
+    } game_result;      //æ¯”èµ›ç»“æŸåå‘é€
 
-  __packed struct game_robot_HP_t // »úÆ÷ÈËÑªÁ¿Êı¾İ£º0x0003
-  {
-    uint16_t red_1_robot_HP;
-    uint16_t red_2_robot_HP;
-    uint16_t red_3_robot_HP;
-    uint16_t red_4_robot_HP;
-    uint16_t red_5_robot_HP;
-    uint16_t red_7_robot_HP;
-    uint16_t red_outpost_HP;
-    uint16_t red_base_HP;
-    uint16_t blue_1_robot_HP;
-    uint16_t blue_2_robot_HP;
-    uint16_t blue_3_robot_HP;
-    uint16_t blue_4_robot_HP;
-    uint16_t blue_5_robot_HP;
-    uint16_t blue_7_robot_HP;
-    uint16_t blue_outpost_HP;
-    uint16_t blue_base_HP;
-  } game_robot_HP; // 1HZ
+    struct game_robot_HP_t
+    {
+        uint16_t red_1_robot_HP;
+        uint16_t red_2_robot_HP;
+        uint16_t red_3_robot_HP;
+        uint16_t red_4_robot_HP;
+        uint16_t red_5_robot_HP;
+        uint16_t red_7_robot_HP;
+        uint16_t red_outpost_HP;
+        uint16_t red_base_HP;
+        uint16_t blue_1_robot_HP;
+        uint16_t blue_2_robot_HP;
+        uint16_t blue_3_robot_HP;
+        uint16_t blue_4_robot_HP;
+        uint16_t blue_5_robot_HP;
+        uint16_t blue_7_robot_HP;
+        uint16_t blue_outpost_HP;
+        uint16_t blue_base_HP;
+    } game_robot_HP; //1HZ
 
-  __packed struct // ·ÉïÚ·¢Éä×´Ì¬£º0x0004
-  {
-    uint8_t dart_belong;           // ·¢Éä¶ÓÎé 1 Red 2 Blue
-    uint16_t stage_remaining_time; // Ê£Óà·¢ÉäÊ±¼ä
-  } ext_dart_status_t;
-
-  __packed struct // ÈË¹¤ÖÇÄÜÌôÕ½Èü¼Ó³ÉÓë³Í·£Çø×´Ì¬£º0x0005¡£·¢ËÍÆµÂÊ£º1Hz ÖÜÆÚ·¢ËÍ£¬·¢ËÍ·¶Î§£ºËùÓĞ»úÆ÷ÈË
-  {
-    uint8_t F1_zone_status : 1;
-    uint8_t F1_zone_buff_debuff_status : 3;
-    uint8_t F2_zone_status : 1;
-    uint8_t F2_zone_buff_debuff_status : 3;
-    uint8_t F3_zone_status : 1;
-    uint8_t F3_zone_buff_debuff_status : 3;
-    uint8_t F4_zone_status : 1;
-    uint8_t F4_zone_buff_debuff_status : 3;
-    uint8_t F5_zone_status : 1;
-    uint8_t F5_zone_buff_debuff_status : 3;
-    uint8_t F6_zone_status : 1;
-    uint8_t F6_zone_buff_debuff_status : 3;
-    uint16_t red1_bullet_left;
-    uint16_t red2_bullet_left;
-    uint16_t blue1_bullet_left;
-    uint16_t blue2_bullet_left;
-  } ext_ICRA_buff_debuff_zone_status_t;
-
-  __packed struct // ³¡µØµØÊÂ¼şÊı¾İ£º0x0101¡£·¢ËÍÆµÂÊ£ºÊÂ¼ş¸Ä±äºó·¢ËÍ
-  {
-    uint32_t event_type;
-  } ext_event_data_t;
-
-  __packed struct // ²¹¸øÕ¾¶¯×÷±êÊ¶£º0x0102¡£·¢ËÍÆµÂÊ£º¶¯×÷¸Ä±äºó·¢ËÍ, ·¢ËÍ·¶Î§£º¼º·½»úÆ÷
-  {
-    uint8_t supply_projectile_id;
-    uint8_t supply_robot_id;
-    uint8_t supply_projectile_step;
-    uint8_t supply_projectile_num;
-  } ext_supply_projectile_action_t;
-
-  __packed struct // ²ÃÅĞ¾¯¸æĞÅÏ¢£ºcmd_id (0x0104)¡£·¢ËÍÆµÂÊ£º¾¯¸æ·¢Éúºó·¢ËÍ
-  {
-    uint8_t level;
-    uint8_t foul_robot_id;
-  } ext_referee_warning_t;
-
-  __packed struct // ·ÉïÚ·¢Éä¿Úµ¹¼ÆÊ±£ºcmd_id (0x0105)¡£·¢ËÍÆµÂÊ£º1Hz ÖÜÆÚ·¢ËÍ£¬·¢ËÍ·¶Î§£º¼º·½»úÆ÷ÈË
-  {
-    uint8_t dart_remaining_time;
-  } ext_dart_remaining_time_t;
-
-  __packed struct // ±ÈÈü»úÆ÷ÈË×´Ì¬£º0x0201¡£·¢ËÍÆµÂÊ£º10Hz
-  {
-    uint8_t robot_id;
-    uint8_t robot_level;
-    uint16_t remain_HP;
-    uint16_t max_HP;
-    uint16_t shooter_id1_17mm_cooling_rate;
-    uint16_t shooter_id1_17mm_cooling_limit;
-    uint16_t shooter_id1_17mm_speed_limit;
-    uint16_t shooter_id2_17mm_cooling_rate;
-    uint16_t shooter_id2_17mm_cooling_limit;
-    uint16_t shooter_id2_17mm_speed_limit;
-
-    uint16_t shooter_id1_42mm_cooling_rate;
-    uint16_t shooter_id1_42mm_cooling_limit;
-    uint16_t shooter_id1_42mm_speed_limit;
-    uint16_t chassis_power_limit;
-    uint8_t mains_power_gimbal_output : 1;
-    uint8_t mains_power_chassis_output : 1;
-    uint8_t mains_power_shooter_output : 1;
-  } ext_game_robot_status_t;
-
-  __packed struct // ÊµÊ±¹¦ÂÊÈÈÁ¿Êı¾İ£º0x0202¡£·¢ËÍÆµÂÊ£º50Hz
-  {
-    uint16_t chassis_volt;
-    uint16_t chassis_current;
-    float chassis_power;
-    uint16_t chassis_power_buffer;
-    uint16_t shooter_id1_17mm_cooling_heat;
-    uint16_t shooter_id2_17mm_cooling_heat;
-    uint16_t shooter_id1_42mm_cooling_heat;
-  } ext_power_heat_data_t;
-
-  __packed struct // »úÆ÷ÈËÎ»ÖÃ£º0x0203¡£·¢ËÍÆµÂÊ£º10Hz
-  {
-    float x;
-    float y;
-    float z;
-    float yaw;
-  } ext_game_robot_pos_t;
-
-  __packed struct // »úÆ÷ÈËÔöÒæ£º0x0204¡£·¢ËÍÆµÂÊ£º1Hz
-  {
-    uint8_t power_rune_buff;
-  } ext_buff_t;
-
-  __packed struct // ¿ÕÖĞ»úÆ÷ÈËÄÜÁ¿×´Ì¬£º0x0205¡£·¢ËÍÆµÂÊ£º10Hz
-  {
-    uint8_t attack_time;
-  } aerial_robot_energy_t;
-
-  __packed struct // ÉËº¦×´Ì¬£º0x0206¡£·¢ËÍÆµÂÊ£ºÉËº¦·¢Éúºó·¢ËÍ
-  {
-    uint8_t armor_id : 4;
-    uint8_t hurt_type : 4;
-  } ext_robot_hurt_t;
-
-  __packed struct // ÊµÊ±Éä»÷ĞÅÏ¢£º0x0207¡£·¢ËÍÆµÂÊ£ºÉä»÷ºó·¢ËÍ
-  {
-    uint8_t bullet_type;
-    uint8_t shooter_id;
-    uint8_t bullet_freq;
-    float bullet_speed;
-  } ext_shoot_data_t;
-
-  __packed struct // ×Óµ¯Ê£Óà·¢ÉäÊı£º0x0208¡£·¢ËÍÆµÂÊ£º10Hz ÖÜÆÚ·¢ËÍ£¬ËùÓĞ»úÆ÷ÈË·¢ËÍ
-  {
-    uint16_t bullet_remaining_num_17mm;
-    uint16_t bullet_remaining_num_42mm;
-    uint16_t coin_remaining_num; // Ê£Óà½ğ±Ò
-  } ext_bullet_remaining_t;
-
-  __packed struct // »úÆ÷ÈË RFID ×´Ì¬£º0x0209¡£·¢ËÍÆµÂÊ£º1Hz£¬·¢ËÍ·¶Î§£ºµ¥Ò»»úÆ÷ÈË
-  {
-    uint32_t rfid_status;
-  } ext_rfid_status_t;
-
-  __packed struct // ·ÉïÚ»úÆ÷ÈË¿Í»§¶ËÖ¸ÁîÊı¾İ£º0x020A¡£·¢ËÍÆµÂÊ£º10Hz£¬·¢ËÍ·¶Î§£ºµ¥Ò»»úÆ÷ÈË
-  {
-    uint8_t dart_launch_opening_status;
-    uint8_t dart_attack_target;
-    uint16_t target_change_time;
-    uint8_t first_dart_speed;
-    uint8_t second_dart_speed;
-    uint8_t third_dart_speed;
-    uint8_t fourth_dart_speed;
-    uint16_t last_dart_launch_time;
-    uint16_t operate_launch_cmd_time;
-  } ext_dart_client_cmd_t;
 } referee_t;
 
-extern referee_t referee; // ²ÃÅĞÏµÍ³½ÓÊÜ½á¹¹Ìå
+extern referee_t referee;
 
-__packed typedef struct
-{
-  uint8_t name[3]; // Ãû×Ö Ö»ÓÃÇ°Ò»¸ö
-  uint32_t operate_tpye : 3;
-  uint32_t graphic_tpye : 3;
-  uint32_t layer : 4;
-  uint32_t color : 4;
-  uint32_t start_angle : 9;
-  uint32_t end_angle : 9;
-  uint32_t width : 10;
-  uint32_t start_x : 11;
-  uint32_t start_y : 11;
-  uint32_t radius : 10;
-  uint32_t end_x : 11;
-  uint32_t end_y : 11;
-} graphic_data_struct_t;
-
-struct layer_node;
-
-typedef struct
-{
-  graphic_data_struct_t graphic;
-  uint8_t updata;
-
-  layer_node *next;
-} layer_node;
-
-/**
- * @brief ÓÃÓÚ·¢ËÍÖ¡Í·µÄcmd_idÁĞ±í
- *        ½á¹¹Ìåframe_headÊ¹ÓÃ
- */
-typedef enum
-{
-  COM_EACH_OTHER_ID = 0x301,   //½»»¥ĞÅÏ¢
-  PRIVATE_CTL_ID = 0x302,      // ×Ô¶¨Òå¿ØÖÆÆ÷
-  FORM_OTHER_TEAMMATE = 0x303, // À´×ÅÔÆÌ¨ÊÖ/À×´ïµÄĞÅÏ¢ ?
-  RADER_SEND_INFO = 0x305,     // À×´ï·¢ËÍĞÅÏ¢
-} SEND_ID;
-
-//********************½»»¥ĞÅÏ¢²¿·Ö**********************
-__packed typedef struct
-{
-  uint16_t data_cmd_id;
-  uint16_t sender_ID;
-  uint16_t receiver_ID;
-} ext_student_interactive_header_data_t;
-
-/**
- * @brief ½»»¥ĞÅÏ¢µÄ·¢ËÍºÍ½ÓÊÜÕßID
- *
- */
-typedef enum
-{
-  HERO_R = 1,
-  ENGINEER_R = 2,
-  INFANTRY1_R = 3,
-  INFANTRY2_R = 4,
-  INFANTRY3_R = 5,
-  AIR_R = 6,
-  RADER_R = 7, // ºì·½
-
-  HERO_B = 101,
-  ENGINEER_B = 102,
-  INFANTRY1_B = 103,
-  INFANTRY2_B = 104,
-  INFANTRY3_B = 105,
-  AIR_B = 106,
-  RADER_B = 107, // À¶·½
-} SEMDER_ID;
-
-//Íâ²¿µ÷ÓÃ
-void referee_init(void);                                            //³õÊ¼»¯²ÃÅĞÏµÍ³
-int referee_decode_full_frame(uint8_t rx_data[], unsigned int len); //½âÎö´Ó²ÃÅĞÏµÍ³»ñÈ¡µÄÊı¾İ
+//å¤–éƒ¨è°ƒç”¨
+void referee_init(void);                                                  //åˆå§‹åŒ–è£åˆ¤ç³»ç»Ÿ
+int referee_decode_full_frame(unsigned char rx_data[], unsigned int len); //è§£æä»è£åˆ¤ç³»ç»Ÿè·å–çš„æ•°æ®
 
 #endif
 
-// end of file
+//end of file

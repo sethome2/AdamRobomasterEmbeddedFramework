@@ -19,6 +19,8 @@
         "crc8_crc16.h": "c",
         "xtree": "cpp",
         "utility": "cpp",
-        "files:encoding": "gb2312"
+        "dbus_remote_control.h": "c",
+        "gimbal.h": "c",
+        "myactuator_rmd_x.h": "c"
     }
 }

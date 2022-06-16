@@ -13,11 +13,11 @@
 
 #define FULL_BULLETS 500
 
-//#define USE_3508_AS_SHOOT_MOTOR
+#define USE_3508_AS_SHOOT_MOTOR
 
 enum shoot_speed
 {
-    SHOOT_STOP = 1200,
+    SHOOT_STOP = 3000,
     SHOOT_17 = 1350,
     SHOOT_23 = 1450,
     SHOOT_30 = 1550,

@@ -41,6 +41,8 @@ rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Dri
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+rmc_adam_generalrobotsystemcode\can_receive&send.o: ..\Applications\Software\cap_ctl.h
+rmc_adam_generalrobotsystemcode\can_receive&send.o: ..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
 rmc_adam_generalrobotsystemcode\can_receive&send.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h

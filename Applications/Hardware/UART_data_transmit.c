@@ -6,7 +6,6 @@
 #include "string.h"
 #include "stdio.h"
 #include "TF_MINI_PLUS_LaserRanging.h"
-#include "referee.h"
 
 //DMA控制变量
 extern DMA_HandleTypeDef hdma_usart1_rx;
@@ -61,7 +60,6 @@ void UART_send_data(transmit_data uart, uint8_t data[], uint16_t size)
 
 //请放于UARTx_IRQHandler下，即UART全局中断函数
 //=.=当然你想放在HAL_UART_RxCpltCallback也不是不行
-int a = 0; 
 void UART_rx_IRQHandler(transmit_data *uart)
 {
   uint16_t len = 256;//得到的数据长度
@@ -87,8 +85,7 @@ void UART_rx_IRQHandler(transmit_data *uart)
 		}
     else if (uart->huart == &huart6)//串口二数据处理
     {
-			a = referee_decode_full_frame(uart->rev_data,len);
-			// UART_send_data(UART6_data,uart->rev_data,len);
+			UART_send_data(UART6_data,uart->rev_data,len);
 		}
 
 		//清除数据

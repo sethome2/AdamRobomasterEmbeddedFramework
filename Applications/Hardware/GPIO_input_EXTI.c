@@ -3,6 +3,7 @@
 #define __GPIO_INPUT_EXTI_C__
 #ifdef __GPIO_INPUT_EXTI_C__
 
+#include "global_status.h"
 #include "GPIO_input_EXTI.h"
 #include "main.h"
 #include "Encoder.h"
@@ -18,7 +19,11 @@ void HAL_GPIO_EXTI_Callback (uint16_t GPIO_Pin)
 	}
 	if(GPIO_Pin == KEY_Pin)// 用户按键被按下时
 	{
-		led_show(YELLOW);
+		//led_show(YELLOW);
+		if(Global_status.team == BLUE_TEAM)
+			Global_status.team = RED_TEAM;
+		else if(Global_status.team == RED_TEAM)
+			Global_status.team = BLUE_TEAM;
 	}
 }
 

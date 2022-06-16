@@ -1,4 +1,6 @@
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ..\Applications\Hardware\GPIO_input_EXTI.c
+rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ..\Applications\Software\global_status.h
+rmc_adam_generalrobotsystemcode\gpio_input_exti.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ..\Applications\Hardware\GPIO_input_EXTI.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Inc/stm32f4xx_hal_conf.h
@@ -7,7 +9,6 @@ rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/STM32F4xx_HAL_Driv
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/CMSIS/Include/core_cm4.h
-rmc_adam_generalrobotsystemcode\gpio_input_exti.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/CMSIS/Include/cmsis_version.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 rmc_adam_generalrobotsystemcode\gpio_input_exti.o: ../Drivers/CMSIS/Include/cmsis_armcc.h

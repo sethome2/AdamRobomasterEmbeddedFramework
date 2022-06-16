@@ -48,10 +48,10 @@ pid_t location_pid;
 void guard_chassis_move_init()
 {
     //速度环初始化
-    pid_set(&speed_pid[0], 10, 0, 0, 2000, 0);
-    pid_set(&speed_pid[1], 10, 0, 0, 2000, 0);
+    pid_set(&speed_pid[0], 1000, 0, 10, 2000, 0);
+    pid_set(&speed_pid[1], 1000, 0, 10, 2000, 0);
     //位置环初始化
-    pid_set(&location_pid, 800, 0, 1, 2000, 0);
+    pid_set(&location_pid, 10, 0, 1, 2000, 0);
     //时间滑动方差
     sliding_variance_init(&chassis.location.stable);
 }
@@ -61,16 +61,11 @@ void guard_chassis_pid_calc()
 {
     //计算速度
     chassis.speed.set = pid_cal(&location_pid, chassis.location.now, chassis.location.set);
-	
+
     //计算对应电机的电流
-		if(chassis.speed.set >= 800 || chassis.speed.set <= -800)
-		{
-			wheel_current[0] = pid_cal(&speed_pid[0], get_motor_data(Motor1).speed_rpm, chassis.speed.set);
-			wheel_current[1] = pid_cal(&speed_pid[1], get_motor_data(Motor2).speed_rpm, chassis.speed.set);
-		}
-		else
-			wheel_current[0] = wheel_current[1] = 0;
-		
+    wheel_current[0] = pid_cal(&speed_pid[0], get_motor_data(Motor1).speed_rpm, chassis.speed.set);
+    wheel_current[1] = pid_cal(&speed_pid[1], get_motor_data(Motor2).speed_rpm, chassis.speed.set);
+
     //设置电流
     set_motor(wheel_current[0], Motor1);
     set_motor(wheel_current[1], Motor2);

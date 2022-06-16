@@ -1,3 +1,7 @@
+
+#define __PID_H__
+#ifdef __PID_H__
+
 typedef struct//PID控制数据结构体
 {
   float p,i,d;//比例，积分，微分
@@ -8,3 +12,6 @@ typedef struct//PID控制数据结构体
 
 void pid_set(pid_t *PidSet,float p_set,float i_set,float d_set,float lim_out_set,float lim_i_outset);//PID设置
 float pid_cal(pid_t *PidGoal,float Now,float Set);//PID计算
+
+#endif
+

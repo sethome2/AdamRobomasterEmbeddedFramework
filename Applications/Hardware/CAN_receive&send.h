@@ -121,7 +121,8 @@ typedef struct
   //计算数据
   long long ecd_cnt; //编码器计数器
   float angle_cnt;   //转过的总角度 degree
-  float round_speed; //出轴旋转速度 degree/s
+  float angle;       //单圈角度 only 6020
+	float round_speed; //出轴旋转速度 degree/s
 
 } motor_measure_t;
 
@@ -134,5 +135,6 @@ motor_measure_t get_motor_data(can_id motorID); //获取马达信息
 void decode_as_3508(can_id motorID);
 void decode_as_2006(can_id motorID);
 void decode_as_6020(can_id motorID);
+void clear_motor_cnt(can_id motorID);
 
 #endif
