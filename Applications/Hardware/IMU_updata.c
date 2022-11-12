@@ -8,6 +8,7 @@
 
 #include "MahonyAHRS.h"
 #include "madgwick.h"
+#include "AHRS.h"
 
 //made by sethome
 //使用TIM14定频更新
@@ -30,12 +31,12 @@ extern float SEq_1, SEq_2, SEq_3, SEq_4; //madgwick滤波器变量
 void IMU_heat_set(uint16_t ccr); //加热电阻PWM占空比
 
 //四元数转为欧拉角
-void get_angle(fp32 q[4], fp32 *yaw, fp32 *pitch, fp32 *roll)
-{
-	*yaw = atan2f(2.0f * (q[0] * q[3] + q[1] * q[2]), 2.0f * (q[0] * q[0] + q[1] * q[1]) - 1.0f);
-	*pitch = asinf(-2.0f * (q[1] * q[3] - q[0] * q[2]));
-	*roll = atan2f(2.0f * (q[0] * q[1] + q[2] * q[3]), 2.0f * (q[0] * q[0] + q[3] * q[3]) - 1.0f);
-}
+//void get_angle(fp32 q[4], fp32 *yaw, fp32 *pitch, fp32 *roll)
+//{
+//	*yaw = atan2f(2.0f * (q[0] * q[3] + q[1] * q[2]), 2.0f * (q[0] * q[0] + q[1] * q[1]) - 1.0f);
+//	*pitch = asinf(-2.0f * (q[1] * q[3] - q[0] * q[2]));
+//	*roll = atan2f(2.0f * (q[0] * q[1] + q[2] * q[3]), 2.0f * (q[0] * q[0] + q[3] * q[3]) - 1.0f);
+//}
 
 //初始化
 void IMU_init()
@@ -62,10 +63,12 @@ void IMU_init()
 	HAL_TIM_Base_Start_IT(&htim14); //使能更新中断，200HZ
 
 	Kalman_init(&filter, 1.0f, 0.05f, 0.05f, 0.05f, 0.05f, 0.05f); //卡尔曼滤波参数
+	
+	AHRS_init(IMU_data.AHRS_result.q, IMU_data.accel , IMU_data.mag);// AHRS滤波参数
 }
 
 //IMU更新函数
-void IMU_updata() //1000HZ
+void IMU_updata() //200HZ
 {
 	//读取陀螺仪和地磁计信息
 	BMI088_read(IMU_data.gyro, IMU_data.accel, &IMU_data.temp);
@@ -91,7 +94,13 @@ void IMU_updata() //1000HZ
 	IMU_data.madgwick_result.q[2] = SEq_3;
 	IMU_data.madgwick_result.q[3] = SEq_4;
 	get_angle(IMU_data.madgwick_result.q, &IMU_data.madgwick_result.yaw, &IMU_data.madgwick_result.pitch, &IMU_data.madgwick_result.roll);
+	
+	// AHRS.lib
+	// 如果失败，返回0
+	AHRS_update(IMU_data.AHRS_result.q, 0.05f, IMU_data.gyro, IMU_data.accel, IMU_data.mag);
+	get_angle(IMU_data.AHRS_result.q, &IMU_data.AHRS_result.yaw, &IMU_data.AHRS_result.pitch, &IMU_data.AHRS_result.roll);
 }
+
 void MagUpdate() //200Hz
 {
 	ist8310_read_mag(IMU_data.mag);
@@ -101,7 +110,7 @@ void MagUpdate() //200Hz
 void IMU_heat_set(uint16_t ccr)
 {
 	__HAL_TIM_SetCompare(&htim10, TIM_CHANNEL_1, ccr); //HAL库PWM的CCR设定
-													   //TIM10->CCR1 = (pwm);
+	//TIM10->CCR1 = (pwm);
 }
 
 //旋转90度

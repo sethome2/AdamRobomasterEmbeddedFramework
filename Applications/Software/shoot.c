@@ -57,6 +57,8 @@ void shoot_update()
     shoot.shoot_speed[1] = get_motor_data(SHOOT_MOTOR2).speed_rpm;
 #endif
 
+    // 卡弹 退单逻辑处，判断时间，临时后退一个距离
+    
     decode_as_2006(TRIGGER_MOTOR);
     shoot.trigger_location.now = get_motor_data(TRIGGER_MOTOR).angle_cnt;
 }

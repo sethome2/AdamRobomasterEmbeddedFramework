@@ -67,6 +67,8 @@
 "rmc_adam_generalrobotsystemcode\madgwick.o"
 "rmc_adam_generalrobotsystemcode\mahonyahrs.o"
 "rmc_adam_generalrobotsystemcode\small_tools.o"
+"rmc_adam_generalrobotsystemcode\ahrs_middleware.o"
+"..\Algorithm\AHRS.lib"
 "rmc_adam_generalrobotsystemcode\chassis_task.o"
 "rmc_adam_generalrobotsystemcode\arm_task.o"
 "rmc_adam_generalrobotsystemcode\encoder.o"
@@ -86,12 +88,14 @@
 "rmc_adam_generalrobotsystemcode\shoot.o"
 "rmc_adam_generalrobotsystemcode\nuc_communication.o"
 "rmc_adam_generalrobotsystemcode\chassis_move.o"
+"rmc_adam_generalrobotsystemcode\global_status.o"
 "rmc_adam_generalrobotsystemcode\usbd_core.o"
 "rmc_adam_generalrobotsystemcode\usbd_ctlreq.o"
 "rmc_adam_generalrobotsystemcode\usbd_ioreq.o"
 "rmc_adam_generalrobotsystemcode\usbd_cdc.o"
 "rmc_adam_generalrobotsystemcode\tf_mini_plus_laserranging.o"
 "rmc_adam_generalrobotsystemcode\myactuator_rmd_x.o"
+"C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Lib\ARM\arm_cortexM4lf_math.lib"
 --strict --scatter "RMc_adam_GeneralRobotSystemCode\RMc_adam_GeneralRobotSystemCode.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

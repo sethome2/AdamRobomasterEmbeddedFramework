@@ -247,8 +247,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   }
 	else if (htim->Instance == TIM14)//200HZ
 	{
-    IMU_updata();
 		MagUpdate();
+    IMU_updata();
 		//char a[100];
 		//VirCom_send(a, sprintf(a,"%f,%f\n",pitch_speed_pid.set,pitch_speed_pid.err));
 	}

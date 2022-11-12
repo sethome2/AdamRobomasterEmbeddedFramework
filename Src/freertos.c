@@ -32,6 +32,7 @@
 #include "LED_control.h"
 #include "IMU_updata.h"
 #include "PWM_control.h"
+
 #include "TF_MINI_PLUS_LaserRanging.h"
 //#include "guard_chassis.h" //哨兵底盘
 #include "chassis_move.h"  //普通底盘
@@ -39,6 +40,8 @@
 #include "shoot.h"
 #include "math.h"
 #include "USB_VirCom.h"
+
+#include "global_status.h"
 
 #include "NUC_communication.h"
 
@@ -115,6 +118,20 @@ const osThreadAttr_t NUCcontrolTask_attributes = {
   .stack_size = 256 * 4,
   .priority = (osPriority_t) osPriorityAboveNormal7,
 };
+/* Definitions for errorDetectTask */
+osThreadId_t errorDetectTaskHandle;
+const osThreadAttr_t errorDetectTask_attributes = {
+  .name = "errorDetectTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
+/* Definitions for statusTask */
+osThreadId_t statusTaskHandle;
+const osThreadAttr_t statusTask_attributes = {
+  .name = "statusTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -128,6 +145,8 @@ void RemoteTask_callback(void *argument);
 void ChassisTask_callback(void *argument);
 void gimbalTask_callback(void *argument);
 void NUCcontrolTask_callback(void *argument);
+void errorDetectTask_callback(void *argument);
+void statusTask_callback(void *argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -180,6 +199,12 @@ void MX_FREERTOS_Init(void) {
   /* creation of NUCcontrolTask */
   NUCcontrolTaskHandle = osThreadNew(NUCcontrolTask_callback, NULL, &NUCcontrolTask_attributes);
 
+  /* creation of errorDetectTask */
+  errorDetectTaskHandle = osThreadNew(errorDetectTask_callback, NULL, &errorDetectTask_attributes);
+
+  /* creation of statusTask */
+  statusTaskHandle = osThreadNew(statusTask_callback, NULL, &statusTask_attributes);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -205,15 +230,11 @@ void flashLEDTask_callback(void *argument)
   /* Infinite loop */
   for (;;)
   {
-#ifdef TEST_VERSION
-    led_show(PINK);
-#endif
-#ifdef DEV_VERSION
-    led_show(BLUE);
-#endif
-#ifdef RELEASE_VERSION
-    led_show(GREEN);
-#endif
+		if(Global_status.team == RED_TEAM)
+			led_show(RED);
+		else if(Global_status.team == BLUE_TEAM)
+			led_show(BLUE);
+		
     osDelay(80);
     led_show(BLANK);
     osDelay(80);
@@ -316,14 +337,15 @@ void ChassisTask_callback(void *argument)
 * @retval None
 */
 /* USER CODE END Header_gimbalTask_callback */
-	int i = -10;
-	float set = 0.0f;
-	pid_t speed;
-	pid_t location;
 void gimbalTask_callback(void *argument)
 {
   /* USER CODE BEGIN gimbalTask_callback */
+	
 	//工程机器为机械臂进程
+	pid_t speed;
+	pid_t location;
+	float set = 0;
+	int i = 0;
 	pid_set(&speed,1000,10,0,10000,300);
 	pid_set(&location,20,0,0,20,0);
 	float set_speed = 0;
@@ -391,6 +413,49 @@ void NUCcontrolTask_callback(void *argument)
 		osDelay(10);
   }
   /* USER CODE END NUCcontrolTask_callback */
+}
+
+/* USER CODE BEGIN Header_errorDetectTask_callback */
+/**
+* @brief Function implementing the errorDetectTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_errorDetectTask_callback */
+void errorDetectTask_callback(void *argument)
+{
+  /* USER CODE BEGIN errorDetectTask_callback */
+  /* Infinite loop */
+  int err_cnt = 0;
+	
+	for(;;)
+  {	
+		// 循环检测电机值，如果和上次不相同，则在线，遥控器同理
+		
+    osDelay(500);
+		err_cnt = 0;
+  }
+  /* USER CODE END errorDetectTask_callback */
+}
+
+/* USER CODE BEGIN Header_statusTask_callback */
+/**
+* @brief Function implementing the statusTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_statusTask_callback */
+void statusTask_callback(void *argument)
+{
+  /* USER CODE BEGIN statusTask_callback */
+  /* Infinite loop */
+  for(;;)
+  {
+		// 在此切换状态
+		
+    osDelay(10);
+  }
+  /* USER CODE END statusTask_callback */
 }
 
 /* Private application code --------------------------------------------------*/

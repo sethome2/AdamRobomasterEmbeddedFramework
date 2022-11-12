@@ -33,6 +33,11 @@ struct IMU_t
 		fp32 pitch,yaw,roll;//欧拉角
 	}madgwick_result;
 		
+	struct
+	{
+		fp32 q[4];//四元数
+		fp32 pitch,yaw,roll;//欧拉角
+	}AHRS_result;
 };
 
 extern struct IMU_t IMU_data;

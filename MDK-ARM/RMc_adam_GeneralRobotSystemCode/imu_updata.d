@@ -50,3 +50,5 @@ rmc_adam_generalrobotsystemcode\imu_updata.o: ../Inc/tim.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Drivers\Chip\ist8310driver.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Algorithm\MahonyAHRS\MahonyAHRS.h
 rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Algorithm\madgwickAHRS\madgwick.h
+rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Algorithm\AHRS.h
+rmc_adam_generalrobotsystemcode\imu_updata.o: ..\Algorithm\AHRS_MiddleWare.h

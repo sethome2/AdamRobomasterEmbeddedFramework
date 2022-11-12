@@ -75,5 +75,6 @@ rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\gimbal.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Algorithm\pid.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\shoot.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Hardware\USB_VirCom.h
+rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\global_status.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Applications\Software\NUC_communication.h
 rmc_adam_generalrobotsystemcode\freertos.o: ..\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h
