@@ -15,8 +15,8 @@
         <TargetCommonOption>
           <Device>STM32F407IGHx</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F4xx_DFP.2.9.0</PackID>
-          <PackURL>http://www.keil.com/pack</PackURL>
+          <PackID>Keil.STM32F4xx_DFP.2.16.0</PackID>
+          <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x2001FFFF) IRAM2(0x10000000-0x1000FFFF) IROM(0x8000000-0x80FFFFF) CLOCK(25000000) FPU2 CPUTYPE("Cortex-M4")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -208,7 +208,7 @@
             <Ra2Chk>0</Ra2Chk>
             <Ra3Chk>0</Ra3Chk>
             <Im1Chk>1</Im1Chk>
-            <Im2Chk>0</Im2Chk>
+            <Im2Chk>1</Im2Chk>
             <OnChipMemories>
               <Ocm1>
                 <Type>0</Type>
@@ -334,7 +334,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy; ../Middlewares/Third_Party/FreeRTOS/Source/include; ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2; ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F; ../Drivers/CMSIS/Device/ST/STM32F4xx/Include; ../Drivers/CMSIS/Include; ..\Algorithm; ..\Drivers\Chip; ..\Task; ..\Drivers\Encoder; ..\Applications\Software; ..\Applications\Hardware; ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc; ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc; ..\Algorithm\madgwickAHRS; ..\Algorithm\MahonyAHRS; ..\Drivers\Chip\MPU6050; ..\Drivers\Chip\MPU6050\eMPL; ..\Drivers\TF-MINI_PLUS; ..\Drivers\MYACTUATOR_RMD_X</IncludePath>
+              <IncludePath>../Inc;   ../Drivers/STM32F4xx_HAL_Driver/Inc;   ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;   ../Middlewares/Third_Party/FreeRTOS/Source/include;   ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;   ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;   ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;   ../Drivers/CMSIS/Include;   ..\Algorithm;   ..\Drivers\Chip;   ..\Task;   ..\Drivers\Encoder;   ..\Applications\Software;   ..\Applications\Hardware;   ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc;   ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc;   ..\Algorithm\madgwickAHRS;   ..\Algorithm\MahonyAHRS;   ..\Drivers\Chip\MPU6050;   ..\Drivers\Chip\MPU6050\eMPL;   ..\Drivers\TF-MINI_PLUS;   ..\Drivers\MYACTUATOR_RMD_X;   ..\Algorithm\lowFreCross</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1193,20 +1193,15 @@
               <FileType>4</FileType>
               <FilePath>..\Algorithm\AHRS.lib</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Task</GroupName>
-          <Files>
             <File>
-              <FileName>Chassis_Task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Task\Chassis_Task.c</FilePath>
+              <FileName>bsxlite_interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Algorithm\bsxlite_interface.h</FilePath>
             </File>
             <File>
-              <FileName>Arm_Task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Task\Arm_Task.c</FilePath>
+              <FileName>libalgobsx.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\Algorithm\libalgobsx.lib</FilePath>
             </File>
           </Files>
         </Group>
@@ -1273,16 +1268,16 @@
               <FileType>1</FileType>
               <FilePath>..\Applications\Hardware\USB_VirCom.c</FilePath>
             </File>
+            <File>
+              <FileName>Laser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Applications\Hardware\Laser.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Applications/Software</GroupName>
           <Files>
-            <File>
-              <FileName>IMU_calculate.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Applications\Software\IMU_calculate.c</FilePath>
-            </File>
             <File>
               <FileName>Stxxid-Data-Transmission.c</FileName>
               <FileType>1</FileType>
@@ -1312,6 +1307,16 @@
               <FileName>global_status.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Applications\Software\global_status.c</FilePath>
+            </File>
+            <File>
+              <FileName>Error_detect.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Applications\Software\Error_detect.c</FilePath>
+            </File>
+            <File>
+              <FileName>referee.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Applications\Software\referee.c</FilePath>
             </File>
           </Files>
         </Group>

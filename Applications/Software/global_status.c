@@ -23,4 +23,9 @@ enum cap_e read_cap_status()
     return Global_status.cap;
 }
 
+void Global_status_set_err(enum err_e err, uint8_t status)
+{
+    Global_status.err[err] = status;
+}
+
 //end of file

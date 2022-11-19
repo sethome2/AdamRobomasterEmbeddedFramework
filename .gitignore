@@ -1,3 +1,8 @@
+doc/∂®“ÂŒª∫≈Õº.psd
+
+# keil5
+*.crf
+
 # Prerequisites
 *.d
 
@@ -17,7 +22,6 @@
 *.pch
 
 # Libraries
-*.lib
 *.a
 *.la
 *.lo

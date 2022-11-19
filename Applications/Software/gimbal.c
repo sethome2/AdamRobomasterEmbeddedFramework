@@ -65,7 +65,7 @@ void gimbal_updata()
   // yaw轴更新
   // decode_as_6020(YAW_MOTOR);
   decode_as_3508(YAW_MOTOR);
-  gimbal.yaw.now = (get_motor_data(YAW_MOTOR).angle_cnt) / 3.0 - gimbal.yaw.offset;
+  gimbal.yaw.now = (get_motor_data(YAW_MOTOR).angle_cnt) - gimbal.yaw.offset;
 
   // pitch轴更新
   // decode_as_6020(PITCH_MOTOR);
@@ -87,6 +87,7 @@ void gimbal_set(float pitch, float yaw)
 
   gimbal.yaw.set = yaw;
 }
+
 void gimbal_set_pitch(float pitch)
 {
   gimbal.pitch_status = LOCATION; // 以位置模式控制
@@ -110,7 +111,6 @@ void gimbal_set_yaw_speed(float yaw)
   gimbal.set_yaw_speed = yaw;
 }
 
-// char arduino[128];
 void gimbal_pid_cal()
 {
   // 位置环 （位置控制模式下）
@@ -127,8 +127,4 @@ void gimbal_pid_cal()
   //速度环
   set_motor(pid_cal(&yaw_speed_pid, get_motor_data(YAW_MOTOR).speed_rpm, gimbal.yaw_speed), YAW_MOTOR);
   set_motor(pid_cal(&pitch_speed_pid, get_motor_data(PITCH_MOTOR).speed_rpm, gimbal.pitch_speed), PITCH_MOTOR);
-
-  //    // 测试使用 
-  //		int len = sprintf(arduino,"%f,%f,%f,%d,%d\n",gimbal.pitch.now,gimbal.pitch.set,gimbal.pitch_speed,get_motor_data(PITCH_MOTOR).speed_rpm,get_motor_data(PITCH_MOTOR).set);
-  //		VirCom_send(arduino,len);
 }

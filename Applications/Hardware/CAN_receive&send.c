@@ -4,9 +4,9 @@
  * @brief (CAN_motor & surper_cap) control & send_rev
  * @version 0.1
  * @date 2021-12-13
- * 
- * @copyright Copyright (c) 2021
- * 
+ *
+ * @copyright Copyright (c) 2021 sethome
+ *
  */
 #include "CAN_receive&send.h"
 
@@ -19,7 +19,7 @@
 //电机数据
 motor_measure_t motor_data[22];
 
-//CAN寄存器及控制器
+// CAN寄存器及控制器
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2; //定义原型在can.c文件
 
@@ -46,21 +46,21 @@ void process_motor_data(motor_measure_t *motor_data)
     motor_data->ecd_cnt += (motor_data->ecd - motor_data->last_ecd);
 }
 
-//HAL库中断回调指针
+// HAL库中断回调指针
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
-  CAN_RxHeaderTypeDef rx_header; //CAN 数据指针
+  CAN_RxHeaderTypeDef rx_header; // CAN 数据指针
   uint8_t rx_data[8];            //获取到的数据
 
   HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data); //取得信息
-	
-	if(rx_header.StdId > 0x140 && rx_header.StdId < 0x150)
-	{
-		RMD_decode_reply(rx_header.StdId, rx_data);
-		return;
-	}
-	
-  if (hcan == &hcan1) //CAN1/2判断
+
+  if (rx_header.StdId > 0x140 && rx_header.StdId < 0x150) // 脉塔电机
+  {
+    RMD_decode_reply(rx_header.StdId, rx_data);
+    return;
+  }
+
+  if (hcan == &hcan1) // CAN1/2判断
   {
     get_motor_measure(&motor_data[rx_header.StdId - CAN_ID1], rx_data);
     process_motor_data(&motor_data[rx_header.StdId - CAN_ID1]);
@@ -72,11 +72,10 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
   }
 }
 
-//返回马达数据指针（还不够安全。。。）
+// 返回马达数据（还不够安全。。。）
 motor_measure_t get_motor_data(can_id motorID) //获取马达数据
 {
-  motor_measure_t *target_data = &motor_data[motorID];
-  return *target_data;
+  return motor_data[motorID];
 }
 
 //设置马达电流
@@ -85,7 +84,7 @@ void set_motor(int16_t val, can_id motorID) //设定马达电流
   motor_data[motorID].set = val;
 }
 
-//CAN1发送电流
+// CAN1发送电流
 void CAN1_send_current() //发送电机控制电流
 {
   uint8_t can_send_data[8];
@@ -156,7 +155,7 @@ void CAN1_send_current() //发送电机控制电流
 #endif
 }
 
-//CAN2 发送电流
+// CAN2 发送电流
 void CAN2_send_current() //发送电机控制电流
 {
   uint8_t can_send_data[8];
@@ -232,7 +231,7 @@ void CAN2_send_current() //发送电机控制电流
 void decode_as_3508(can_id motorID)
 {
   //计算出轴速度
-  motor_data[motorID].round_speed  = motor_data[motorID].speed_rpm / 60.0f / M3508_P;
+  motor_data[motorID].round_speed = motor_data[motorID].speed_rpm / 60.0f / M3508_P;
   //计算总角度
   motor_data[motorID].angle_cnt = motor_data[motorID].ecd_cnt / ECD_MAX / M3508_P * 360.00f;
 }

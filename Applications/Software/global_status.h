@@ -14,6 +14,20 @@
 #define __GLOBAL_STATUS_H__
 #ifdef __GLOBAL_STATUS_H__
 
+// 错误码
+enum err_e
+{
+    GIMBAL_ERR = 0,
+    CHASSIS_ERR,
+    SHOOT_ERR,
+    CAP_ERR,
+    VISION_ERR,
+    REMOTE_ERR,
+    PC_ERR,
+    OTHER_ERR,
+    MOTOR_ERR,
+};
+
 // 适合十几个简单状态的情况
 struct GlobalStatus_t
 {
@@ -35,13 +49,14 @@ struct GlobalStatus_t
         ACC,      // 用于短时加速
         FULL,     //全力响应
     } cap;
-		
-		
+
     enum team_e
     {
         BLUE_TEAM = 0,
         RED_TEAM,
-    }team;
+    } team;
+
+    uint8_t err[8];
 };
 
 extern struct GlobalStatus_t Global_status;
@@ -51,5 +66,7 @@ void change_cap_status(enum cap_e in);
 enum gimbal_visual_e read_gimbal_visual_status(void);
 enum cap_e read_cap_status(void);
 
+void Global_status_set_err(enum err_e err, uint8_t status);
+
 #endif
-//end of file
+// end of file

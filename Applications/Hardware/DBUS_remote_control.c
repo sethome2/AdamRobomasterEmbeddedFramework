@@ -19,6 +19,7 @@
 
 #include "DBUS_remote_control.h"
 #include "main.h"
+#include "Error_detect.h"
 //此处移植官方
 
 extern UART_HandleTypeDef huart3;
@@ -116,7 +117,9 @@ void Dbus_USARTx_IRQHandler(void) //过于耦合，请求更改 by：sethome
     static uint16_t this_time_rx_len = 0;
 
     __HAL_UART_CLEAR_PEFLAG(&huart3);
-
+    
+    Error_detect_remote();
+    
     if ((hdma_usart3_rx.Instance->CR & DMA_SxCR_CT) == RESET)
     {
       /* Current memory buffer used is Memory 0 */

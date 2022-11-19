@@ -1,4 +1,3 @@
-#include "Arm_Task.h"
 #include "UART_data_transmit.h"
 #include "stdio.h"
 #include "stdlib.h"
