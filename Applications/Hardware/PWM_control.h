@@ -1,3 +1,14 @@
+/**
+ * @file PWM_control.h
+ * @author sethome 
+ * @brief PWM控制头文件
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include "struct_typedef.h"
 
 #ifndef PWM_CONTROL_H

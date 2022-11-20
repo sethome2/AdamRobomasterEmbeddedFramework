@@ -1,3 +1,14 @@
+/**
+ * @file GPIO_output.c
+ * @author sethome
+ * @brief Êä³ö¿ØÖÆ
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include "GPIO_output.h"
 #include "PWM_control.h"
 

@@ -1,7 +1,12 @@
-/*
- * @Author: your name
- * @Date: 2021-12-06 11:35:13
- * @LastEditTime: 2021-12-23 12:08:46
+/**
+ * @file gimbal.h
+ * @author sethome
+ * @brief 
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
  */
 #define __GIMBAL_H__
 #ifdef __GIMBAL_H__

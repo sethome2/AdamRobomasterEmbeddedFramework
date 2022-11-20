@@ -1,12 +1,12 @@
 /**
  * @file IMU_updata.h
  * @author sethome
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2022-11-19
- * 
+ *
  * @copyright Copyright (c) 2022
- * 
+ *
  */
 #include "struct_typedef.h"
 #include "Kalman_Filter_c.h"
@@ -46,7 +46,7 @@ struct IMU_t
 	{
 		fp32 q[4];			   //四元数
 		fp32 pitch, yaw, roll; //欧拉角
-		fp32 heading;
+		fp32 heading;		   //航向角(0-360)
 		int16_t error_code;
 		uint8_t accel_calibration_status;
 		uint8_t gyro_calibration_status;

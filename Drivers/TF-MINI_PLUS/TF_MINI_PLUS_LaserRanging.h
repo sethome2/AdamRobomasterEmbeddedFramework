@@ -1,9 +1,16 @@
-/*
- * @Author: sethome
- * @Date: 2021-12-23 00:25:56
- * @LastEditTime: 2021-12-23 00:36:28
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Drivers\TF-MINI_PLUS\TF_MINI_PLUS_LaserRanging.h
+/**
+ * @file TF_MINI_PLUS_LaserRanging.h
+ * @author sethome 
+ * @brief ±±–—TF-MINI-PLUSº§π‚≤‚æ‡ƒ£øÈ«˝∂Ø
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
  */
+
+#define __TF_MINI_PLUS_LASERRANGING_H__
+#ifdef __TF_MINI_PLUS_LASERRANGING_H__
 
 struct TF_MINI_PLUS_LaserRanging
 {
@@ -15,4 +22,6 @@ struct TF_MINI_PLUS_LaserRanging
 
 extern struct TF_MINI_PLUS_LaserRanging TF_LaserRanging;
 
-void updataTF_MINI_PLUS_LaserRanging(unsigned char rx[], int num);//Êõ¥Êñ∞ÊøÄÂÖâÊµãË∑ùÊï∞ÊçÆÔºà‰∏≤Âè£Ôºâ
+void updataTF_MINI_PLUS_LaserRanging(unsigned char rx[], int num); // ????
+
+#endif // __TF_MINI_PLUS_LASERRANGING_H__

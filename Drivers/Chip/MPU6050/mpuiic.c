@@ -122,7 +122,7 @@ void MPU_IIC_Send_Byte(u8 txd)
 //读1个字节，ack=1时，发送ACK，ack=0，发送nACK   
 u8 MPU_IIC_Read_Byte(unsigned char ack)
 {
-	unsigned char i,receive=0;
+	unsigned char receive=0;
 //	MPU_SDA_IN();//SDA设置为输入
 //    for(i=0;i<8;i++ )
 //	{

@@ -1,15 +1,26 @@
-/*
- * @Author: sethome
- * @Date: 2022-02-27 23:20:23
- * @LastEditTime: 2022-03-01 21:18:21
- * @LastEditors: Please set LastEditors
- * @Description: 
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.h
+/**
+ * @file MYACTUATOR_RMD_X.h
+ * @author sethome (you@domain.com)
+ * @brief 脉塔智能的X系列电机驱动程序
+ * @version 0.1
+ * @date 2022-11-20
+ *
+ * @copyright Copyright (c) 2022 sethome
+ *
  */
 
-//我只适配了位置环
-//但是你可以很轻易的适配三种模式
-//我经可能留出了拓展空间，后续建议使用ID来快速控制各个马达
+/* 我只适配了位置环
+ * 但是你可以很轻易的适配三种模式
+ * 我经可能留出了拓展空间，后续建议使用ID来快速控制各个马达
+ * 
+ * I only adapted the position loop command
+ * But you can easily adapt the three modes
+ * I left as much flexible code for expansion, and it is recommended to use ID to quickly control each motor in the future
+ */
+
+#define __MYACTUATOR_RMD_X_H__
+#ifdef __MYACTUATOR_RMD_X_H__
+
 #include "stdint.h"
 
 typedef struct
@@ -19,7 +30,7 @@ typedef struct
 	float current_p, current_i;
 
 	int32_t ecd;
-	
+
 	int speed;
 	int temp;
 } RMD_X;
@@ -28,7 +39,7 @@ extern RMD_X RMD_motor[8];
 
 typedef enum
 {
-	MOTOR_BEGIN_ID = 0x140 + 1, //1-32往后延伸32个
+	MOTOR_BEGIN_ID = 0x140 + 1, // 1-32往后延伸32个
 	MOTOR_ID_1 = 0x141,
 	MOTOR_ID_2 = 0x142,
 	MOTOR_ID_3 = 0x143,
@@ -56,3 +67,5 @@ void RMD_write_current(RMD_X_ID_CMD ID, int16_t current);																		   //
 void RMD_write_angle(RMD_X_ID_CMD ID, float angle);																				   //写入设定角度
 void RMD_write_angle_with_speed(RMD_X_ID_CMD ID, uint16_t speed, float angle);													   //写入限制速度的角度控制
 void RMD_decode_reply(uint16_t CAN_ID, uint8_t data[8]);																		   //解码信息
+
+#endif // __MYACTUATOR_RMD_X_H__

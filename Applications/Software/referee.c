@@ -1,7 +1,7 @@
 /**
  * @file referee.c
  * @author sethome 
- * @brief 
+ * @brief 裁判系统通信
  * @version 0.1
  * @date 2022-05-14
  * 

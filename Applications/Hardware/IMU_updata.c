@@ -21,7 +21,7 @@
 #include "madgwick.h"
 #include "AHRS.h"
 #include "bsxlite_interface.h"
-#include "time.h"
+#include "Stm32_time.h"
 
 // made by sethome
 //使用TIM14定频更新

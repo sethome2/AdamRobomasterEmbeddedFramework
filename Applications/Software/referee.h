@@ -1,3 +1,13 @@
+/**
+ * @file referee.h
+ * @author sethome
+ * @brief 裁判系统通信
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022 sethome
+ * 
+ */
 #ifndef __REFEREE_H__
 #define __REFEREE_H__
 

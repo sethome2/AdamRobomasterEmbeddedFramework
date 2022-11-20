@@ -1,9 +1,4 @@
-/*
- * @Author: sethome
- * @Date: 2021-12-23 16:49:11
- * @LastEditTime: 2021-12-23 17:20:10
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Applications\Software\NUC_communication.c
- */
+
 typedef struct 
 {
     float acc[3];

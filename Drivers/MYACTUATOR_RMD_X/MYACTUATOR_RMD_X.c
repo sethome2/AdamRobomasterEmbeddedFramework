@@ -1,12 +1,13 @@
-/*
- * @Author: sethome
- * @Date: 2022-02-27 23:20:14
- * @LastEditTime: 2022-03-01 21:18:24
- * @LastEditors: Please set LastEditors
- * @Description: 脉塔智能的示例驱动程序
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha 工程\Drivers\MYACTUATOR_RMD_X\MYACTUATOR_RMD_X.c
+/**
+ * @file MYACTUATOR_RMD_X.c
+ * @author sethome
+ * @brief 脉塔智能的X系列电机驱动程序
+ * @version 0.1
+ * @date 2022-11-20
+ *
+ * @copyright Copyright (c) 2022 sethome
+ *
  */
-
 #include "MYACTUATOR_RMD_X.h"
 #include "CAN_receive&send.h"
 
@@ -15,7 +16,7 @@ RMD_X RMD_motor[8];
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2; //定义原型在can.c文件
 
-//方便接下来的发送
+// 方便接下来的发送
 void send2CAN(RMD_X_ID_CMD motorID, RMD_X_ID_CMD ID, uint8_t data1, uint8_t data2, uint8_t data3, uint8_t data4, uint8_t data5, uint8_t data6, uint8_t data7)
 {
 	uint8_t can_send_data[8] = {ID, data1, data2, data3, data4, data5, data6, data7};
@@ -46,8 +47,8 @@ void RMD_config(RMD_X *motor, float location_p, float location_i, float speed_p,
 
 /**
  * @brief 设置PID参数
- * 
- * @param motor 马达结构体 
+ *
+ * @param motor 马达结构体
  * @param ID ID
  */
 void RMD_setup(RMD_X *motor, RMD_X_ID_CMD ID)
@@ -93,7 +94,7 @@ void RMD_decode_reply(uint16_t CAN_ID, uint8_t data[8])
 		break;
 
 	case WRITE_CURRENT:
-    motor->speed = data[4] + data[5] * 255;
+		motor->speed = data[4] + data[5] * 255;
 		motor->ecd = data[6] + data[7] * 255;
 		break;
 

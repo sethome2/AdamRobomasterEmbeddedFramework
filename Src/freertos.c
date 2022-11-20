@@ -240,13 +240,13 @@ void flashLEDTask_callback(void *argument)
     {
       led_show(PINK);
 			err_flag = 1;
-      osDelay(100);
+      osDelay(150);
     }
     if (Global_status.err[REMOTE_ERR] == 1)
     {
       led_show(ORANGE);
 			err_flag = 1;
-      osDelay(100);
+      osDelay(150);
     }
 		
 		if ( err_flag == 0)
@@ -284,7 +284,7 @@ void CAN_sendTask_callback(void *argument)
     //    taskYIELD();
     //  }
 
-    osDelay(2);
+    osDelay(5);
   }
   /* USER CODE END CAN_sendTask_callback */
 }
@@ -340,8 +340,8 @@ void ChassisTask_callback(void *argument)
   /* Infinite loop */
   for (;;)
   {
-    // chassis_moto_speed_calc(RC_data.rc.ch[0],RC_data.rc.ch[1],RC_data.rc.ch[2]);
-    osDelay(10);
+    chassis_moto_speed_calc(RC_data.rc.ch[0] / 500.0f, RC_data.rc.ch[1] / 500.0f, RC_data.rc.ch[2] / 500.0f);
+    osDelay(5);
   }
   /* USER CODE END ChassisTask_callback */
 }
@@ -445,7 +445,11 @@ void errorDetectTask_callback(void *argument)
   for (;;)
   {
 		Error_detect_flush();
-    osDelay(200);
+		Error_detect_motor(chassis_FR);
+		Error_detect_motor(chassis_FL);
+		Error_detect_motor(chassis_BL);
+		Error_detect_motor(chassis_BR);
+    osDelay(500);
   }
   /* USER CODE END errorDetectTask_callback */
 }

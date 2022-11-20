@@ -1,22 +1,22 @@
-//author:sethome/(cc/ÏàÏà)
+//author:sethome/(cc/ç›¸ç›¸)
 //start time:2019/03/12
 //end time:2019/07/02
 
 //ver1.0 bete
 /*
-  ?????????¨¢??
+  ?????????Ã¡??
 	u8??
-	  ?????¡¤            ID   
+	  ?????Â·            ID   
 	0xFF 0xFF   0x00   0x00    0xFA
-					  ?????¨¤??        ?????¨¦
+					  ?????Ã ??        ?????Ã©
 	u16??
-	  ?????¡¤            ID   
+	  ?????Â·            ID   
 	0xFF 0xFF   0x01   0x00    0xFA  0xFA
-					  ?????¨¤??           ?????¨¦
+					  ?????Ã ??           ?????Ã©
 	float:
-	  ?????¡¤            ID   
+	  ?????Â·            ID   
 	0xFF 0xFF   0x02   0x00    0xFA 0xFA 0xFA 0xFA
-					  ?????¨¤??               ?????¨¦
+					  ?????Ã ??               ?????Ã©
 */
 
 #include "struct_typedef.h"
@@ -24,65 +24,65 @@
 #define __UART_data_transmit__
 #ifdef 	__UART_data_transmit__
 
-//Êı¾İÀàĞÍ
+//æ•°æ®ç±»å‹
 #define receive_int8_t_data 0
 #define receive_int16_t_data 1
 #define receive_float_data 2
 
-//×Ô¶¨ÒåÊı¾İID
-//int8_tÀà
+//è‡ªå®šä¹‰æ•°æ®ID
+//int8_tç±»
 
-//int16_tÀà
+//int16_tç±»
 
-//floatÀà
+//floatç±»
 
-//½ÓÊÕ×´Ì¬
+//æ¥æ”¶çŠ¶æ€
 #define wait_data_head 0
 #define wait_data_formet 1
 #define wait_data_ID 2
 #define wait_data 3
 
-struct serial_data_set_t//´®¿ÚÊı¾İÖĞ×ª
+struct serial_data_set_t//ä¸²å£æ•°æ®ä¸­è½¬
 {
-  u8 data_head_count;//Êı¾İÍ·¼ì²â¼ÆÊı
-  u8 data_formet;    //Êı¾İÀàĞÍ
-  u8 data_ID;        //Êı¾İID
-  u8 state;          //½ÓÊÕ×´Ì¬
+  u8 data_head_count;//æ•°æ®å¤´æ£€æµ‹è®¡æ•°
+  u8 data_formet;    //æ•°æ®ç±»å‹
+  u8 data_ID;        //æ•°æ®ID
+  u8 state;          //æ¥æ”¶çŠ¶æ€
   
-  unsigned long long data_err_count;//Êı¾İÖ¡´íÎó¼ÆÊı
+  unsigned long long data_err_count;//æ•°æ®å¸§é”™è¯¯è®¡æ•°
 
-  u8 data_receive_cache[4];//½ÓÊÕ»º´æ
-  int8_t point;//ĞéÄâÖ¸Õë
+  u8 data_receive_cache[4];//æ¥æ”¶ç¼“å­˜
+  int8_t point;//è™šæ‹ŸæŒ‡é’ˆ
 
   unsigned long long send_data_count;
-  unsigned long long recive_data_count;//·¢ËÍÓë½ÓÊÕÍ³¼Æ
+  unsigned long long recive_data_count;//å‘é€ä¸æ¥æ”¶ç»Ÿè®¡
 };
 
-struct database_t//½ÓÊÜÊı¾İ´¢´æ
+struct database_t//æ¥å—æ•°æ®å‚¨å­˜
 {
   volatile int8_t int8_t_data[10];
   volatile int16_t int16_t_data[50];
-  volatile float float_data[50];//½ÓÊÕÊı¾İ»º´æ
+  volatile float float_data[50];//æ¥æ”¶æ•°æ®ç¼“å­˜
 };
 
-//Êı¾İ×ª»»
-union float_to_u32//ÌáÈ¡floatÄÚ´æÊı¾İ
+//æ•°æ®è½¬æ¢
+union float_to_u32//æå–floatå†…å­˜æ•°æ®
 {
   u32 temp;
   float p;
 };
-int16_t u8_to_int16_t(u8 data_H, u8 data_L);//u8×ª»»³Éint16_t
-void int16_to_u8(u8 *data_H, u8 *data_L, int16_t source_data);//int16_t×ª»»³Éu8
+int16_t u8_to_int16_t(u8 data_H, u8 data_L);//u8è½¬æ¢æˆint16_t
+void int16_to_u8(u8 *data_H, u8 *data_L, int16_t source_data);//int16_tè½¬æ¢æˆu8
 
-void float_to_u8(float source_data, u8 *HL, u8 *MHL, u8 *MLL, u8 *LL);//float×ª»»³Éu8
-float u8_to_float(u8 cache_u8[4]);//u8×ª»»³Éfloat
+void float_to_u8(float source_data, u8 *HL, u8 *MHL, u8 *MLL, u8 *LL);//floatè½¬æ¢æˆu8
+float u8_to_float(u8 cache_u8[4]);//u8è½¬æ¢æˆfloat
 
-//Êı¾İ·¢ËÍ
-void UART_send_int8_t_data(struct database_t *database,struct serial_data_set_t *UART, int8_t data, u8 data_ID); //·¢ËÍint8_tÀàĞÍÊı¾İ
-void UART_send_int16_t_data(struct database_t *database,struct serial_data_set_t *UART, int16_t data, u8 data_ID); //·¢ËÍint16_tÀàĞÍÊı¾İ
-void UART_send_float_data(struct database_t *database,struct serial_data_set_t *UART, float data, u8 data_ID); //·¢ËÍfloatÀàĞÍ
+//æ•°æ®å‘é€
+void UART_send_int8_t_data(struct database_t *database,struct serial_data_set_t *UART, int8_t data, u8 data_ID); //å‘é€int8_tç±»å‹æ•°æ®
+void UART_send_int16_t_data(struct database_t *database,struct serial_data_set_t *UART, int16_t data, u8 data_ID); //å‘é€int16_tç±»å‹æ•°æ®
+void UART_send_float_data(struct database_t *database,struct serial_data_set_t *UART, float data, u8 data_ID); //å‘é€floatç±»å‹
 
-void UART_receive_processing(struct database_t *database,struct serial_data_set_t *UART,u8 data);//´®¿ÚÖĞ¶Ï´¦Àí£¨×îÖØÒª£©
+void UART_receive_processing(struct database_t *database,struct serial_data_set_t *UART,u8 data);//ä¸²å£ä¸­æ–­å¤„ç†ï¼ˆæœ€é‡è¦ï¼‰
 
 #endif
 //end of file

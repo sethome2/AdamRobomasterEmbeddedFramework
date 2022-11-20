@@ -1,14 +1,26 @@
-/*
- * @Author: sethome
- * @Date: 2021-08-18 01:50:38
- * @LastEditTime: 2021-12-04 01:38:37
- * @LastEditors: Please set LastEditors
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Applications\Software\chassis_move.h
+/**
+ * @file chassis_move.h
+ * @author sethome
+ * @brief µ×ÅÌ¿ØÖÆÎÄ¼þ
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
  */
 #include "struct_typedef.h"
 
 #define __chassis_move__
 #ifdef __chassis_move__
+
+/* motorID 1 %++++++% 0
+      			   ++++
+			         ++++
+		       2 %++++++% 3 */
+#define chassis_FR CAN_1_1
+#define chassis_FL CAN_1_2
+#define chassis_BL CAN_1_3
+#define chassis_BR CAN_1_4
 
 struct chassis_status
 {

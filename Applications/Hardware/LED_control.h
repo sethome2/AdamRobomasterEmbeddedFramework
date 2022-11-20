@@ -1,9 +1,19 @@
+/**
+ * @file LED_control.h
+ * @author sethome 
+ * @brief °åÔØLED¿ØÖÆÍ·ÎÄ¼ş
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include "struct_typedef.h"
 
 #ifndef LED_CONTROL_H
 #define LED_CONTROL_H
 
-//é¢„è®¾é¢œè‰²è¡¨
+//Ô¤ÉèÑÕÉ«±í
 #define RED    0xFFFF0000
 #define GREEN  0xFF00FF00
 #define BLUE   0xFF0000FF
@@ -13,8 +23,8 @@
 #define PURPLE 0xFF800080
 #define BLANK  0xFF000000
 
-//å¤–éƒ¨è°ƒç”¨
-void led_init(void);          //LEDå½©ç¯åˆå§‹åŒ–
-void led_show(uint32_t aRGB); //è®¾å®šçš„é¢œè‰²
+//Íâ²¿µ÷ÓÃ
+void led_init(void);          //LED²ÊµÆ³õÊ¼»¯
+void led_show(uint32_t aRGB); //Éè¶¨µÄÑÕÉ«
 	
 #endif

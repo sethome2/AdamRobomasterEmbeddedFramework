@@ -13,7 +13,7 @@
 #ifdef __GPIO_INPUT_EXTI_C__
 
 #include "main.h"
-#include "time.h"
+#include "Stm32_time.h"
 #include "LED_control.h"
 #include "global_status.h"
 #include "GPIO_input_EXTI.h"

@@ -1,3 +1,13 @@
+/**
+ * @file global_status.c
+ * @author sethome 
+ * @brief 
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include "global_status.h"
 
 struct GlobalStatus_t Global_status;

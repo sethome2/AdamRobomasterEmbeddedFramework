@@ -1,5 +1,16 @@
+/**
+ * @file Encoder.c
+ * @author sethome
+ * @brief AB相编码器驱动
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022 sethome
+ * 
+ */
+
 #include "Encoder.h"
-#include "time.h"
+#include "Stm32_time.h"
 
 //初始化编码器
 void init_Encoder(Encode_t *target)

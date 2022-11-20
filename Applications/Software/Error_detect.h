@@ -1,7 +1,7 @@
 /**
  * @file Error_detect.h
  * @author sethome
- * @brief
+ * @brief ´íÎó¼ì²é
  * @version 0.1
  * @date 2022-11-19
  *
@@ -18,9 +18,9 @@ struct Error_detect_t
 {
     struct
     {
-        uint16_t last_given_current[CAN_2_6020_7];
-        uint8_t err_cnt[CAN_2_6020_7];
-        uint8_t flag[CAN_2_6020_7];
+        uint16_t last_given_current[CAN_2_6020_7 + 1];
+        uint8_t err_cnt[CAN_2_6020_7 + 1];
+        uint8_t flag[CAN_2_6020_7 + 1];
     } motor;
 
     struct

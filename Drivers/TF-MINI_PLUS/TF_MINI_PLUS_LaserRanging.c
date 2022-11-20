@@ -1,8 +1,12 @@
-/*
- * @Author: sethome
- * @Date: 2021-12-23 00:24:57
- * @LastEditTime: 2021-12-23 10:49:11
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Drivers\TF-MINI_PLUS\TF_MINI_PLUS_LaserRanging.c
+/**
+ * @file TF_MINI_PLUS_LaserRanging.c
+ * @author sethome
+ * @brief 北醒TF-MINI-PLUS激光测距模块驱动
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022 sethome
+ * 
  */
 #include "TF_MINI_PLUS_LaserRanging.h"
 

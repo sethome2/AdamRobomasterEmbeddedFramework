@@ -1,3 +1,13 @@
+/**
+ * @file UART_data_transmit.c
+ * @author sethome
+ * @brief 串口数据发送
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022 sethome
+ * 
+ */
 #include "UART_data_transmit.h"
 #include "stdio.h"
 #include "stdlib.h"

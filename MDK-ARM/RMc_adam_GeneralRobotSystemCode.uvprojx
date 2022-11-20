@@ -1259,11 +1259,6 @@
               <FilePath>..\Applications\Hardware\PWM_control.c</FilePath>
             </File>
             <File>
-              <FileName>time.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Applications\Hardware\time.c</FilePath>
-            </File>
-            <File>
               <FileName>USB_VirCom.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Applications\Hardware\USB_VirCom.c</FilePath>
@@ -1272,6 +1267,16 @@
               <FileName>Laser.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Applications\Hardware\Laser.c</FilePath>
+            </File>
+            <File>
+              <FileName>Stm32_time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Applications\Hardware\Stm32_time.c</FilePath>
+            </File>
+            <File>
+              <FileName>cap_ctl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Applications\Hardware\cap_ctl.c</FilePath>
             </File>
           </Files>
         </Group>

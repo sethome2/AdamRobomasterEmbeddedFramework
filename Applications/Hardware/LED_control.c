@@ -1,30 +1,41 @@
+/**
+ * @file LED_control.c
+ * @author sethome (you@domain.com)
+ * @brief °åÔØLED¿ØÖÆ
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include "LED_control.h"
 #include "stm32f4xx_hal.h"
 
 extern TIM_HandleTypeDef htim5;
 
-//åˆå§‹åŒ–LED
+//³õÊ¼»¯LED
 void led_init()
 {
-	HAL_TIM_Base_Start(&htim5);               //å¯åŠ¨å®šæ—¶å™¨5
-	HAL_TIM_PWM_Start(&htim5,TIM_CHANNEL_1);  //å¯åŠ¨æ¯ä¸€ä¸ªé€šé“
+	HAL_TIM_Base_Start(&htim5);               //Æô¶¯¶¨Ê±Æ÷5
+	HAL_TIM_PWM_Start(&htim5,TIM_CHANNEL_1);  //Æô¶¯Ã¿Ò»¸öÍ¨µÀ
 	HAL_TIM_PWM_Start(&htim5,TIM_CHANNEL_2);
 	HAL_TIM_PWM_Start(&htim5,TIM_CHANNEL_3);
 }
 
-//æ˜¾ç¤ºé¢œè‰²
+//ÏÔÊ¾ÑÕÉ«
 void led_show(uint32_t aRGB)
 {
   static uint8_t alpha;
   static uint16_t red,green,blue;
 
-  //ä½ç§»èŽ·å–é¢œè‰²
+  //Î»ÒÆ»ñÈ¡ÑÕÉ«
   alpha = (aRGB & 0xFF000000) >> 24;
   red = ((aRGB & 0x00FF0000) >> 16) * alpha;
   green = ((aRGB & 0x0000FF00) >> 8) * alpha;
   blue = ((aRGB & 0x000000FF) >> 0) * alpha;
 
-  //ä½¿èƒ½æ¯”è¾ƒå€¼
+  //Ê¹ÄÜ±È½ÏÖµ
   __HAL_TIM_SetCompare(&htim5, TIM_CHANNEL_1, blue);  
   __HAL_TIM_SetCompare(&htim5, TIM_CHANNEL_2, green);
   __HAL_TIM_SetCompare(&htim5, TIM_CHANNEL_3, red);

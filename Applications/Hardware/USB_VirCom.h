@@ -1,7 +1,12 @@
-/*
- * @Author: sethome
- * @Date: 2021-12-06 10:28:15
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Applications\Hardware\USB_VirCom.h
+/**
+ * @file USB_VirCom.h
+ * @author sethome
+ * @brief 虚拟串口数据发送
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022 sethome
+ * 
  */
 #define __USB_VIR_COM_H__
 #ifdef __USB_VIR_COM_H__

@@ -10,6 +10,8 @@
  */
 #include "CAN_receive&send.h"
 
+#include "cap_ctl.h"
+
 //第三方驱动
 #include "MYACTUATOR_RMD_X.h"
 
@@ -54,12 +56,22 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 
   HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data); //取得信息
 
-  if (rx_header.StdId > 0x140 && rx_header.StdId < 0x150) // 脉塔电机
+  // 脉塔电机
+  if (rx_header.StdId > 0x140 && rx_header.StdId < 0x150) 
   {
     RMD_decode_reply(rx_header.StdId, rx_data);
     return;
   }
 
+  // 超级电容
+  if (rx_header.StdId == 0x007)
+  {
+    cap_handle_message(rx_data);
+    return;
+  }
+	
+	// DJI电机
+  
   if (hcan == &hcan1) // CAN1/2判断
   {
     get_motor_measure(&motor_data[rx_header.StdId - CAN_ID1], rx_data);
@@ -70,6 +82,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
     get_motor_measure(&motor_data[CAN_1_6020_7 + 1 + rx_header.StdId - CAN_ID1], rx_data);
     process_motor_data(&motor_data[CAN_1_6020_7 + 1 + rx_header.StdId - CAN_ID1]);
   }
+  
 }
 
 // 返回马达数据（还不够安全。。。）

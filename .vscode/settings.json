@@ -27,7 +27,9 @@
         "stm32f4xx_hal.h": "c",
         "led_control.h": "c",
         "tuple": "c",
-        "type_traits": "c"
+        "type_traits": "c",
+        "stm32_time.h": "c",
+        "stdint.h": "c"
     },
-    "files.encoding": "gbk"
+    "files.encoding": "gbk",
 }

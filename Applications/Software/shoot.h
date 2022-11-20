@@ -1,8 +1,12 @@
-/*
- * @Author: sethome
- * @Date: 2021-12-23 12:30:06
- * @LastEditTime: 2021-12-23 16:37:02
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Applications\Software\shoot.h
+/**
+ * @file shoot.h
+ * @author sethome 
+ * @brief ·¢ÉäÄ£¿é
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
  */
 #include "stdint.h"
 

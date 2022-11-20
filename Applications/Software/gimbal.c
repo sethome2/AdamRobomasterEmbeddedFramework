@@ -1,7 +1,12 @@
-/*
- * @Author: sethome
- * @Date: 2021-12-06 11:32:52
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Applications\Software\gimbal.c
+/**
+ * @file gimbal.c
+ * @author sethome
+ * @brief 
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
  */
 #include "gimbal.h"
 #include "IMU_updata.h"
@@ -76,12 +81,12 @@ void gimbal_updata()
   gimbal.yaw.stable = sliding_variance_cal(&yaw_variance, gimbal.yaw.now);
 }
 
-//设定角度
+// 设定角度
 void gimbal_set(float pitch, float yaw)
 {
   gimbal.yaw_status = gimbal.pitch_status = LOCATION; // 以位置模式控制
 
-  //范围限定
+  // 范围限定 防止超出机械限位
   if (fabs(pitch) < 180)
     gimbal.pitch.set = pitch;
 
@@ -96,7 +101,7 @@ void gimbal_set_pitch(float pitch)
     gimbal.pitch.set = pitch;
 }
 
-//设定速度
+// 设定速度
 void gimbal_set_speed(float pitch, float yaw)
 {
   gimbal.yaw_status = gimbal.pitch_status = SPEED; // 以速度模式控制

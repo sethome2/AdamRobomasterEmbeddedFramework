@@ -1,8 +1,12 @@
-/*
- * @Author: sethome
- * @Date: 2021-12-23 16:49:58
- * @LastEditTime: 2021-12-23 17:20:29
- * @FilePath: \RMc_Adam_GenralRobotSystem Ver1.0.4.20210818 Alpha\Applications\Software\NUC_communication.h
+/**
+ * @file NUC_communication.c
+ * @brief 
+ * @author sethome (you@domain.com)
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
  */
 #include "NUC_communication.h"
 

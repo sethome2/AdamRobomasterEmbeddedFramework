@@ -1,54 +1,56 @@
+/**
+ * @file chassis_move.c
+ * @author sethome
+ * @brief 
+ * @version 0.1
+ * @date 2022-11-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include "chassis_move.h"
-#include "math.h"
 #include "CAN_receive&send.h"
+#include "math.h"
 #include "pid.h"
-#include "UART_data_transmit.h"
+#include "Stm32_time.h"
+
 #include "stdlib.h"
 #include "stdio.h"
+#include "stdint.h"
 
-/* motorID 1 %++++++% 0
-               ++++
-               ++++
-           2 %++++++% 3 */
-#define chassis_FR CAN_1_1
-#define chassis_FL CAN_1_2
-#define chassis_BL CAN_1_3
-#define chassis_BR CAN_1_4
-
-//wheel conf
-#define WHEEL_RADIUS 0.15240f //m
+// wheel conf
+#define WHEEL_RADIUS 0.15240f // m
 #define PI 3.1415926f
 
-//car conf
-#define ROLLER_DISTANCE 100 //mm  轴距
-#define WHEELS_DISTANCE 100 //mm  轮距
+// car conf
+#define ROLLER_DISTANCE 100 // mm  轴距
+#define WHEELS_DISTANCE 100 // mm  轮距
 
 struct chassis_status chassis;
 
-//mm/s
+// mm/s
 #define FR 0
 #define FL 1
 #define BL 2
 #define BR 3
 float wheel_rpm[4]; // 底盘速度数组
 
-int16_t wheel_current[4]; //PID输出的电调电流
+int16_t wheel_current[4]; // PID输出的电调电流
 int16_t track_pid;
 
 //最大速度
-#define MAX_VX_SPEED 2.5 //m/s
+#define MAX_VX_SPEED 2.5 // m/s
 #define MAX_VY_SPEED 2.5
 #define MAX_VR_SPEED 3
 #define MAX_TRACK_SPEED 3
 
 //最大加速度
-#define ACC_VX 0.01 //m/s^2
+#define ACC_VX 0.01 // m/s^2
 #define ACC_VY 0.3
 #define ACC_VW 0xFF
 
 //马达速度环PID
 pid_t motor_speed[4];
-
 
 //初始化底盘
 void chassis_move_init()
@@ -61,7 +63,7 @@ void chassis_move_init()
 }
 
 //限制值
-void val_limit(float *val, float MAX)
+inline void val_limit(float *val, float MAX)
 {
 	if (fabs(*val) > MAX)
 		if (*val > 0)
@@ -71,7 +73,7 @@ void val_limit(float *val, float MAX)
 }
 
 //限制变化量
-void change_limit(float last, float *now, float limit)
+inline void change_limit(float last, float *now, float limit)
 {
 	float change = *now - last;
 	if (fabs(change) > limit)
@@ -83,12 +85,10 @@ void change_limit(float last, float *now, float limit)
 	}
 }
 
-//计算底盘马达速度
+// 计算底盘马达速度
 void chassis_moto_speed_calc(float vx, float vy, float vw)
 {
-	//static float last_vx,last_vy,last_vw; //加速度数组
-
-	//最大速度限制
+	// 最大速度限制
 	val_limit(&vx, MAX_VX_SPEED);
 	val_limit(&vy, MAX_VY_SPEED);
 	val_limit(&vw, MAX_VR_SPEED);
@@ -96,30 +96,42 @@ void chassis_moto_speed_calc(float vx, float vy, float vw)
 	chassis.speed.vx = vx;
 	chassis.speed.vy = vy;
 	chassis.speed.vw = vw;
-	
-	//限制加速度
-	//change_limit(last_vx,&vx,ACC_VX);
-	//change_limit(last_vy,&vy,ACC_VY);
-	//change_limit(last_vw,&vw,ACC_VX);
 
-	//last_vx = vx; last_vy = vy; last_vw = vw;
+	// 计算加速度
+	uint32_t now_time = Get_sys_time_ms();
+	static uint32_t last_time = 0;
+	float dt = (now_time - last_time) / 1000.0f;
+	last_time = now_time;
+	chassis.acc.ax = (vx - chassis.speed.last_vx) / dt;
+	chassis.acc.ay = (vy - chassis.speed.last_vy) / dt;
+	chassis.acc.aw = (vw - chassis.speed.last_vw) / dt;
 
-	//计算速度分量
+	// 限制加速度
+	// change_limit(last_vx,&vx,ACC_VX);
+	// change_limit(last_vy,&vy,ACC_VY);
+	// change_limit(last_vw,&vw,ACC_VX);
+
+	// last_vx = vx; last_vy = vy; last_vw = vw;
+
+	// 计算速度分量
 	wheel_rpm[FR] = +chassis.speed.vx - chassis.speed.vy + chassis.speed.vw;
 	wheel_rpm[FL] = +chassis.speed.vx + chassis.speed.vy + chassis.speed.vw;
 	wheel_rpm[BL] = -chassis.speed.vx + chassis.speed.vy + chassis.speed.vw;
 	wheel_rpm[BR] = -chassis.speed.vx - chassis.speed.vy + chassis.speed.vw;
 
-	//计算马达电流
+	// 计算马达电流
 	wheel_current[FR] = pid_cal(&motor_speed[FR], get_motor_data(chassis_FR).round_speed * WHEEL_RADIUS * PI, wheel_rpm[FR]);
 	wheel_current[FL] = pid_cal(&motor_speed[FL], get_motor_data(chassis_FL).round_speed * WHEEL_RADIUS * PI, wheel_rpm[FL]);
 	wheel_current[BL] = pid_cal(&motor_speed[BL], get_motor_data(chassis_BL).round_speed * WHEEL_RADIUS * PI, wheel_rpm[BL]);
 	wheel_current[BR] = pid_cal(&motor_speed[BR], get_motor_data(chassis_BR).round_speed * WHEEL_RADIUS * PI, wheel_rpm[BR]);
 
-//	//发送马达电流 （应在freeRTOS发送）
-//	set_motor_current(wheel_current[FR], CAN_1, chassis_FR);
-//	set_motor_current(wheel_current[FL], CAN_1, chassis_FL);
-//	set_motor_current(wheel_current[BL], CAN_1, chassis_BL);
-//	set_motor_current(wheel_current[BR], CAN_1, chassis_BR);
-}
+	// 设定马达电流 （在freeRTOS中发送）
+	set_motor(wheel_current[FR], chassis_FR);
+	set_motor(wheel_current[FL], chassis_FL);
+	set_motor(wheel_current[BL], chassis_BL);
+	set_motor(wheel_current[BR], chassis_BR);
 
+	chassis.speed.last_vx = chassis.speed.vx;
+	chassis.speed.last_vy = chassis.speed.vy;
+	chassis.speed.last_vw = chassis.speed.vw;
+}
