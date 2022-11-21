@@ -71,65 +71,65 @@ extern struct IMU_t IMU_data;
 /* Definitions for flashLED */
 osThreadId_t flashLEDHandle;
 const osThreadAttr_t flashLED_attributes = {
-    .name = "flashLED",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "flashLED",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for CAN_sendTask */
 osThreadId_t CAN_sendTaskHandle;
 const osThreadAttr_t CAN_sendTask_attributes = {
-    .name = "CAN_sendTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityRealtime7,
+  .name = "CAN_sendTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityRealtime7,
 };
 /* Definitions for FastTestTask */
 osThreadId_t FastTestTaskHandle;
 const osThreadAttr_t FastTestTask_attributes = {
-    .name = "FastTestTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "FastTestTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for RemoteTask */
 osThreadId_t RemoteTaskHandle;
 const osThreadAttr_t RemoteTask_attributes = {
-    .name = "RemoteTask",
-    .stack_size = 256 * 4,
-    .priority = (osPriority_t)osPriorityHigh,
+  .name = "RemoteTask",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityHigh,
 };
 /* Definitions for ChassisTask */
 osThreadId_t ChassisTaskHandle;
 const osThreadAttr_t ChassisTask_attributes = {
-    .name = "ChassisTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityRealtime1,
+  .name = "ChassisTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityRealtime1,
 };
 /* Definitions for gimbalTask */
 osThreadId_t gimbalTaskHandle;
 const osThreadAttr_t gimbalTask_attributes = {
-    .name = "gimbalTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityRealtime6,
+  .name = "gimbalTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityRealtime6,
 };
 /* Definitions for NUCcontrolTask */
 osThreadId_t NUCcontrolTaskHandle;
 const osThreadAttr_t NUCcontrolTask_attributes = {
-    .name = "NUCcontrolTask",
-    .stack_size = 256 * 4,
-    .priority = (osPriority_t)osPriorityAboveNormal7,
+  .name = "NUCcontrolTask",
+  .stack_size = 256 * 4,
+  .priority = (osPriority_t) osPriorityAboveNormal7,
 };
 /* Definitions for errorDetectTask */
 osThreadId_t errorDetectTaskHandle;
 const osThreadAttr_t errorDetectTask_attributes = {
-    .name = "errorDetectTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "errorDetectTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 /* Definitions for statusTask */
 osThreadId_t statusTaskHandle;
 const osThreadAttr_t statusTask_attributes = {
-    .name = "statusTask",
-    .stack_size = 128 * 4,
-    .priority = (osPriority_t)osPriorityLow,
+  .name = "statusTask",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityLow,
 };
 
 /* Private function prototypes -----------------------------------------------*/
@@ -151,12 +151,11 @@ extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /**
- * @brief  FreeRTOS initialization
- * @param  None
- * @retval None
- */
-void MX_FREERTOS_Init(void)
-{
+  * @brief  FreeRTOS initialization
+  * @param  None
+  * @retval None
+  */
+void MX_FREERTOS_Init(void) {
   /* USER CODE BEGIN Init */
 
   /* USER CODE END Init */
@@ -212,6 +211,7 @@ void MX_FREERTOS_Init(void)
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
+
 }
 
 /* USER CODE BEGIN Header_flashLEDTask_callback */

@@ -125,11 +125,11 @@ void IMU_updata() // 200HZ
 	// 			  IMU_data.mag[0], IMU_data.mag[1], IMU_data.mag[2]);
 
 	// MahonyÂË²¨
-	// MahonyAHRSupdate(IMU_data.Mahony.q,
-	// 				 IMU_data.gyro[0], IMU_data.gyro[1], IMU_data.gyro[2],
-	// 				 IMU_data.accel[0], IMU_data.accel[1], IMU_data.accel[2],
-	// 				 IMU_data.mag[0], IMU_data.mag[1], IMU_data.mag[2]);
-	// get_angle(IMU_data.Mahony.q, &IMU_data.Mahony.yaw, &IMU_data.Mahony.pitch, &IMU_data.Mahony.roll);
+	MahonyAHRSupdate(IMU_data.Mahony.q,
+	 				 IMU_data.gyro[0], IMU_data.gyro[1], IMU_data.gyro[2],
+	 				 IMU_data.accel[0], IMU_data.accel[1], IMU_data.accel[2],
+	 				 IMU_data.mag[0], IMU_data.mag[1], IMU_data.mag[2]);
+	get_angle(IMU_data.Mahony.q, &IMU_data.Mahony.yaw, &IMU_data.Mahony.pitch, &IMU_data.Mahony.roll);
 
 	// madgwickÂË²¨
 	madgwickUpdate(IMU_data.gyro[0], IMU_data.gyro[1], IMU_data.gyro[2],
